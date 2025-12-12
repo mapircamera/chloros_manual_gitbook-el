@@ -6,7 +6,9 @@
 
 Όταν συνδεθείτε, θα εμφανιστούν τα στοιχεία του λογαριασμού σας:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Σύνδεση
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+
+## CLI Σύνδεση
 
 Συνδεθείτε με τα διαπιστευτήριά σας Chloros+ για να ενεργοποιήσετε την επεξεργασία CLI.
 
@@ -28,7 +30,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Έξοδος:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Λήξη προγράμματος
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+
+### Λήξη προγράμματος
 
 Η λήξη του προγράμματος στο GUI δείχνει πότε η άδεια χρήσης σας θα καταστεί άκυρη. Για τις επαναλαμβανόμενες μηνιαίες συνδρομές, η λήξη είναι στο τέλος του μήνα. Για τις ετήσιες συνδρομές, είναι ένα έτος μετά την έναρξη της συνδρομής. Ο έλεγχος της άδειας χρήσης απαιτεί μηνιαία σύνδεση στο διαδίκτυο για επαλήθευση, με περίοδο χάριτος 30 ημερών.
 
