@@ -1,47 +1,47 @@
-# GUI : Navigation
+# GUI: Πλοήγηση
 
-When you first launch Chloros and Chloros (Browser) it will start up its backend. Once it is ready the top left main menu icon will be revealed <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Όταν εκκινήσετε για πρώτη φορά το Chloros and Chloros (Πρόγραμμα περιήγησης), θα ξεκινήσει το backend του. Μόλις είναι έτοιμο, το επάνω αριστερό εικονίδιο του κύριου μενού θα αποκαλυφθεί <img src=".gitbook/assets/image (1).png" alt="" data-size="line">.
 
 <figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 
-From left to right the top header contains:
+Από αριστερά προς τα δεξιά η επάνω κεφαλίδα περιέχει:
 
-### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Main Menu
+### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Κύριο μενού
 
-From the main menu you can start a new project, open an existing project or open the project folder.
+Από το κύριο μενού μπορείτε να ξεκινήσετε ένα νέο έργο, να ανοίξετε ένα υπάρχον έργο ή να ανοίξετε το φάκελο του έργου.
 
-### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Play/Start Button
+### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Κουμπί αναπαραγωγής/Έναρξης
 
-When enabled, the start processing button starts the image processing pipeline.
+Όταν είναι ενεργοποιημένο, το κουμπί έναρξης επεξεργασίας ξεκινά τη διοχέτευση επεξεργασίας εικόνας.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Progress Bar <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Γραμμή προόδου <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
 
-In the free Chloros mode, which processes all files sequentially, the progress bar will show 2 stages: Target Detect and Processing.
+Στη δωρεάν λειτουργία Chloros, η οποία επεξεργάζεται όλα τα αρχεία διαδοχικά, η γραμμή προόδου θα εμφανίσει 2 στάδια: Ανίχνευση στόχου και επεξεργασία.
 
-In the paid Chloros+ licensed mode, which process all files simultaneously, the progress bar shows 4 stages: Detecting, Analyzing, Calibrating, Exporting. If you hover your mouse cursor over the Chloros+ progress bar it will drop down the extended 4 progress bar panel so you can follow along. Clicking the top progress bar will freeze the dropdown panel, clicking again unfreezes it.
+Στην επί πληρωμή λειτουργία με άδεια χρήσης Chloros+, η οποία επεξεργάζεται όλα τα αρχεία ταυτόχρονα, η γραμμή προόδου εμφανίζει 4 στάδια: Ανίχνευση, Ανάλυση, Βαθμονόμηση, Εξαγωγή. Εάν τοποθετήσετε τον κέρσορα του ποντικιού πάνω από τη γραμμή προόδου Chloros+, θα πέσει κάτω το εκτεταμένο πλαίσιο της γραμμής προόδου των 4, ώστε να μπορείτε να ακολουθήσετε. Κάνοντας κλικ στην επάνω γραμμή προόδου θα παγώσει ο αναπτυσσόμενος πίνακας, ενώ κάνοντας ξανά κλικ θα το ξεπαγώσει.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
-## Side Menu
+## Πλαϊνό μενού
 
-The left sidebar menu contains various icons to interact with:
+Το μενού της αριστερής πλαϊνής γραμμής περιέχει διάφορα εικονίδια για αλληλεπίδραση:
 
-#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Project Settings](project-settings/page-2.md)
+#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Ρυθμίσεις έργου](project-settings/page-2.md)
 
-The Project Setting tab allows you to adjust project global and project processing settings. Adjust these prior to starting to process your files.
+Η καρτέλα Ρύθμιση έργου σάς επιτρέπει να προσαρμόσετε τις καθολικές ρυθμίσεις του έργου και τις ρυθμίσεις επεξεργασίας έργου. Προσαρμόστε τα πριν ξεκινήσετε την επεξεργασία των αρχείων σας.
 
-#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> File Browser
+#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Πρόγραμμα περιήγησης αρχείων
 
-Add files/folders and remove files from the project. Duplicate files are ignored. Check the target column box for any target image, and the processing will only look at checked images for targets, greatly speeding up your processing time.
+Προσθέστε αρχεία/φακέλους και αφαιρέστε αρχεία από το έργο. Τα διπλότυπα αρχεία αγνοούνται. Επιλέξτε το πλαίσιο στήλης προορισμού για οποιαδήποτε εικόνα-στόχο και η επεξεργασία θα εξετάσει μόνο τις επιλεγμένες εικόνες για στόχους, επιταχύνοντας σημαντικά τον χρόνο επεξεργασίας σας.
 
-#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Image Viewer](image-viewer-gui/page-3.md)
+#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Προβολή εικόνων](image-viewer-gui/page-3.md)
 
-When an image is clicked in the main image viewer it is opened full screen in the Image Viewer tab.
+Όταν κάνετε κλικ σε μια εικόνα στο κύριο πρόγραμμα προβολής εικόνων, ανοίγει σε πλήρη οθόνη στην καρτέλα Προβολή εικόνων.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Debug Log
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Αρχείο καταγραφής εντοπισμού σφαλμάτων
 
-Review the log for debug prints when issues happen. Copy/download the log and send to [MAPIR Support](https://www.mapir.camera/community/contact) for assistance.
+Ελέγξτε το αρχείο καταγραφής για εκτυπώσεις εντοπισμού σφαλμάτων όταν παρουσιάζονται προβλήματα. Αντιγράψτε/κατεβάστε το αρχείο καταγραφής και στείλτε το στο [Υποστήριξη MAPIR](https://www.mapir.camera/community/contact) για βοήθεια.
 
-#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [User Login](chloros+-login.md)
+#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Είσοδος χρήστη](chloros+-login.md)
 
-The user login sidebar allows you to log into your Chloros+ account to unlock advanced features. You can also view the current application version, as well as adjust the language of the displayed text in Chloros GUI and CLI.
+Η πλαϊνή γραμμή σύνδεσης χρήστη σάς επιτρέπει να συνδεθείτε στον λογαριασμό σας στο Chloros+ για να ξεκλειδώσετε προηγμένες λειτουργίες. Μπορείτε επίσης να προβάλετε την τρέχουσα έκδοση της εφαρμογής, καθώς και να προσαρμόσετε τη γλώσσα του εμφανιζόμενου κειμένου στο Chloros GUI και CLI.

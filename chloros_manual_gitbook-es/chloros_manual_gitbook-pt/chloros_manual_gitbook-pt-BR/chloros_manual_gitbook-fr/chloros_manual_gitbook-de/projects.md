@@ -1,17 +1,17 @@
-# Projects
+# Έργα
 
-Chloros allows you to create projects which can be reopened in the future.
+Το Chloros σας επιτρέπει να δημιουργήσετε έργα που μπορούν να ανοίξουν ξανά στο μέλλον.
 
-## New Project
+## Νέο Έργο
 
 <figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+Επιλέξτε "Νέο έργο" από το κύριο μενού και εισαγάγετε ένα μοναδικό όνομα για το έργο σας.
 
-## Open Project
+## Άνοιγμα έργου
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+Επιλέξτε "Άνοιγμα έργου" για να δείτε μια λίστα με τα υπάρχοντα έργα στον Φάκελο του Έργου. Εάν δεν υπάρχουν έργα, το δευτερεύον πλαϊνό μενού δεν θα ανοίξει. Μπορείτε να δείτε μερικά έργα που δημιουργήθηκαν με GUI (t1, t2, t3) που αναφέρονται στην παραπάνω φωτογραφία. Τα έργα DATE\_TIME δημιουργήθηκαν από το CLI χρησιμοποιώντας το προεπιλεγμένο σχήμα ονομασίας έργου. Κάνοντας κλικ σε οποιοδήποτε όνομα έργου θα ανοίξει.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/page-2.md).
+Κάνοντας κλικ στο κουμπί "Άνοιγμα φακέλου έργου" ανοίγει η εξερεύνηση αρχείων του υπολογιστή σας στη διαδρομή του έργου. Μπορείτε να προσαρμόσετε τη διαδρομή του έργου στο [Ρυθμίσεις έργου](project-settings/page-2.md).

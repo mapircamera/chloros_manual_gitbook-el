@@ -1,5 +1,5 @@
 ---
-description: Frequently Asked Questions
+description: Συχνές Ερωτήσεις
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
@@ -9,64 +9,64 @@ metaLinks:
 
 <details>
 
-<summary>Can I process images from cameras that are not MAPIR brand with Chloros?</summary>
+<summary>Μπορώ να επεξεργαστώ εικόνες από κάμερες που δεν είναι της επωνυμίας MAPIR με Chloros;</summary>
 
-No, Chloros only supports processing MAPIR camera images. Please see the list of [supported camera models](supported-cameras.md) for more information. We do offer processing of other cameras on MAPIR Cloud, see full list [here](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
-
-</details>
-
-<details>
-
-<summary>Can I calibrate my images for reflectance without a calibration target?</summary>
-
-No. Without an image of the calibration target captured around when the non target images are captured you will not be able to relate the image's pixel values to a known reflectance percent. If you also do not include the log from a MAPIR light sensor then the ambient light spectrum will not be measured, and the reflectance results will not be accurate.
+Όχι, το Chloros υποστηρίζει μόνο την επεξεργασία εικόνων κάμερας MAPIR. Δείτε τη λίστα των [υποστηριζόμενα μοντέλα καμερών](supported-cameras.md) για περισσότερες πληροφορίες. Προσφέρουμε επεξεργασία άλλων καμερών στο MAPIR Cloud, δείτε την πλήρη λίστα [εδώ](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
 <details>
 
-<summary>Can I edit my images prior to processing in Chloros?</summary>
+<summary>Μπορώ να βαθμονομήσω τις εικόνες μου για ανάκλαση χωρίς στόχο βαθμονόμησης;</summary>
 
-No. Chloros assumes the input data has not been modified. Do not change the file names.
-
-</details>
-
-<details>
-
-<summary>Can I set my MAPIR Survey3 cameras to auto exposure and process the images in Chloros?</summary>
-
-No. Survey3 image datasets must have a fixed/locked exposure, so no auto shutter speed or auto ISO. All images of the same camera model must have identical shutter speed and ISO (exposure).
+Όχι. Χωρίς μια εικόνα του στόχου βαθμονόμησης που λαμβάνεται γύρω από τη λήψη των εικόνων που δεν είναι στόχοι, δεν θα μπορείτε να συσχετίσετε τις τιμές των pixel της εικόνας με ένα γνωστό ποσοστό ανάκλασης. Εάν δεν συμπεριλάβετε επίσης το αρχείο καταγραφής από έναν αισθητήρα φωτός MAPIR, τότε το φάσμα φωτός περιβάλλοντος δεν θα μετρηθεί και τα αποτελέσματα ανάκλασης δεν θα είναι ακριβή.
 
 </details>
 
 <details>
 
-<summary>Can Chloros process or analyze orthomosaic images?</summary>
+<summary>Μπορώ να επεξεργαστώ τις εικόνες μου πριν από την επεξεργασία στο Chloros;</summary>
 
-No. Only individual MAPIR camera images are supported, not stitched images like an orthomosaic map.
-
-</details>
-
-<details>
-
-<summary>How can I speed up the target detection step of Chloros?</summary>
-
-In the file browser table pre-selecting the target images in the right column will tell Chloros to only look in those images for calibration targets, greatly speeding up the processing.
+Όχι. Το Chloros υποθέτει ότι τα δεδομένα εισόδου δεν έχουν τροποποιηθεί. Μην αλλάζετε τα ονόματα των αρχείων.
 
 </details>
 
 <details>
 
-<summary>If I will upload my images to <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> should I process in Chloros prior to uploading?</summary>
+<summary>Μπορώ να ρυθμίσω τις κάμερές μου MAPIR Survey3 για αυτόματη έκθεση και επεξεργασία των εικόνων στο Chloros;</summary>
 
-If you plan to upload to our online processing platform [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription) do not edit the images prior to uploading. Cloud will perform all the same processing and more.
+Όχι. Τα σύνολα δεδομένων εικόνων Survey3 πρέπει να έχουν σταθερή/κλειδωμένη έκθεση, επομένως δεν υπάρχει αυτόματη ταχύτητα κλείστρου ή αυτόματο ISO. Όλες οι εικόνες του ίδιου μοντέλου κάμερας πρέπει να έχουν ίδια ταχύτητα κλείστρου και ISO (έκθεση).
 
 </details>
 
 <details>
 
-<summary>Will MAPIR ever support X feature? I really wish MAPIR offered X.</summary>
+<summary>Μπορεί το Chloros να επεξεργαστεί ή να αναλύσει ορθομωσικές εικόνες;</summary>
 
-We are always interested in receiving feedback on our products. If you find an issue with our products, or have a suggestion on how we can improve our products please [CONTACT US](https://www.mapir.camera/community/contact) to share your thoughts. Most of our R\&D is guided by listening to our customer's biggest needs.
+Όχι. Υποστηρίζονται μόνο μεμονωμένες εικόνες κάμερας MAPIR, όχι ραμμένες εικόνες όπως ένας ορθομοσαϊκός χάρτης.
+
+</details>
+
+<details>
+
+<summary>Πώς μπορώ να επιταχύνω το βήμα ανίχνευσης στόχου του Chloros;</summary>
+
+Στον πίνακα του προγράμματος περιήγησης αρχείων, η προεπιλογή των εικόνων-στόχων στη δεξιά στήλη θα πει στο Chloros να αναζητά μόνο σε αυτές τις εικόνες στόχους βαθμονόμησης, επιταχύνοντας σημαντικά την επεξεργασία.
+
+</details>
+
+<details>
+
+<summary>Εάν ανεβάσω τις εικόνες μου στο <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud</a> θα πρέπει να επεξεργαστώ στο Chloros πριν από τη μεταφόρτωση;</summary>
+
+Εάν σκοπεύετε να ανεβάσετε στην ηλεκτρονική μας πλατφόρμα επεξεργασίας [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), μην επεξεργαστείτε τις εικόνες πριν από τη μεταφόρτωση. Το Cloud θα εκτελέσει την ίδια επεξεργασία και πολλά άλλα.
+
+</details>
+
+<details>
+
+<summary>Θα υποστηρίξει ποτέ το MAPIR τη δυνατότητα X; Θα ήθελα πραγματικά η MAPIR να πρόσφερε X.</summary>
+
+Μας ενδιαφέρει πάντα να λαμβάνουμε σχόλια για τα προϊόντα μας. Εάν βρείτε κάποιο πρόβλημα με τα προϊόντα μας ή έχετε μια πρόταση για το πώς μπορούμε να βελτιώσουμε τα προϊόντα μας, [ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ](https://www.mapir.camera/community/contact) για να μοιραστείτε τις σκέψεις σας. Το μεγαλύτερο μέρος της Ε&Α μας καθοδηγείται ακούγοντας τις μεγαλύτερες ανάγκες των πελατών μας.
 
 </details>

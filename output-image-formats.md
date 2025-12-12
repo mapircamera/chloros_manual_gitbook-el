@@ -4,21 +4,21 @@ metaLinks:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
 
-# Output Image Formats
+# Μορφές εικόνας εξόδου
 
 ### TIFF (16-bit)
 
-16-bit (pixel digital number 0 - 65535) TIFF (.tif) format output.
+Έξοδος μορφής 16-bit (ψηφιακός αριθμός pixel 0 - 65535) TIFF (.tif).
 
-### TIFF (32-bit, Percent %)
+### TIFF (32-bit, Ποσοστό %)
 
-32-bit (pixel float 0.0 - 1.0) TIFF (.tif) format output. Pixel values represent reflectance percentages where 0.0 = 0% and 1.0 = 100%.
+Έξοδος μορφής 32 bit (pixel float 0,0 - 1,0) TIFF (.tif). Οι τιμές εικονοστοιχείων αντιπροσωπεύουν ποσοστά ανάκλασης όπου 0,0 = 0% και 1,0 = 100%.
 
 ### **JPG (8-bit)**
 
-8-bit (pixel digital number 0 -255) JPG (.jpg) format output.
+Έξοδος μορφής 8-bit (ψηφιακός αριθμός pixel 0 -255) JPG (.jpg).
 
 ### **PNG (8-bit)**
 
-8-bit (pixel digital number 0 - 255) PNG (.png) format output. Lossless compression suitable for web viewing and visualization.
+Έξοδος μορφής PNG (.png) 8 bit (ψηφιακός αριθμός pixel 0 - 255). Συμπίεση χωρίς απώλειες κατάλληλη για προβολή και οπτικοποίηση ιστού.
 
