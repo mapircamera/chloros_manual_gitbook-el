@@ -1,306 +1,306 @@
-# Finishing the Processing
+# Ολοκλήρωση της επεξεργασίας
 
-Once Chloros completes processing, it's time to review your results, verify output quality, and prepare your processed images for use in your workflow. This page guides you through the final steps and next actions.
+Μόλις ολοκληρωθεί η επεξεργασία του Chloros, είναι ώρα να ελέγξετε τα αποτελέσματα, να επαληθεύσετε την ποιότητα της εξόδου και να προετοιμάσετε τις επεξεργασμένες εικόνες για χρήση στη ροή εργασίας σας. Αυτή η σελίδα σας καθοδηγεί στα τελικά βήματα και τις επόμενες ενέργειες.
 
-## Processing Complete Indication
+## Ένδειξη ολοκλήρωσης επεξεργασίας
 
-When processing finishes successfully, you'll see several indicators:
+Όταν η επεξεργασία ολοκληρωθεί με επιτυχία, θα δείτε διάφορες ενδείξεις:
 
-* ✅ **Progress bar**: Reaches 100% completion
-* ✅ **Debug Log**: Shows "Processing Complete" message
-* ✅ **Start button**: Becomes enabled again (ready for next processing run)
-* ✅ **Output files**: All processed images saved to camera model subfolder
-
-***
-
-## Locating Your Processed Images
-
-### Opening the Output Folder
-
-1. Click the **Main Menu** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> icon (top left)
-2. Select **"Open Project Folder"**
-3. Your file explorer opens to the project directory
-4. Locate your project by name
+* ✅ **Γραμμή προόδου**: Φτάνει στο 100% της ολοκλήρωσης
+* ✅ **Αρχείο καταγραφής σφαλμάτων**: Εμφανίζει το μήνυμα «Επεξεργασία ολοκληρώθηκε»
+* ✅ **Κουμπί έναρξης**: Ενεργοποιείται ξανά (έτοιμο για την επόμενη επεξεργασία)
+* ✅ **Αρχεία εξόδου**: Όλες οι επεξεργασμένες εικόνες αποθηκεύονται στον υποφάκελο του μοντέλου της κάμερας
 
 ***
 
-## Reviewing Processed Images
+## Εντοπισμός των επεξεργασμένων εικόνων σας
 
-### Quick Preview in File Explorer
+### Άνοιγμα του φακέλου εξόδου
 
-**Windows built-in preview:**
-
-1. Navigate to camera model subfolder
-2. Select an image file
-3. Preview appears in Windows Explorer preview pane
-4. Use arrow keys to browse through images
-
-### Preview in External Image Viewers
-
-**Recommended viewers:**
-
-* **QGIS** - Free GIS software (best for georeferenced multispectral analysis)
-* **IrfanView** - Fast, lightweight image viewer (supports TIFF)
-* **Adobe Photoshop** - Professional editing (TIFF support)
-* **GIMP** - Free alternative to Photoshop
-* **Windows Photos** - Basic viewing (may not support 16-bit TIFF)
-
-### Preview in Chloros Image Viewer
-
-Use Chloros's built-in Image Viewer for advanced visualization:
-
-1. Click an image thumbnail in the File Browser
-2. Image opens in the main preview area
-3. Click **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab in left sidebar
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) for interactive analysis
-
-See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
+1. Κάντε κλικ στο εικονίδιο **Κύριο μενού** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (πάνω αριστερά)
+2. Επιλέξτε **&quot;Άνοιγμα φακέλου έργου&quot;**
+3. Ο εξερευνητής αρχείων ανοίγει στον κατάλογο του έργου
+4. Εντοπίστε το έργο σας με βάση το όνομα
 
 ***
 
-## Reviewing the Debug Log
+## Επισκόπηση επεξεργασμένων εικόνων
 
-### Check for Warnings or Errors
+### Γρήγορη προεπισκόπηση στον εξερευνητή αρχείων
 
-1. Open **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Scroll through messages
-3. Look for yellow warnings or red errors
-4. Review any issues noted
-5. Contact MAPIR support for assistance
+**Ενσωματωμένη προεπισκόπηση Windows:**
 
-### Saving the Log
+1. Μεταβείτε στον υποφάκελο του μοντέλου της κάμερας
+2. Επιλέξτε ένα αρχείο εικόνας
+3. Η προεπισκόπηση εμφανίζεται στο παράθυρο προεπισκόπησης του Windows Explorer
+4. Χρησιμοποιήστε τα πλήκτρα βέλους για να περιηγηθείτε στις εικόνες
 
-To keep a record of processing or to send to MAPIR Support:
+### Προεπισκόπηση σε εξωτερικούς προβολείς εικόνων
 
-1. Click **"Copy"** or **"Download"** button
-2. Save as text file in project folder
-3. Include with project documentation
-4. Send to MAPIR support if issues encountered
+**Συνιστώμενοι προβολείς:**
 
-***
+* **QGIS** - Δωρεάν λογισμικό GIS (ιδανικό για γεωαναφερόμενη πολυφασματική ανάλυση)
+* **IrfanView** - Γρήγορος, ελαφρύς προβολέας εικόνων (υποστηρίζει TIFF)
+* **Adobe Photoshop** - Επαγγελματική επεξεργασία (υποστήριξη TIFF)
+* **GIMP** - Δωρεάν εναλλακτική λύση του Photoshop
+* **Windows Photos** - Βασική προβολή (ενδέχεται να μην υποστηρίζει 16-bit TIFF)
 
-## Common Output Issues and Solutions
+### Προεπισκόπηση στο Chloros Image Viewer
 
-### Issue: Missing Output Files
+Χρησιμοποιήστε το ενσωματωμένο Image Viewer του Chloros για προηγμένη οπτικοποίηση:
 
-**Possible causes:**
+1. Κάντε κλικ σε μια μικρογραφία εικόνας στο File Browser
+2. Η εικόνα ανοίγει στην κύρια περιοχή προεπισκόπησης
+3. Κάντε κλικ στην καρτέλα **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> στην αριστερή πλευρική γραμμή
+4. Χρησιμοποιήστε το [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) για διαδραστική ανάλυση
 
-* Files didn't meet processing criteria
-* Target-only images (excluded from export)
-* Disk space ran out during export
-* File corruption during processing
-
-**Solutions:**
-
-1. Check Debug Log for skip/error messages
-2. Verify disk space was sufficient
-3. Count files: Should match (original count - target count) × (indices + 1)
-4. Re-import and reprocess any missing files
-
-### Issue: Dark or Bright Edges (Vignetting Still Visible)
-
-**Possible causes:**
-
-* Vignette correction disabled
-* Camera/lens not in Chloros profile database
-* Extreme vignetting beyond correction capability
-
-**Solutions:**
-
-1. Verify vignette correction was enabled in Project Settings
-2. Check camera model correctly detected
-3. Contact MAPIR support if vignetting persists
-
-### Issue: Incorrect Colors or Values
-
-**Possible causes:**
-
-* No calibration targets detected
-* Wrong calibration target model selected
-* Reflectance calibration disabled
-* Poor quality target images
-
-**Solutions:**
-
-1. Verify reflectance calibration was enabled
-2. Check "Target found" messages in Debug Log
-3. Review target image quality
-4. Reprocess with proper targets marked
-
-### Issue: NDVI Values Seem Wrong
-
-**Expected NDVI ranges:**
-
-* **Water, rocks, soil**: -0.1 to 0.2
-* **Sparse/unhealthy vegetation**: 0.2 to 0.4
-* **Moderate vegetation**: 0.4 to 0.6
-* **Healthy, dense vegetation**: 0.6 to 0.9
-
-**If values are outside these ranges:**
-
-1. Verify reflectance calibration was applied
-2. Verify light sensor log was included
-3. Check calibration targets were detected
-4. Ensure correct camera model was detected
-5. Review target image capture timing and conditions
+Δείτε το [Image Viewer](../image-viewer-gui/opening-an-image-full-screen.md) για λεπτομερείς οδηγίες.
 
 ***
 
-## Using Your Processed Images
+## Επισκόπηση του αρχείου καταγραφής σφαλμάτων
 
-### For Photogrammetry / Orthomosaic Creation
+### Έλεγχος για προειδοποιήσεις ή σφάλματα
 
-**Recommended workflow:**
+1. Ανοίξτε την καρτέλα **Αρχείο καταγραφής σφαλμάτων** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> .
+2. Περιηγηθείτε στα μηνύματα.
+3. Αναζητήστε κίτρινες προειδοποιήσεις ή κόκκινα σφάλματα.
+4. Ελέγξτε τυχόν προβλήματα που έχουν σημειωθεί.
+5. Επικοινωνήστε με την υποστήριξη MAPIR για βοήθεια.
 
-1. **Import calibrated reflectance images** into photogrammetry software:
+### Αποθήκευση του αρχείου καταγραφής
+
+Για να διατηρήσετε ένα αρχείο καταγραφής της επεξεργασίας ή για να το στείλετε στην υποστήριξη MAPIR:
+
+1. Κάντε κλικ στο κουμπί **&quot;Αντιγραφή&quot;** ή **&quot;Λήψη&quot;**
+2. Αποθηκεύστε ως αρχείο κειμένου στο φάκελο του έργου
+3. Συμπεριλάβετε το αρχείο στην τεκμηρίωση του έργου
+4. Στείλτε το στην υποστήριξη MAPIR εάν αντιμετωπίσετε προβλήματα
+
+***
+
+## Συνηθισμένα προβλήματα εξόδου και λύσεις
+
+### Πρόβλημα: Λείπουν αρχεία εξόδου
+
+**Πιθανές αιτίες:**
+
+* Τα αρχεία δεν πληρούσαν τα κριτήρια επεξεργασίας
+* Εικόνες μόνο για τον προορισμό (εξαιρούνται από την εξαγωγή)
+* Ο χώρος στο δίσκο εξαντλήθηκε κατά την εξαγωγή
+* Καταστροφή αρχείων κατά την επεξεργασία
+
+**Λύσεις:**
+
+1. Ελέγξτε το αρχείο καταγραφής σφαλμάτων για μηνύματα παράλειψης/σφάλματος
+2. Βεβαιωθείτε ότι ο χώρος στο δίσκο ήταν επαρκής
+3. Μετρήστε τα αρχεία: Πρέπει να ταιριάζουν (αρχικός αριθμός - αριθμός προορισμού) × (δείκτες + 1)
+4. Εισαγάγετε ξανά και επεξεργαστείτε εκ νέου τα αρχεία που λείπουν
+
+### Πρόβλημα: Σκούρα ή φωτεινά άκρα (το βινιέτ εξακολουθεί να είναι ορατό)
+
+**Πιθανές αιτίες:**
+
+* Η διόρθωση βινιέτ είναι απενεργοποιημένη
+* Η κάμερα/ο φακός δεν περιλαμβάνεται στη βάση δεδομένων προφίλ Chloros
+* Ακραίο βινιέτ που υπερβαίνει τη δυνατότητα διόρθωσης
+
+**Λύσεις:**
+
+1. Βεβαιωθείτε ότι η διόρθωση βινιέτας είναι ενεργοποιημένη στις Ρυθμίσεις έργου
+2. Ελέγξτε ότι το μοντέλο κάμερας έχει ανιχνευθεί σωστά
+3. Επικοινωνήστε με την υποστήριξη MAPIR εάν η βινιέτα παραμένει
+
+### Πρόβλημα: Λανθασμένα χρώματα ή τιμές
+
+**Πιθανές αιτίες:**
+
+* Δεν ανιχνεύθηκαν στόχοι βαθμονόμησης
+* Επιλέχθηκε λανθασμένο μοντέλο στόχου βαθμονόμησης
+* Η βαθμονόμηση ανακλαστικότητας είναι απενεργοποιημένη
+* Εικόνες στόχου κακής ποιότητας
+
+**Λύσεις:**
+
+1. Βεβαιωθείτε ότι η βαθμονόμηση ανάκλασης είναι ενεργοποιημένη.
+2. Ελέγξτε τα μηνύματα «Target found» (Εντοπίστηκε στόχος) στο αρχείο καταγραφής σφαλμάτων.
+3. Ελέγξτε την ποιότητα της εικόνας στόχου.
+4. Επαναλάβετε τη διαδικασία με τους σωστούς στόχους επισημασμένους.
+
+### Πρόβλημα: Οι τιμές NDVI φαίνονται λανθασμένες.
+
+**Αναμενόμενα εύρη NDVI:**
+
+* **Νερό, βράχοι, χώμα**: -0,1 έως 0,2
+* **Αραιή/ανθυγιεινή βλάστηση**: 0,2 έως 0,4
+* **Μέτρια βλάστηση**: 0,4 έως 0,6
+* **Υγιής, πυκνή βλάστηση**: 0,6 έως 0,9
+
+**Εάν οι τιμές βρίσκονται εκτός αυτών των εύρων:**
+
+1. Βεβαιωθείτε ότι έχει εφαρμοστεί η βαθμονόμηση της ανακλαστικότητας.
+2. Βεβαιωθείτε ότι έχει συμπεριληφθεί το αρχείο καταγραφής του αισθητήρα φωτός.
+3. Ελέγξτε ότι έχουν ανιχνευθεί οι στόχοι βαθμονόμησης.
+4. Βεβαιωθείτε ότι έχει ανιχνευθεί το σωστό μοντέλο κάμερας.
+5. Ελέγξτε το χρονισμό και τις συνθήκες λήψης της εικόνας-στόχου.
+
+***
+
+## Χρήση των επεξεργασμένων εικόνων σας
+
+### Για φωτογραμμετρία/δημιουργία ορθομοσαϊκού
+
+**Συνιστώμενη ροή εργασίας:**
+
+1. **Εισαγάγετε τις εικόνες ανακλαστικότητας που έχουν βαθμονομηθεί** στο λογισμικό φωτογραμμετρίας:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
    * WebODM
-2. **Keep EXIF metadata**: Ensure GPS data preserved for geotagging
-3. **Calibrated workflows**: Use reflectance images for scientific accuracy
-4. **Process index mosaics**: Create NDVI orthomosaics from individual index images
-5. **Export georeferenced GeoTIFF**: For use in GIS applications
+2. **Διατηρήστε τα μεταδεδομένα EXIF**: Βεβαιωθείτε ότι τα δεδομένα GPS έχουν διατηρηθεί για γεωγραφική σήμανση
+3. **Βαθμονομημένες ροές εργασίας**: Χρησιμοποιήστε εικόνες ανακλαστικότητας για επιστημονική ακρίβεια
+4. **Επεξεργαστείτε μωσαϊκά ευρετηρίου**: Δημιουργήστε ορθομωσαϊκά NDVI από μεμονωμένες εικόνες ευρετηρίου
+5. **Εξαγωγή γεωαναφερόμενων GeoTIFF**: Για χρήση σε εφαρμογές GIS
 
-### For GIS Analysis
+### Για ανάλυση GIS
 
-**Recommended workflow:**
+**Συνιστώμενη ροή εργασίας:**
 
-1. **Load into QGIS, ArcGIS, or similar**
-2. **Use 16-bit TIFF** reflectance images for multi-band analysis
-3. **Use index images** (NDVI, NDRE) as ready-to-use vegetation layers
-4. **Raster calculator**: Combine bands for custom analysis
-5. **Export**: Create classification maps, change detection, vegetation health maps
+1. **Φόρτωση σε QGIS, ArcGIS ή παρόμοιο**
+2. **Χρησιμοποιήστε εικόνες ανάκλασης 16-bit TIFF** για ανάλυση πολλαπλών ζωνών
+3. **Χρησιμοποιήστε εικόνες ευρετηρίου** (NDVI, NDRE) ως έτοιμα προς χρήση στρώματα βλάστησης
+4. **Υπολογιστής ράστερ**: Συνδυάστε ζώνες για προσαρμοσμένη ανάλυση
+5. **Εξαγωγή**: Δημιουργήστε χάρτες ταξινόμησης, ανίχνευση αλλαγών, χάρτες υγείας βλάστησης
 
-### For Direct Analysis / Reporting
+### Για άμεση ανάλυση/αναφορά
 
-**Recommended workflow:**
+**Συνιστώμενη ροή εργασίας:**
 
-1. **Use index images with LUT colors** for visual reports
-2. **Extract statistics**: Mean NDVI per field/plot
-3. **Time series**: Compare indices across multiple sessions
-4. **Generate reports**: Include maps, statistics, and visualizations
-
-***
-
-## Archiving and Backup
-
-### Recommended Backup Strategy
-
-**What to save:**
-
-* ✅ **Original RAW/JPG images** - Archive on separate drive/cloud
-* ✅ **Processed outputs** - Keep calibrated images and indices
-* ✅ **Project file** - Contains all settings for reprocessing if needed
-* ✅ **Debug Log** - Documents processing details
-* ✅ **Calibration target images** - For verification and reprocessing
-
-**Storage recommendations:**
-
-* **Immediate backup**: External hard drive
-* **Long-term archive**: Cloud storage (Google Drive, Dropbox, etc.)
-* **Critical data**: Keep 2-3 copies in different locations
+1. **Χρησιμοποιήστε εικόνες δείκτη με χρώματα LUT** για οπτικές αναφορές
+2. **Εξαγωγή στατιστικών**: Μέσος όρος NDVI ανά πεδίο/οικόπεδο
+3. **Χρονοσειρές**: Συγκρίνετε δείκτες σε πολλαπλές συνεδρίες
+4. **Δημιουργία αναφορών**: Συμπεριλάβετε χάρτες, στατιστικά στοιχεία και οπτικοποιήσεις
 
 ***
 
-## Next Processing Runs
+## Αρχειοθέτηση και δημιουργία αντιγράφων ασφαλείας
 
-### Reusing Project Settings
+### Συνιστώμενη στρατηγική δημιουργίας αντιγράφων ασφαλείας
 
-If processing similar datasets in the future:
+**Τι να αποθηκεύσετε:**
 
-1. **Save Project Template** (if not already done)
-2. **Create new project** using saved template
-3. **Import new images**
-4. **Process** with identical settings for consistency
+* ✅ **Αρχικές εικόνες RAW/JPG** - Αρχειοθετήστε σε ξεχωριστό δίσκο/cloud
+* ✅ **Επεξεργασμένα αποτελέσματα** - Διατήρηση βαθμονομημένων εικόνων και δεικτών
+* ✅ **Αρχείο έργου** - Περιέχει όλες τις ρυθμίσεις για επανεπεξεργασία, αν χρειαστεί
+* ✅ **Αρχείο καταγραφής σφαλμάτων** - Τεκμηριώνει τις λεπτομέρειες της επεξεργασίας
+* ✅ **Εικόνες στόχου βαθμονόμησης** - Για επαλήθευση και επανεπεξεργασία
 
-### Batch Processing Multiple Sessions
+**Συστάσεις αποθήκευσης:**
 
-For multiple sessions/datasets:
-
-**Option 1: GUI - Multiple Projects**
-
-* Create separate project for each session
-* Use consistent template settings
-* Process one at a time
-
-**Option 2: Chloros CLI (Chloros+ only)**
-
-* Automate batch processing
-* Process multiple folders with scripts
-* See [CLI Documentation](../CLI.md)
-
-**Option 3: Python SDK (Chloros+ only)**
-
-* Programmatic control
-* Integration with analysis pipelines
-* See [API Documentation](../api-python-sdk.md)
+* **Άμεση δημιουργία αντιγράφων ασφαλείας**: Εξωτερικός σκληρός δίσκος
+* **Μακροπρόθεσμη αρχειοθέτηση**: Αποθήκευση στο cloud (Google Drive, Dropbox κ.λπ.)
+* **Κρίσιμα δεδομένα**: Διατηρήστε 2-3 αντίγραφα σε διαφορετικές τοποθεσίες
 
 ***
 
-## Troubleshooting Post-Processing
+## Επόμενες εκτελέσεις επεξεργασίας
 
-### Re-Processing with Different Settings
+### Επαναχρησιμοποίηση ρυθμίσεων έργου
 
-If results aren't satisfactory:
+Εάν επεξεργαστείτε παρόμοια σύνολα δεδομένων στο μέλλον:
 
-1. Keep original images (never delete)
-2. Open same project in Chloros
-3. Adjust settings in Project Settings panel
-4. Process again - outputs will overwrite previous results
+1. **Αποθηκεύστε το πρότυπο έργου** (εάν δεν το έχετε κάνει ήδη)
+2. **Δημιουργήστε νέο έργο** χρησιμοποιώντας το αποθηκευμένο πρότυπο
+3. **Εισαγάγετε νέες εικόνες**
+4. **Επεξεργαστείτε** με πανομοιότυπες ρυθμίσεις για συνέπεια
 
-### Processing Subset of Images
+### Μαζική επεξεργασία πολλαπλών συνεδριών
 
-To reprocess only specific images:
+Για πολλαπλές συνεδρίες/σύνολα δεδομένων:
 
-1. Create new project
-2. Import only the images needing reprocessing
-3. Use same settings template
-4. Process smaller dataset
+**Επιλογή 1: GUI - Πολλαπλά έργα**
 
-### Getting Help
+* Δημιουργήστε ξεχωριστό έργο για κάθε συνεδρία
+* Χρησιμοποιήστε συνεπείς ρυθμίσεις προτύπου
+* Επεξεργαστείτε ένα κάθε φορά
 
-If you encounter issues:
+**Επιλογή 2: Chloros CLI (μόνο Chloros+)**
 
-* 📧 **Email**: info@mapir.camera (include Debug Log)
-* 🌐 **Support**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Frequently Asked Questions](../faq.md)
-* 📖 **Documentation**: [Chloros Manual](../)
+* Αυτοματοποιήστε τη μαζική επεξεργασία
+* Επεξεργαστείτε πολλαπλούς φακέλους με σενάρια
+* Δείτε [Τεκμηρίωση CLI](../CLI.md)
 
-***
+**Επιλογή 3: Python SDK (μόνο Chloros+)**
 
-## Summary: Complete Workflow
-
-You've now completed the full Chloros processing workflow:
-
-1. ✅ **Created project** - See [Projects](../projects.md)
-2. ✅ **Added files** - See [Adding Files](page-1.md)
-3. ✅ **Adjusted settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-4. ✅ **Marked targets** - See [Choosing Target Images](choosing-target-images.md)
-5. ✅ **Started processing** - See [Starting the Processing](starting-the-processing.md)
-6. ✅ **Monitored progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-7. ✅ **Reviewed results** - This page
-
-**Your calibrated, reflectance-corrected multispectral images are ready for analysis!**
+* Προγραμματιστικός έλεγχος
+* Ενσωμάτωση με αγωγούς ανάλυσης
+* Δείτε [API Τεκμηρίωση](../api-python-sdk.md)
 
 ***
 
-## Additional Resources
+## Αντιμετώπιση προβλημάτων μετά την επεξεργασία
 
-### Advanced Features
+### Επανεκτέλεση της επεξεργασίας με διαφορετικές ρυθμίσεις
 
-* [**Image Viewer**](../image-viewer-gui/page-3.md) - Interactive visualization and analysis
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Custom index testing
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Complete index reference
+Εάν τα αποτελέσματα δεν είναι ικανοποιητικά:
 
-### Automation & Integration
+1. Διατηρήστε τις αρχικές εικόνες (μην τις διαγράψετε ποτέ)
+2. Ανοίξτε το ίδιο έργο στο Chloros
+3. Προσαρμόστε τις ρυθμίσεις στον πίνακα Ρυθμίσεις έργου
+4. Επεξεργαστείτε ξανά - τα αποτελέσματα θα αντικαταστήσουν τα προηγούμενα
 
-* [**CLI Documentation**](../CLI.md) - Command-line batch processing
-* [**Python SDK**](../api-python-sdk.md) - Programmatic automation
-* [**Chloros+ Features**](../#chloros) - Advanced processing capabilities
+### Επεξεργασία υποσύνολου εικόνων
 
-### Support & Learning
+Για να επανεπεξεργαστείτε μόνο συγκεκριμένες εικόνες:
 
-* [**FAQ**](../faq.md) - Common questions answered
-* [**Calibration Targets**](../calibration-targets.md) - Understanding reflectance calibration
-* [**Supported Cameras**](../supported-cameras.md) - Compatible hardware
+1. Δημιουργήστε ένα νέο έργο
+2. Εισαγάγετε μόνο τις εικόνες που χρειάζονται επανεπεξεργασία
+3. Χρησιμοποιήστε το ίδιο πρότυπο ρυθμίσεων
+4. Επεξεργαστείτε μικρότερο σύνολο δεδομένων
+
+### Λήψη βοήθειας
+
+Εάν αντιμετωπίσετε προβλήματα:
+
+* 📧 **Email**: info@mapir.camera (συμπεριλάβετε το αρχείο καταγραφής σφαλμάτων)
+* 🌐 **Υποστήριξη**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **Συχνές ερωτήσεις**: [Συχνές ερωτήσεις](../faq.md)
+* 📖 **Τεκμηρίωση**: [Εγχειρίδιο Chloros](../)
+
+***
+
+## Περίληψη: Ολοκλήρωση της ροής εργασίας
+
+Τώρα έχετε ολοκληρώσει την πλήρη ροή εργασίας επεξεργασίας Chloros:
+
+1. ✅ **Δημιουργήθηκε έργο** - Δείτε [Έργα](../projects.md)
+2. ✅ **Προσθήκη αρχείων** - Δείτε [Προσθήκη αρχείων](adding-files-to-a-project.md)
+3. ✅ **Προσαρμογή ρυθμίσεων** - Δείτε [Προσαρμογή ρυθμίσεων έργου](adjusting-project-settings.md)
+4. ✅ **Επισημάνθηκαν στόχοι** - Δείτε [Επιλογή εικόνων-στόχων](choosing-target-images.md)
+5. ✅ **Ξεκίνησε η επεξεργασία** - Δείτε [Έναρξη της επεξεργασίας](starting-the-processing.md)
+6. ✅ **Παρακολούθηση προόδου** - Δείτε [Παρακολούθηση της επεξεργασίας](monitoring-the-processing.md)
+7. ✅ **Αναθεώρηση αποτελεσμάτων** - Αυτή η σελίδα
+
+**Οι βαθμονομημένες, διορθωμένες ως προς την ανακλαστικότητα πολυφασματικές εικόνες σας είναι έτοιμες για ανάλυση!**
+
+***
+
+## Πρόσθετοι πόροι
+
+### Προηγμένες λειτουργίες
+
+* [**Πρόγραμμα προβολής εικόνων**](../image-viewer-gui/opening-an-image-full-screen.md) - Διαδραστική οπτικοποίηση και ανάλυση
+* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Προσαρμοσμένη δοκιμή δείκτη
+* [**Τύποι πολυφασματικών δεικτών**](../project-settings/multispectral-index-formulas.md) - Πλήρης αναφορά δεικτών
+
+### Αυτοματοποίηση και ενσωμάτωση
+
+* [**Τεκμηρίωση CLI**](../CLI.md) - Μαζική επεξεργασία από τη γραμμή εντολών
+* [**Python SDK**](../api-python-sdk.md) - Προγραμματισμένη αυτοματοποίηση
+* [**Χαρακτηριστικά Chloros+**](../#chloros) - Προηγμένες δυνατότητες επεξεργασίας
+
+### Υποστήριξη &amp; Εκμάθηση
+
+* [**Συχνές ερωτήσεις**](../faq.md) - Απαντήσεις σε συνήθεις ερωτήσεις
+* [**Στόχοι βαθμονόμησης**](../calibration-targets.md) - Κατανόηση της βαθμονόμησης ανακλαστικότητας
+* [**Υποστηριζόμενες κάμερες**](../supported-cameras.md) - Συμβατό υλικό

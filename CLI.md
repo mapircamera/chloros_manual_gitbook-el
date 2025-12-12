@@ -1,48 +1,46 @@
-# CLI : Command Line
+# CLI : Γραμμή εντολών
 
-<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cli.JPG" alt=""><figcaption></figcaption></figure>Το **Chloros CLI** παρέχει ισχυρή πρόσβαση στη γραμμή εντολών στον κινητήρα επεξεργασίας εικόνων Chloros, επιτρέποντας την αυτοματοποίηση, τη δημιουργία σεναρίων και την λειτουργία χωρίς οθόνη για τις ροές εργασίας σας στον τομέα της απεικόνισης.
 
-The **Chloros CLI** provides powerful command-line access to the Chloros image processing engine, enabling automation, scripting, and headless operation for your imaging workflows.
+### Βασικά χαρακτηριστικά
 
-### Key Features
+* 🚀 **Αυτοματοποίηση** - Σενάρια μαζικής επεξεργασίας πολλαπλών συνόλων δεδομένων
+* 🔗 **Ενσωμάτωση** - Ενσωμάτωση σε υπάρχουσες ροές εργασίας και pipelines
+* 💻 **Λειτουργία χωρίς οθόνη** - Εκτέλεση χωρίς GUI
+* 🌍 **Πολυγλωσσικό** - Υποστήριξη 38 γλωσσών
+* ⚡ **Παράλληλη επεξεργασία** - Δυναμική κλιμάκωση ανάλογα με την CPU σας (έως 16 παράλληλοι εργαζόμενοι)
 
-* 🚀 **Automation** - Script batch processing of multiple datasets
-* 🔗 **Integration** - Embed in existing workflows and pipelines
-* 💻 **Headless Operation** - Run without GUI
-* 🌍 **Multi-Language** - Support for 38 languages
-* ⚡ **Parallel Processing** - Dynamically scales to your CPU (up to 16 parallel workers)
+### Απαιτήσεις
 
-### Requirements
-
-| Requirement          | Details                                                             |
+| Απαίτηση          | Λεπτομέρειες                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
-| **Disk Space**       | Varies by project size                                              |
+| **Λειτουργικό σύστημα** | Windows 10/11 (64-bit)                                              |
+| **Άδεια χρήσης**          | Chloros+ ([απαιτείται πρόγραμμα επί πληρωμή](https://cloud.mapir.camera/pricing)) |
+| **Μνήμη**           | Ελάχιστη μνήμη RAM 8 GB (συνιστάται 16 GB)                                  |
+| **Διαδίκτυο**         | Απαιτείται για την ενεργοποίηση της άδειας χρήσης                                     |
+| **Χώρος στο δίσκο**       | Διαφέρει ανάλογα με το μέγεθος του έργου                                              |
 
-{% hint style="warning" %}
-**License Requirement**: The CLI requires a paid Chloros+ subscription. Standard (free) plans do not have CLI access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
+{% hint style=&quot;warning&quot; %}
+**Απαιτήσεις άδειας χρήσης**: Το CLI απαιτεί συνδρομή επί πληρωμή στο Chloros+. Τα βασικά (δωρεάν) πακέτα δεν έχουν πρόσβαση στο CLI. Επισκεφθείτε το [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) για αναβάθμιση.
 {% endhint %}
 
-## Quick Start
+## Γρήγορη εκκίνηση
 
-### Installation
+### Εγκατάσταση
 
-The CLI is automatically included with the Chloros installer:
+Το CLI περιλαμβάνεται αυτόματα στο πρόγραμμα εγκατάστασης Chloros:
 
-1. Download and run **Chloros Installer.exe**
-2. Complete the installation wizard
-3. CLI installed to: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
+1. Κατεβάστε και εκτελέστε το **Chloros Installer.exe**
+2. Ολοκληρώστε τον οδηγό εγκατάστασης
+3. CLI εγκατεστημένο σε: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
-{% hint style="success" %}
-The installer automatically adds `chloros-cli` to your system PATH. Restart your terminal after installation.
+{% hint style=&quot;success&quot; %}
+Το πρόγραμμα εγκατάστασης προσθέτει αυτόματα το `chloros-cli` στο PATH του συστήματός σας. Επανεκκινήστε το τερματικό σας μετά την εγκατάσταση.
 {% endhint %}
 
-### First-Time Setup
+### Πρώτη εγκατάσταση
 
-Before using the CLI, activate your Chloros+ license:
+Πριν χρησιμοποιήσετε το CLI, ενεργοποιήστε την άδεια χρήσης Chloros+:
 
 ```bash
 # Login with your Chloros+ account
@@ -55,9 +53,9 @@ chloros-cli status
 chloros-cli process "C:\Images\Dataset001"
 ```
 
-### Basic Usage
+### Βασική χρήση
 
-Process a folder with default settings:
+Επεξεργασία φακέλου με τις προεπιλεγμένες ρυθμίσεις:
 
 ```powershell
 chloros-cli process "C:\Images\Dataset001"
@@ -65,9 +63,9 @@ chloros-cli process "C:\Images\Dataset001"
 
 ***
 
-## Command Reference
+## Αναφορά εντολών
 
-### General Syntax
+### Γενική σύνταξη
 
 ```
 chloros-cli [global-options] <command> [command-options]
@@ -75,89 +73,87 @@ chloros-cli [global-options] <command> [command-options]
 
 ***
 
-## Commands
+## Εντολές
 
-### `process` - Process Images
+### `process` - Επεξεργασία εικόνων
 
-Process images in a folder with calibration.
+Επεξεργασία εικόνων σε ένα φάκελο με βαθμονόμηση.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli process <input-folder> [options]
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 ```
 
-#### Process Command Options
+#### Επιλογές εντολών επεξεργασίας
 
-| Option                | Type    | Default        | Description                                                                            |
+| Επιλογή                | Τύπος    | Προεπιλογή        | Περιγραφή                                                                            |
 | --------------------- | ------- | -------------- | -------------------------------------------------------------------------------------- |
-| `<input-folder>`      | Path    | _Required_     | Folder containing RAW/JPG multispectral images                                         |
-| `-o, --output`        | Path    | Same as input  | Output folder for processed images                                                     |
-| `-n, --project-name`  | String  | Auto-generated | Custom project name                                                                    |
-| `--vignette`          | Flag    | Enabled        | Enable vignette correction                                                             |
-| `--no-vignette`       | Flag    | -              | Disable vignette correction                                                            |
-| `--reflectance`       | Flag    | Enabled        | Enable reflectance calibration                                                         |
-| `--no-reflectance`    | Flag    | -              | Disable reflectance calibration                                                        |
-| `--ppk`               | Flag    | Disabled       | Apply PPK corrections from .daq light sensor data                                      |
-| `--format`            | Choice  | TIFF (16-bit)  | Output format: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
-| `--min-target-size`   | Integer | Auto           | Minimum target size in pixels for calibration panel detection                          |
-| `--target-clustering` | Integer | Auto           | Target clustering threshold (0-100)                                                    |
-| `--exposure-pin-1`    | String  | None           | Lock exposure for camera model (Pin 1)                                                 |
-| `--exposure-pin-2`    | String  | None           | Lock exposure for camera model (Pin 2)                                                 |
-| `--recal-interval`    | Integer | Auto           | Recalibration interval in seconds                                                      |
-| `--timezone-offset`   | Integer | 0              | Timezone offset in hours                                                               |
+| `<input-folder>`      | Διαδρομή    | _Απαιτείται_     | Φάκελος που περιέχει εικόνες RAW/JPG πολλαπλού φάσματος                                         |
+| `-o, --output`        | Διαδρομή    | Ίδια με την είσοδο  | Φάκελος εξόδου για επεξεργασμένες εικόνες                                                     |
+| `-n, --project-name`  | String  | Αυτόματη δημιουργία | Προσαρμοσμένο όνομα έργου                                                                    |
+| `--vignette`          | Σημαία    | Ενεργοποιημένη        | Ενεργοποίηση διόρθωσης βινιέτας                                                             |
+| `--no-vignette`       | Σημαία    | -              | Απενεργοποίηση διόρθωσης βινιέτας                                                            |
+| `--reflectance`       | Σημαία    | Ενεργοποιημένη        | Ενεργοποίηση βαθμονόμησης ανακλαστικότητας                                                         |
+| `--no-reflectance`    | Σημαία    | -              | Απενεργοποίηση βαθμονόμησης ανακλαστικότητας                                                        |
+| `--ppk`               | Σημαία    | Απενεργοποιημένη       | Εφαρμογή διορθώσεων PPK από δεδομένα αισθητήρα φωτός .daq                                      |
+| `--format`            | Επιλογή  | TIFF (16-bit)  | Μορφή εξόδου: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
+| `--min-target-size`   | Ακέραιος | Αυτόματο           | Ελάχιστο μέγεθος στόχου σε εικονοστοιχεία για την ανίχνευση του πίνακα βαθμονόμησης                          |
+| `--target-clustering` | Ακέραιος | Αυτόματο           | Όριο ομαδοποίησης στόχων (0-100)                                                    |
+| `--exposure-pin-1`    | String  | Κανένα           | Κλείδωμα έκθεσης για μοντέλο κάμερας (Pin 1)                                                 |
+| `--exposure-pin-2`    | String  | Κανένα           | Κλείδωμα έκθεσης για μοντέλο κάμερας (Pin 2)                                                 |
+| `--recal-interval`    | Ακέραιος | Αυτόματο           | Διάστημα επαναβαθμονόμησης σε δευτερόλεπτα                                                      |
+| `--timezone-offset`   | Ακέραιος | 0              | Διαφορά ζώνης ώρας σε ώρες                                                               |
 
 ***
 
-### `login` - Authenticate Account
+### `login` - Έλεγχος ταυτότητας λογαριασμού
 
-Login with your Chloros+ credentials to enable CLI processing.
+Συνδεθείτε με τα διαπιστευτήριά σας Chloros+ για να ενεργοποιήσετε την επεξεργασία CLI.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli login <email> <password>
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
+{% hint style=&quot;warning&quot; %}
+**Ειδικοί χαρακτήρες**: Χρησιμοποιήστε απλά εισαγωγικά γύρω από κωδικούς πρόσβασης που περιέχουν χαρακτήρες όπως `$`, `!` ή κενά.
 {% endhint %}
 
-**Output:**
+**Έξοδος:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
-***
+### `logout` - Εκκαθάριση διαπιστευτηρίων
 
-### `logout` - Clear Credentials
+Εκκαθαρίστε τα αποθηκευμένα διαπιστευτήρια και αποσυνδεθείτε από τον λογαριασμό σας.
 
-Clear stored credentials and logout from your account.
-
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli logout
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli logout
 ```
 
-**Output:**
+**Έξοδος:**
 
 ```
 ✓ Logout successful
@@ -166,23 +162,23 @@ chloros-cli logout
 
 ***
 
-### `status` - Check License Status
+### `status` - Έλεγχος κατάστασης άδειας χρήσης
 
-Display current license and authentication status.
+Εμφάνιση της τρέχουσας άδειας χρήσης και της κατάστασης ελέγχου ταυτότητας.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli status
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli status
 ```
 
-**Output:**
+**Έξοδος:**
 
 ```
 ╔══════════════════════════════════════╗
@@ -197,31 +193,31 @@ chloros-cli status
 
 ***
 
-### `export-status` - Check Export Progress
+### `export-status` - Έλεγχος προόδου εξαγωγής
 
-Monitor Thread 4 export progress during or after processing.
+Παρακολούθηση της προόδου εξαγωγής του νήματος 4 κατά τη διάρκεια ή μετά την επεξεργασία.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli export-status
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli export-status
 ```
 
-**Use Case:** Call this command while processing is running to check export progress.
+**Περίπτωση χρήσης:** Καλέστε αυτήν την εντολή ενώ εκτελείται η επεξεργασία για να ελέγξετε την πρόοδο της εξαγωγής.
 
 ***
 
-### `language` - Manage Interface Language
+### `language` - Διαχείριση γλώσσας διεπαφής
 
-View or change the CLI interface language.
+Προβολή ή αλλαγή της γλώσσας διεπαφής CLI.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 # Show current language
@@ -234,7 +230,7 @@ chloros-cli language --list
 chloros-cli language <language-code>
 ```
 
-**Examples:**
+**Παραδείγματα:**
 
 ```powershell
 # View current language
@@ -250,66 +246,66 @@ chloros-cli language es
 chloros-cli language ja
 ```
 
-#### Supported Languages (38 Total)
+#### Υποστηριζόμενες γλώσσες (38 συνολικά)
 
-| Code    | Language              | Native Name      |
+| Κωδικός    | Γλώσσα              | Εγγενής ονομασία      |
 | ------- | --------------------- | ---------------- |
-| `en`    | English               | English          |
-| `es`    | Spanish               | Español          |
-| `pt`    | Portuguese            | Português        |
-| `fr`    | French                | Français         |
-| `de`    | German                | Deutsch          |
-| `it`    | Italian               | Italiano         |
-| `ja`    | Japanese              | 日本語              |
-| `ko`    | Korean                | 한국어              |
-| `zh`    | Chinese (Simplified)  | 简体中文             |
-| `zh-TW` | Chinese (Traditional) | 繁體中文             |
-| `ru`    | Russian               | Русский          |
-| `nl`    | Dutch                 | Nederlands       |
-| `ar`    | Arabic                | العربية          |
-| `pl`    | Polish                | Polski           |
-| `tr`    | Turkish               | Türkçe           |
-| `hi`    | Hindi                 | हिंदी            |
-| `id`    | Indonesian            | Bahasa Indonesia |
-| `vi`    | Vietnamese            | Tiếng Việt       |
-| `th`    | Thai                  | ไทย              |
-| `sv`    | Swedish               | Svenska          |
-| `da`    | Danish                | Dansk            |
-| `no`    | Norwegian             | Norsk            |
-| `fi`    | Finnish               | Suomi            |
-| `el`    | Greek                 | Ελληνικά         |
-| `cs`    | Czech                 | Čeština          |
-| `hu`    | Hungarian             | Magyar           |
-| `ro`    | Romanian              | Română           |
-| `uk`    | Ukrainian             | Українська       |
-| `pt-BR` | Brazilian Portuguese  | Português Brasileiro |
-| `zh-HK` | Cantonese             | 粵語             |
-| `ms`    | Malay                 | Bahasa Melayu    |
-| `sk`    | Slovak                | Slovenčina       |
-| `bg`    | Bulgarian             | Български        |
-| `hr`    | Croatian              | Hrvatski         |
-| `lt`    | Lithuanian            | Lietuvių         |
-| `lv`    | Latvian               | Latviešu         |
-| `et`    | Estonian              | Eesti            |
-| `sl`    | Slovenian             | Slovenščina      |
+| `en`    | Αγγλικά               | English          |
+| `es`    | Ισπανικά               | Español          |
+| `pt`    | Πορτογαλικά            | Português        |
+| `fr`    | Γαλλικά                | Français         |
+| `de`    | Γερμανικά                | Deutsch          |
+| `it`    | Ιταλικά               | Italiano         |
+| `ja`    | Ιαπωνικά              | 日本語              |
+| `ko`    | Κορεατικά                | 한국어              |
+| `zh`    | Κινέζικα (απλοποιημένα)  | 简体中文             |
+| `zh-TW` | Κινέζικα (παραδοσιακά) | 繁體中文             |
+| `ru`    | Ρωσικά               | Русский          |
+| `nl`    | Ολλανδικά                 | Nederlands       |
+| `ar`    | Αραβικά                | العربية          |
+| `pl`    | Πολωνικά                | Polski           |
+| `tr`    | Τουρκικά               | Türkçe           |
+| `hi`    | Χίντι                 | हिंदी            |
+| `id`    | Ινδονησιακά            | Bahasa Indonesia |
+| `vi`    | Βιετναμέζικα            | Tiếng Việt       |
+| `th`    | Ταϊλανδικά                  | ไทย              |
+| `sv`    | Σουηδικά               | Svenska          |
+| `da`    | Δανικά                | Dansk            |
+| `no`    | Νορβηγικά             | Norsk            |
+| `fi`    | Φινλανδικά               | Suomi            |
+| `el`    | Ελληνικά                 | Ελληνικά         |
+| `cs`    | Τσεχικά                 | Čeština          |
+| `hu`    | Ουγγρικά             | Magyar           |
+| `ro`    | Ρουμανικά              | Română           |
+| `uk`    | Ουκρανικά             | Українська       |
+| `pt-BR` | Βραζιλιάνικα πορτογαλικά  | Português Brasileiro |
+| `zh-HK` | Καντονέζικα             | 粵語             |
+| `ms`    | Μαλαισιανά                 | Bahasa Melayu    |
+| `sk`    | Σλοβακικά                | Slovenčina       |
+| `bg`    | Βουλγαρικά             | Български        |
+| `hr`    | Κροατικά              | Hrvatski         |
+| `lt`    | Λιθουανικά            | Lietuvių         |
+| `lv`    | Λετονικά               | Latviešu         |
+| `et`    | Εσθονικά              | Eesti            |
+| `sl`    | Σλοβενικά             | Slovenščina      |
 
-{% hint style="success" %}
-**Automatic Persistence**: Your language preference is saved to `~/.chloros/cli_language.json` and persists across all sessions.
+{% hint style=&quot;success&quot; %}
+**Αυτόματη διατήρηση**: Η προτίμηση γλώσσας σας αποθηκεύεται στο `~/.chloros/cli_language.json` και διατηρείται σε όλες τις συνεδρίες.
 {% endhint %}
 
 ***
 
-### `set-project-folder` - Set Default Project Folder
+### `set-project-folder` - Ορισμός προεπιλεγμένου φακέλου έργου
 
-Change the default project folder location (shared with GUI).
+Αλλάξτε την προεπιλεγμένη θέση του φακέλου έργου (κοινή με το GUI).
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli set-project-folder <folder-path>
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli set-project-folder "C:\Projects\2025"
@@ -317,23 +313,23 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Show Project Folder
+### `get-project-folder` - Εμφάνιση φακέλου έργου
 
-Display the current default project folder location.
+Εμφάνιση της τρέχουσας προεπιλεγμένης θέσης του φακέλου έργου.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli get-project-folder
 ```
 
-**Example:**
+**Παράδειγμα:**
 
 ```powershell
 chloros-cli get-project-folder
 ```
 
-**Output:**
+**Έξοδος:**
 
 ```
 ℹ Current project folder: C:\Projects\2025
@@ -341,11 +337,11 @@ chloros-cli get-project-folder
 
 ***
 
-### `reset-project-folder` - Reset to Default
+### `reset-project-folder` - Επαναφορά στην προεπιλογή
 
-Reset the project folder to the default location.
+Επαναφορά του φακέλου έργου στην προεπιλεγμένη θέση.
 
-**Syntax:**
+**Σύνταξη:**
 
 ```bash
 chloros-cli reset-project-folder
@@ -353,19 +349,19 @@ chloros-cli reset-project-folder
 
 ***
 
-## Global Options
+## Παγκόσμιες επιλογές
 
-These options apply to all commands:
+Αυτές οι επιλογές ισχύουν για όλες τις εντολές:
 
-| Option          | Type    | Default       | Description                                      |
+| Επιλογή          | Τύπος    | Προεπιλογή       | Περιγραφή                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
-| `--backend-exe` | Path    | Auto-detected | Path to backend executable                       |
-| `--port`        | Integer | 5000          | Backend API port number                          |
-| `--restart`     | Flag    | -             | Force restart backend (kills existing processes) |
-| `--version`     | Flag    | -             | Show version information and exit                |
-| `--help`        | Flag    | -             | Show help information and exit                   |
+| `--backend-exe` | Διαδρομή    | Αυτόματη ανίχνευση | Διαδρομή προς το εκτελέσιμο αρχείο του backend                       |
+| `--port`        | Ακέραιος αριθμός | 5000          | Αριθμός θύρας του backend API                          |
+| `--restart`     | Σημαία    | -             | Αναγκαστική επανεκκίνηση του backend (τερματίζει τις υπάρχουσες διεργασίες) |
+| `--version`     | Σημαία    | -             | Εμφάνιση πληροφοριών έκδοσης και έξοδος                |
+| `--help`        | Σημαία    | -             | Εμφάνιση πληροφοριών βοήθειας και έξοδος                   |
 
-**Example with Global Options:**
+**Παράδειγμα με καθολικές επιλογές:**
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Survey_001"
@@ -373,80 +369,78 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ***
 
-## Processing Settings Guide
+## Οδηγός ρυθμίσεων επεξεργασίας
 
-### Parallel Processing
+### Παράλληλη επεξεργασία
 
-Chloros+ CLI **automatically scales** parallel processing to match your computer's capabilities:
+Chloros+ CLI **αυτοματοποιεί την κλιμάκωση** της παράλληλης επεξεργασίας ώστε να ταιριάζει με τις δυνατότητες του υπολογιστή σας:
 
-**How It Works:**
+**Πώς λειτουργεί:**
 
-* Detects your CPU cores and RAM
-* Allocates workers: **2× CPU cores** (uses hyperthreading)
-* **Maximum: 16 parallel workers** (for stability)
+* Ανιχνεύει τους πυρήνες της CPU και τη μνήμη RAM
+* Κατανομή εργαζομένων: **2× πυρήνες CPU** (χρησιμοποιεί hyperthreading)
+* **Μέγιστο: 16 παράλληλοι εργαζόμενοι** (για σταθερότητα)
 
-**System Tiers:**
+**Επίπεδα συστήματος:**
 
-| System Type   | CPU        | RAM      | Workers  | Performance     |
+| Τύπος συστήματος   | CPU        | RAM      | Εργαζόμενοι  | Απόδοση     |
 | ------------- | ---------- | -------- | -------- | --------------- |
-| **High-End**  | 16+ cores  | 32+ GB   | Up to 16 | Maximum speed   |
-| **Mid-Range** | 8-15 cores | 16-31 GB | 8-16     | Excellent speed |
-| **Low-End**   | 4-7 cores  | 8-15 GB  | 4-8      | Good speed      |
+| **Υψηλής απόδοσης**  | 16+ πυρήνες  | 32+ GB   | Έως 16 | Μέγιστη ταχύτητα   |
+| **Μεσαίας κατηγορίας** | 8-15 πυρήνες | 16-31 GB | 8-16     | Εξαιρετική ταχύτητα |
+| **Χαμηλής κατηγορίας**   | 4-7 πυρήνες  | 8-15 GB  | 4-8      | Καλή ταχύτητα      |
 
-{% hint style="success" %}
-**Automatic Optimization**: The CLI automatically detects your system specs and configures optimal parallel processing. No manual configuration needed!
+{% hint style=&quot;success&quot; %}
+**Αυτόματη βελτιστοποίηση**: Το CLI ανιχνεύει αυτόματα τις προδιαγραφές του συστήματός σας και διαμορφώνει τη βέλτιστη παράλληλη επεξεργασία. Δεν απαιτείται χειροκίνητη διαμόρφωση!
 {% endhint %}
 
-### Debayer Methods
+### Μέθοδοι Debayer
 
-The CLI uses **High Quality (Faster)** as the default and recommended debayer algorithm:
+Το CLI χρησιμοποιεί **Υψηλή ποιότητα (ταχύτερη)** ως τον προεπιλεγμένο και συνιστώμενο αλγόριθμο debayer:
 
-| Method                      | Quality | Speed | Description                                 |
+| Μέθοδος                      | Ποιότητα | Ταχύτητα | Περιγραφή                                 |
 | --------------------------- | ------- | ----- | ------------------------------------------- |
-| **High Quality (Faster)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Edge-aware algorithm (default, recommended) |
+| **Υψηλή ποιότητα (ταχύτερη)** ⭐ | ⭐⭐⭐⭐    | ⚡⚡⚡   | Αλγόριθμος ευαισθησίας στις άκρες (προεπιλεγμένος, συνιστώμενος) |
 
-### Vignette Correction
+### Διόρθωση βινιέτας
 
-**What it does:** Corrects light falloff at image edges (darker corners common in camera imagery).
+**Τι κάνει:** Διορθώνει την πτώση του φωτός στις άκρες της εικόνας (σκούρες γωνίες που είναι συνηθισμένες στις εικόνες της κάμερας).
 
-* **Enabled by default** - Most users should keep this enabled
-* Use `--no-vignette` to disable
+* **Ενεργοποιημένη από προεπιλογή** - Οι περισσότεροι χρήστες θα πρέπει να την διατηρήσουν ενεργοποιημένη
+* Χρησιμοποιήστε `--no-vignette` για να την απενεργοποιήσετε
 
-{% hint style="success" %}
-**Recommendation**: Always enable vignette correction to ensure uniform brightness across the frame.
+{% hint style=&quot;success&quot; %}
+**Σύσταση**: Ενεργοποιείτε πάντα τη διόρθωση βινιέτας για να εξασφαλίσετε ομοιόμορφη φωτεινότητα σε όλο το κάδρο.
 {% endhint %}
 
-### Reflectance Calibration
+### Βαθμονόμηση ανακλαστικότητας
 
-Converts raw sensor values to standardized reflectance percentages using calibration panels.
+Μετατρέπει τις ακατέργαστες τιμές του αισθητήρα σε τυποποιημένα ποσοστά ανακλαστικότητας χρησιμοποιώντας πίνακες βαθμονόμησης.
 
-* **Enabled by default** - Essential for vegetation analysis
-* Requires calibration target panels in images
-* Use `--no-reflectance` to disable
+* **Ενεργοποιημένη από προεπιλογή** - Απαραίτητη για την ανάλυση της βλάστησης.
+* Απαιτεί πάνελ στόχων βαθμονόμησης στις εικόνες.
+* Χρησιμοποιήστε το `--no-reflectance` για να την απενεργοποιήσετε.
 
-{% hint style="info" %}
-**Requirements**: Ensure calibration panels are properly exposed and visible in your images for accurate reflectance conversion.
+{% hint style=&quot;info&quot; %}
+**Απαιτήσεις**: Βεβαιωθείτε ότι τα πάνελ βαθμονόμησης είναι σωστά εκτεθειμένα και ορατά στις εικόνες σας για ακριβή μετατροπή της ανακλαστικότητας.
 {% endhint %}
 
-### PPK Corrections
+### Διορθώσεις PPK
 
-**What it does:** Applies Post-Processed Kinematic corrections using DAQ-A-SD log data for improved GPS accuracy.
+**Τι κάνει:** Εφαρμόζει διορθώσεις Post-Processed Kinematic χρησιμοποιώντας δεδομένα καταγραφής DAQ-A-SD για βελτιωμένη ακρίβεια GPS.
 
-* **Disabled by default**
-* Use `--ppk` to enable
-* Requires .daq files in project folder from MAPIR DAQ-A-SD light sensor.
+* **Απενεργοποιημένο από προεπιλογή**
+* Χρησιμοποιήστε το `--ppk` για να το ενεργοποιήσετε
+* Απαιτεί αρχεία .daq στο φάκελο του έργου από τον αισθητήρα φωτός MAPIR DAQ-A-SD.
 
-### Output Formats
+### Μορφές εξόδου
 
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Bit Depth</th><th width="116.5999755859375">File Size</th><th>Best For</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit integer</td><td>Large</td><td>GIS analysis, photogrammetry (recommended)</td></tr><tr><td><strong>TIFF (32-bit, Percent)</strong></td><td>32-bit float</td><td>Very Large</td><td>Scientific analysis, research</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit integer</td><td>Medium</td><td>Visual inspection, web sharing</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>8-bit integer</td><td>Small</td><td>Quick preview, compressed output</td></tr></tbody></table>
+<table><thead><tr><th width="197">Μορφή</th><th width="130.20001220703125">Βάθος bit</th><th width="116.5999755859375">Μέγεθος αρχείου</th><th>Κατάλληλο για</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>16-bit ακέραιος</td><td>Μεγάλο</td><td>Ανάλυση GIS, φωτογραμμετρία (συνιστάται)</td></tr><tr><td><strong>TIFF (32-bit, Ποσοστό)</strong></td><td>32-bit float</td><td>Πολύ μεγάλος</td><td>Επιστημονική ανάλυση, έρευνα</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>8-bit ακέραιος</td><td>Μεσαία</td><td>Οπτική επιθεώρηση, κοινή χρήση στο διαδίκτυο</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>Ολοκληρωμένος αριθμός 8 bit</td><td>Μικρό</td><td>Γρήγορη προεπισκόπηση, συμπιεσμένη έξοδος</td></tr></tbody></table>***
 
-***
+## Αυτοματοποίηση και δημιουργία σεναρίων
 
-## Automation & Scripting
+### Μαζική επεξεργασία PowerShell
 
-### PowerShell Batch Processing
-
-Process multiple dataset folders automatically:
+Αυτόματη επεξεργασία πολλαπλών φακέλων δεδομένων:
 
 ```powershell
 # process_all_datasets.ps1
@@ -470,9 +464,9 @@ foreach ($dataset in $datasets) {
 Write-Host "All datasets processed!" -ForegroundColor Green
 ```
 
-### Windows Batch Script
+### Windows Σενάριο μαζικής επεξεργασίας
 
-Simple loop for batch processing:
+Απλός βρόχος για μαζική επεξεργασία:
 
 ```batch
 @echo off
@@ -497,9 +491,9 @@ echo All datasets processed!
 pause
 ```
 
-### Python Automation Script
+### Python Σενάριο αυτοματοποίησης
 
-Advanced automation with error handling:
+Προηγμένη αυτοματοποίηση με διαχείριση σφαλμάτων:
 
 ```python
 import subprocess
@@ -578,16 +572,16 @@ if __name__ == '__main__':
 
 ***
 
-## Processing Workflow
+## Ροή εργασίας επεξεργασίας
 
-### Standard Workflow
+### Τυπική ροή εργασίας
 
-1. **Input**: Folder containing RAW/JPG image pairs
-2. **Discovery**: CLI auto-scans for supported image files
-3. **Processing**: Parallel mode scales to your CPU cores (Chloros+)
-4. **Output**: Creates camera-model subfolders with processed images
+1. **Εισαγωγή**: Φάκελος που περιέχει ζεύγη εικόνων RAW/JPG
+2. **Ανακάλυψη**: Το CLI σαρώνει αυτόματα τα υποστηριζόμενα αρχεία εικόνων
+3. **Επεξεργασία**: Η παράλληλη λειτουργία προσαρμόζεται στους πυρήνες της CPU σας (Chloros+)
+4. **Έξοδος**: Δημιουργεί υποφακέλους μοντέλων κάμερας με τις επεξεργασμένες εικόνες
 
-### Example Output Structure
+### Παράδειγμα δομής εξόδου
 
 ```
 MyProject/
@@ -600,72 +594,72 @@ MyProject/
     └── ...
 ```
 
-### Processing Time Estimates
+### Εκτιμήσεις χρόνου επεξεργασίας
 
-Typical processing times for 100 images (12MP each):
+Τυπικοί χρόνοι επεξεργασίας για 100 εικόνες (12MP η καθεμία):
 
-| Mode              | Time      | Hardware                                     |
+| Λειτουργία              | Χρόνος      | Υλικό                                     |
 | ----------------- | --------- | -------------------------------------------- |
-| **Parallel Mode** | 5-10 min  | i7/Ryzen 7, 16GB RAM, SSD (up to 16 workers) |
-| **Parallel Mode** | 10-15 min | i5/Ryzen 5, 8GB RAM, HDD (up to 8 workers)   |
+| **Παράλληλη λειτουργία** | 5-10 λεπτά  | i7/Ryzen 7, 16 GB RAM, SSD (έως 16 εργαζόμενοι) |
+| **Παράλληλη λειτουργία** | 10-15 λεπτά | i5/Ryzen 5, 8 GB RAM, HDD (έως 8 εργαζόμενοι)   |
 
-{% hint style="info" %}
-**Performance Tip**: Processing time varies based on image count, resolution, and computer specs.
+{% hint style=&quot;info&quot; %}
+**Συμβουλή απόδοσης**: Ο χρόνος επεξεργασίας ποικίλλει ανάλογα με τον αριθμό των εικόνων, την ανάλυση και τις προδιαγραφές του υπολογιστή.
 {% endhint %}
 
 ***
 
-## Troubleshooting
+## Αντιμετώπιση προβλημάτων
 
-### CLI Not Found
+### CLI Δεν βρέθηκε
 
-**Error:**
+**Σφάλμα:**
 
 ```
 'chloros-cli' is not recognized as an internal or external command
 ```
 
-**Solutions:**
+**Λύσεις:**
 
-1. Verify installation location:
+1. Επαληθεύστε τη θέση εγκατάστασης:
 
 ```powershell
 dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 ```
 
-2. Use full path if not in PATH:
+2. Χρησιμοποιήστε την πλήρη διαδρομή εάν δεν βρίσκεται στο PATH:
 
 ```powershell
 "C:\Program Files\Chloros\resources\cli\chloros-cli.exe" process "C:\Datasets\Field_A"
 ```
 
-3. Add to PATH manually:
-   * Open System Properties → Environment Variables
-   * Edit PATH variable
-   * Add: `C:\Program Files\Chloros\resources\cli`
-   * Restart terminal
+3. Προσθέστε στο PATH χειροκίνητα:
+   * Ανοίξτε τις Ιδιότητες συστήματος → Μεταβλητές περιβάλλοντος
+   * Επεξεργαστείτε τη μεταβλητή PATH
+   * Προσθέστε: `C:\Program Files\Chloros\resources\cli`
+   * Επανεκκινήστε το τερματικό
 
 ***
 
-### Backend Failed to Start
+### Αποτυχία εκκίνησης του backend
 
-**Error:**
+**Σφάλμα:**
 
 ```
 Backend failed to start within 30 seconds
 ```
 
-**Solutions:**
+**Λύσεις:**
 
-1. Check if backend already running (close it first)
-2. Check Windows Firewall is not blocking
-3. Try different port:
+1. Ελέγξτε αν το backend εκτελείται ήδη (κλείστε το πρώτα)
+2. Ελέγξτε ότι το Windows Firewall δεν το εμποδίζει
+3. Δοκιμάστε διαφορετική θύρα:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
 ```
 
-4. Force restart backend:
+4. Αναγκάστε την επανεκκίνηση του backend:
 
 ```powershell
 chloros-cli --restart process "C:\Datasets\Field_A"
@@ -673,71 +667,71 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### License / Authentication Issues
+### Προβλήματα άδειας χρήσης/αυθεντικοποίησης
 
-**Error:**
+**Σφάλμα:**
 
 ```
 Chloros+ license required for CLI access
 ```
 
-**Solutions:**
+**Λύσεις:**
 
-1. Verify you have an active Chloros+ subscription
-2. Login with your credentials:
+1. Βεβαιωθείτε ότι έχετε ενεργή συνδρομή Chloros+
+2. Συνδεθείτε με τα διαπιστευτήριά σας:
 
 ```powershell
 chloros-cli login user@example.com 'password'
 ```
 
-3. Check license status:
+3. Ελέγξτε την κατάσταση της άδειας χρήσης:
 
 ```powershell
 chloros-cli status
 ```
 
-4. Contact support: info@mapir.camera
+4. Επικοινωνήστε με την υποστήριξη: info@mapir.camera
 
 ***
 
-### No Images Found
+### Δεν βρέθηκαν εικόνες
 
-**Error:**
+**Σφάλμα:**
 
 ```
 No images found in the specified folder
 ```
 
-**Solutions:**
+**Λύσεις:**
 
-1. Verify folder contains supported formats (.RAW, .TIF, .JPG)
-2. Check folder path is correct (use quotes for paths with spaces)
-3. Ensure you have read permissions for the folder
-4. Check file extensions are correct
-
-***
-
-### Processing Stalls or Hangs
-
-**Solutions:**
-
-1. Check available disk space (ensure enough for output)
-2. Close other applications to free memory
-3. Reduce image count (process in batches)
+1. Βεβαιωθείτε ότι ο φάκελος περιέχει υποστηριζόμενες μορφές (.RAW, .TIF, .JPG)
+2. Ελέγξτε ότι η διαδρομή του φακέλου είναι σωστή (χρησιμοποιήστε εισαγωγικά για διαδρομές με κενά)
+3. Βεβαιωθείτε ότι έχετε δικαιώματα ανάγνωσης για το φάκελο.
+4. Ελέγξτε ότι οι επεκτάσεις αρχείων είναι σωστές.
 
 ***
 
-### Port Already in Use
+### Η επεξεργασία σταματά ή κολλάει
 
-**Error:**
+**Λύσεις:**
+
+1. Ελέγξτε τον διαθέσιμο χώρο στο δίσκο (βεβαιωθείτε ότι είναι αρκετός για την έξοδο).
+2. Κλείστε άλλες εφαρμογές για να ελευθερώσετε μνήμη.
+3. Μειώστε τον αριθμό των εικόνων (επεξεργαστείτε τις σε παρτίδες).
+
+***
+
+### Η θύρα χρησιμοποιείται ήδη
+
+**Σφάλμα:**
 
 ```
 Port 5000 is already in use
 ```
 
-**Solution:**
+**Λύση:**
 
-Specify a different port:
+Καθορίστε μια διαφορετική θύρα:
 
 ```powershell
 chloros-cli --port 5001 process "C:\Datasets\Field_A"
@@ -745,35 +739,35 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ***
 
-## FAQ
+## Συχνές ερωτήσεις
 
-### Q: Do I need a license for the CLI?
+### Ε: Χρειάζομαι άδεια χρήσης για το CLI;
 
-**A:** Yes! The CLI requires a paid **Chloros+ license**.
+**Α:** Ναι! Το CLI απαιτεί μια πληρωμένη **άδεια Chloros+**.
 
-* ❌ Standard (free) plan: CLI disabled
-* ✅ Chloros+ (paid) plans: CLI fully enabled
+* ❌ Πρότυπο (δωρεάν) πρόγραμμα: CLI απενεργοποιημένο
+* ✅ Πακέτα Chloros+ (επί πληρωμή): CLI πλήρως ενεργοποιημένο
 
-Subscribe at: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
-
-### Q: Can I use the CLI on a server without GUI?
-
-**A:** Yes! The CLI runs completely headless. Requirements:
-
-* Windows Server 2016 or later
-* Visual C++ Redistributable installed
-* Sufficient RAM (8GB minimum, 16GB recommended)
-* One-time GUI license activation on any machine
+Εγγραφείτε στο: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-### Q: Where are processed images saved?
+### Ε: Μπορώ να χρησιμοποιήσω το CLI σε έναν διακομιστή χωρίς GUI;
 
-**A:** By default, processed images are saved in the **same folder as input** in camera-model subfolders (e.g., `Survey3N_RGN/`).
+**Α:** Ναι! Το CLI λειτουργεί εντελώς χωρίς οθόνη. Απαιτήσεις:
 
-Use `-o` option to specify different output folder:
+* Windows Server 2016 ή νεότερη έκδοση
+* Εγκατεστημένο Visual C++ Redistributable
+* Επαρκής μνήμη RAM (ελάχιστο 8 GB, συνιστάται 16 GB)
+* Μία ενεργοποίηση άδειας GUI σε οποιονδήποτε υπολογιστή
+
+***
+
+### Ε: Πού αποθηκεύονται οι επεξεργασμένες εικόνες;
+
+**Α:** Από προεπιλογή, οι επεξεργασμένες εικόνες αποθηκεύονται στον **ίδιο φάκελο με την είσοδο** σε υποφακέλους μοντέλων κάμερας (π.χ. `Survey3N_RGN/`).
+
+Χρησιμοποιήστε την επιλογή `-o` για να καθορίσετε διαφορετικό φάκελο εξόδου:
 
 ```powershell
 chloros-cli process "C:\Input" -o "D:\Output"
@@ -781,13 +775,13 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### Q: Can I process multiple folders at once?
+### Ε: Μπορώ να επεξεργαστώ πολλούς φακέλους ταυτόχρονα;
 
-**A:** Not directly in one command, but you can use scripting to process folders sequentially. See [Automation & Scripting](CLI.md#automation--scripting) section.
+**Α:** Όχι απευθείας με μία εντολή, αλλά μπορείτε να χρησιμοποιήσετε σενάρια για να επεξεργαστείτε τους φακέλους διαδοχικά. Ανατρέξτε στην ενότητα [Αυτοματοποίηση και σενάρια](CLI.md#automation--scripting).
 
 ***
 
-### Q: How do I save CLI output to a log file?
+### Ε: Πώς μπορώ να αποθηκεύσω την έξοδο CLI σε ένα αρχείο καταγραφής;
 
 **PowerShell:**
 
@@ -803,33 +797,33 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 ***
 
-### Q: What happens if I press Ctrl+C during processing?
+### Ε: Τι συμβαίνει αν πατήσω Ctrl+C κατά τη διάρκεια της επεξεργασίας;
 
-**A:** The CLI will:
+**Α:** Το CLI θα:
 
-1. Stop processing gracefully
-2. Shut down the backend
-3. Exit with code 130
+1. Σταματήσει την επεξεργασία ομαλά
+2. Κλείσει το backend
+3. Κλείσει με κωδικό 130
 
-Partially processed images may remain in the output folder.
-
-***
-
-### Q: Can I automate CLI processing?
-
-**A:** Absolutely! The CLI is designed for automation. See [Automation & Scripting](CLI.md#automation--scripting) for PowerShell, Batch, and Python examples.
+Εικόνες που έχουν υποστεί μερική επεξεργασία ενδέχεται να παραμείνουν στον φάκελο εξόδου.
 
 ***
 
-### Q: How do I check the CLI version?
+### Ε: Μπορώ να αυτοματοποιήσω την επεξεργασία του CLI;
 
-**A:**
+**Α:** Φυσικά! Το CLI έχει σχεδιαστεί για αυτοματοποίηση. Δείτε [Αυτοματοποίηση &amp; Σενάρια](CLI.md#automation--scripting) για παραδείγματα PowerShell, Batch και Python.
+
+***
+
+### Ε: Πώς μπορώ να ελέγξω την έκδοση CLI;
+
+**Α:**
 
 ```powershell
 chloros-cli --version
 ```
 
-**Output:**
+**Έξοδος:**
 
 ```
 Chloros CLI 1.0.2
@@ -837,11 +831,11 @@ Chloros CLI 1.0.2
 
 ***
 
-## Getting Help
+## Λήψη βοήθειας
 
-### Command-Line Help
+### Βοήθεια γραμμής εντολών
 
-View help information directly in the CLI:
+Δείτε τις πληροφορίες βοήθειας απευθείας στο CLI:
 
 ```powershell
 # General help
@@ -853,19 +847,19 @@ chloros-cli login --help
 chloros-cli language --help
 ```
 
-### Support Channels
+### Κανάλια υποστήριξης
 
-* **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **Ηλεκτρονικό ταχυδρομείο**: info@mapir.camera
+* **Ιστοσελίδα**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Τιμές**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-## Complete Examples
+## Πλήρη παραδείγματα
 
-### Example 1: Basic Processing
+### Παράδειγμα 1: Βασική επεξεργασία
 
-Process with default settings (vignette, reflectance):
+Επεξεργασία με προεπιλεγμένες ρυθμίσεις (βινιέτα, ανακλαστικότητα):
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A_2025_01_15"
@@ -873,7 +867,7 @@ chloros-cli process "C:\Datasets\Field_A_2025_01_15"
 
 ***
 
-### Example 2: High-Quality Scientific Output
+### Παράδειγμα 2: Επιστημονικά αποτελέσματα υψηλής ποιότητας
 
 32-bit float TIFF:
 
@@ -886,9 +880,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 3: Fast Preview Processing
+### Παράδειγμα 3: Γρήγορη επεξεργασία προεπισκόπησης
 
-8-bit PNG without calibration for quick review:
+8-bit PNG χωρίς βαθμονόμηση για γρήγορη αναθεώρηση:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -899,9 +893,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 4: PPK-Corrected Processing
+### Παράδειγμα 4: Επεξεργασία με διόρθωση PPK
 
-Apply PPK corrections with reflectance:
+Εφαρμογή διορθώσεων PPK με ανακλαστικότητα:
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" ^
@@ -911,9 +905,9 @@ chloros-cli process "C:\Datasets\Field_A" ^
 
 ***
 
-### Example 5: Custom Output Location
+### Παράδειγμα 5: Προσαρμοσμένη θέση εξόδου
 
-Process to different drive with specific format:
+Επεξεργασία σε διαφορετικό δίσκο με συγκεκριμένη μορφή:
 
 ```powershell
 chloros-cli process "C:\Input\Raw_Images" ^
@@ -923,9 +917,9 @@ chloros-cli process "C:\Input\Raw_Images" ^
 
 ***
 
-### Example 6: Authentication Workflow
+### Παράδειγμα 6: Ροή εργασίας πιστοποίησης
 
-Complete authentication flow:
+Ολοκλήρωση ροής πιστοποίησης:
 
 ```powershell
 # Step 1: Login
@@ -943,9 +937,9 @@ chloros-cli logout
 
 ***
 
-### Example 7: Multi-Language Usage
+### Παράδειγμα 7: Χρήση πολλαπλών γλωσσών
 
-Change interface language:
+Αλλαγή γλώσσας διεπαφής:
 
 ```powershell
 # List available languages

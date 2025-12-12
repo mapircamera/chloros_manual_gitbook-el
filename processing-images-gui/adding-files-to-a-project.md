@@ -1,204 +1,204 @@
-# Adding Files to a Project
+# Προσθήκη αρχείων σε ένα έργο
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Αφού δημιουργήσετε ή ανοίξετε ένα έργο στο Chloros, το επόμενο βήμα είναι να προσθέσετε τις πολυφασματικές εικόνες σας για να ξεκινήσετε την επεξεργασία. Η καρτέλα File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> διευκολύνει την εισαγωγή εικόνων και τη διαχείριση του συνόλου δεδομένων σας.
 
-## Accessing the File Browser
+## Πρόσβαση στον περιηγητή αρχείων
 
-1. Open or create a project in Chloros
-2. Click the **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The File Browser panel will display your project's file list
+1. Ανοίξτε ή δημιουργήστε ένα έργο στο Chloros
+2. Κάντε κλικ στο εικονίδιο **Περιηγητής αρχείων** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> στην αριστερή πλευρική γραμμή
+3. Ο πίνακας του προγράμματος περιήγησης αρχείων θα εμφανίσει τη λίστα αρχείων του έργου σας
 
-{% hint style="info" %}
-**Supported File Types**: Chloros supports RAW+JPG and JPG image files from MAPIR Survey3W and Survey3N cameras. Only RAW+JPG are recommended.
+{% hint style=&quot;info&quot; %}
+**Υποστηριζόμενοι τύποι αρχείων**: Το Chloros υποστηρίζει αρχεία εικόνων RAW+JPG και JPG από κάμερες MAPIR Survey3W και Survey3N. Συνιστάται μόνο η χρήση RAW+JPG.
 {% endhint %}
 
 ***
 
-## Adding Images to Your Project
+## Προσθήκη εικόνων στο έργο σας
 
-There are two primary ways to add images to your project:
+Υπάρχουν δύο βασικοί τρόποι για να προσθέσετε εικόνες στο έργο σας:
 
-### Method 1: Add Files
+### Μέθοδος 1: Προσθήκη αρχείων
 
-Use this option to import individual image files or a small selection of files.
+Χρησιμοποιήστε αυτήν την επιλογή για να εισαγάγετε μεμονωμένα αρχεία εικόνων ή μια μικρή επιλογή αρχείων.
 
-1. Click the **"Add Files"** button at the top of the File Browser panel
-2. Navigate to the folder containing your images
-3. Select one or more image files (hold **Ctrl** to select multiple files)
-4. Click **"Open"** to import the selected files
+1. Κάντε κλικ στο κουμπί **&quot;Προσθήκη αρχείων&quot;** στο επάνω μέρος του πλαισίου του προγράμματος περιήγησης αρχείων.
+2. Μεταβείτε στο φάκελο που περιέχει τις εικόνες σας.
+3. Επιλέξτε ένα ή περισσότερα αρχεία εικόνων (κρατήστε πατημένο το πλήκτρο **Ctrl** για να επιλέξετε πολλά αρχεία).
+4. Κάντε κλικ στο **&quot;Άνοιγμα&quot;** για να εισαγάγετε τα επιλεγμένα αρχεία.
 
-### Method 2: Add Folder
+### Μέθοδος 2: Προσθήκη φακέλου
 
-Use this option to import all images from a folder at once.
+Χρησιμοποιήστε αυτήν την επιλογή για να εισαγάγετε όλες τις εικόνες από ένα φάκελο ταυτόχρονα.
 
-1. Click the **"Add Folder"** button at the top of the File Browser panel
-2. Navigate to and select the folder containing your capture session images
-3. Click **"Select Folder"** to import all supported images from that folder
-
-***
-
-## Understanding the File Browser Table
-
-Once images are imported, they appear in a table with the following columns:
-
-### Thumbnail
-
-* Small preview of each image
-* Click thumbnail to view full image in the main preview area
-
-### File Name
-
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
-
-### Timestamp
-
-* Date and time the image was captured
-* Extracted from image EXIF metadata
-* Used for PPK synchronization and calibration target detection
-
-### Camera Model
-
-* Automatically detected camera and filter configuration
-* Examples: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Used to apply correct processing profiles
-
-### Target Column (Checkbox)
-
-* Check this box for images that contain calibration targets
-* Greatly speeds up target detection during processing
-* See [Choosing Target Images](choosing-target-images.md) for details
+1. Κάντε κλικ στο κουμπί **&quot;Προσθήκη φακέλου&quot;** στο επάνω μέρος του πίνακα του προγράμματος περιήγησης αρχείων.
+2. Μεταβείτε και επιλέξτε το φάκελο που περιέχει τις εικόνες της συνεδρίας λήψης.
+3. Κάντε κλικ στο **&quot;Επιλογή φακέλου&quot;** για να εισαγάγετε όλες τις υποστηριζόμενες εικόνες από αυτόν το φάκελο.
 
 ***
 
-## Managing Files in Your Project
+## Κατανόηση του πίνακα του προγράμματος περιήγησης αρχείων
 
-### Removing Files
+Μόλις εισαχθούν οι εικόνες, εμφανίζονται σε έναν πίνακα με τις ακόλουθες στήλες:
 
-To remove unwanted images from your project:
+### Μικρογραφία
 
-1. Select one or more images in the File Browser table
-2. Click the **"Remove Selected"** button
-3. Confirm removal (files are not deleted from disk, only removed from the project)
+* Μικρή προεπισκόπηση κάθε εικόνας
+* Κάντε κλικ στη μικρογραφία για να δείτε την πλήρη εικόνα στην κύρια περιοχή προεπισκόπησης
 
-### Sorting and Filtering
+### Όνομα αρχείου
 
-* **Sort by column**: Click any column header to sort images
-* **Timestamp sort**: Useful for organizing chronological capture sequences
-* **Camera model filter**: Group images by camera type if using multiple cameras
+* Αρχικό όνομα αρχείου από την κάμερα
+* Διατηρεί τη σύμβαση ονοματολογίας της κάμερας (π.χ. IMG\_0001.RAW)
 
-***
+### Χρονοσφραγίδα
 
-## Image Preview
+* Ημερομηνία και ώρα λήψης της εικόνας
+* Εξάγεται από τα μεταδεδομένα EXIF της εικόνας
+* Χρησιμοποιείται για συγχρονισμό PPK και ανίχνευση στόχου βαθμονόμησης
 
-### Viewing Full Image
+### Μοντέλο κάμερας
 
-Click any image thumbnail in the File Browser to display it in the main preview area:
+* Αυτόματη ανίχνευση κάμερας και διαμόρφωσης φίλτρου
+* Παραδείγματα: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
+* Χρησιμοποιείται για την εφαρμογή σωστών προφίλ επεξεργασίας
 
-1. Image appears in the center preview panel
-2. Use zoom controls to inspect image details
-3. Navigate between images using arrow keys
+### Στήλη στόχου (πλαίσιο ελέγχου)
 
-### Quick Navigation
-
-* **Previous Image**: Click left arrow or press ← key
-* **Next Image**: Click right arrow or press → key
-* **Zoom In/Out**: Use mouse wheel or zoom buttons
-* **Pan**: Click and drag on image when zoomed in
+* Επιλέξτε αυτό το πλαίσιο για εικόνες που περιέχουν στόχους βαθμονόμησης
+* Επιταχύνει σημαντικά την ανίχνευση στόχων κατά τη διάρκεια της επεξεργασίας
+* Δείτε [Επιλογή εικόνων στόχων](choosing-target-images.md) για λεπτομέρειες
 
 ***
 
-## Duplicate File Handling
+## Διαχείριση αρχείων στο έργο σας
 
-Chloros automatically detects and ignores duplicate files:
+### Κατάργηση αρχείων
 
-* Files with identical filenames are skipped
-* Prevents accidental double-processing
-* Warning message displayed when duplicates are detected
+Για να καταργήσετε ανεπιθύμητες εικόνες από το έργο σας:
 
-{% hint style="warning" %}
-**Important**: Do not rename or modify your original image files before importing. Chloros relies on original filenames and metadata for proper processing.
+1. Επιλέξτε μία ή περισσότερες εικόνες στον πίνακα του προγράμματος περιήγησης αρχείων
+2. Κάντε κλικ στο κουμπί **&quot;Κατάργηση επιλεγμένων&quot;**
+3. Επιβεβαιώστε την κατάργηση (τα αρχεία δεν διαγράφονται από το δίσκο, αλλά μόνο από το έργο)
+
+### Ταξινόμηση και φιλτράρισμα
+
+* **Ταξινόμηση κατά στήλη**: Κάντε κλικ σε οποιαδήποτε κεφαλίδα στήλης για να ταξινομήσετε τις εικόνες
+* **Ταξινόμηση κατά χρονολογική σειρά**: Χρήσιμο για την οργάνωση χρονολογικών ακολουθιών λήψεων
+* **Φίλτρο μοντέλου κάμερας**: Ομαδοποιήστε τις εικόνες ανά τύπο κάμερας εάν χρησιμοποιείτε πολλές κάμερες
+
+***
+
+## Προεπισκόπηση εικόνας
+
+### Προβολή πλήρους εικόνας
+
+Κάντε κλικ σε οποιαδήποτε μικρογραφία εικόνας στο File Browser για να την εμφανίσετε στην κύρια περιοχή προεπισκόπησης:
+
+1. Η εικόνα εμφανίζεται στο κεντρικό πλαίσιο προεπισκόπησης
+2. Χρησιμοποιήστε τα στοιχεία ελέγχου ζουμ για να ελέγξετε τις λεπτομέρειες της εικόνας
+3. Μεταβείτε μεταξύ των εικόνων χρησιμοποιώντας τα πλήκτρα βέλους
+
+### Γρήγορη πλοήγηση
+
+* **Προηγούμενη εικόνα**: Κάντε κλικ στο αριστερό βέλος ή πατήστε το πλήκτρο ←
+* **Επόμενη εικόνα**: Κάντε κλικ στο δεξί βέλος ή πατήστε το πλήκτρο →
+* **Μεγέθυνση/Σμίκρυνση**: Χρησιμοποιήστε τον τροχό του ποντικιού ή τα κουμπιά μεγέθυνσης
+* **Περιήγηση**: Κάντε κλικ και σύρετε την εικόνα όταν μεγεθύνετε
+
+***
+
+## Χειρισμός διπλών αρχείων
+
+Το Chloros ανιχνεύει αυτόματα και αγνοεί τα διπλά αρχεία:
+
+* Τα αρχεία με πανομοιότυπα ονόματα παραλείπονται
+* Αποτρέπει την τυχαία διπλή επεξεργασία
+* Εμφανίζεται προειδοποιητικό μήνυμα όταν ανιχνεύονται διπλά αρχεία
+
+{% hint style=&quot;warning&quot; %}
+**Σημαντικό**: Μην μετονομάζετε ή τροποποιείτε τα αρχικά αρχεία εικόνων πριν από την εισαγωγή. Το Chloros βασίζεται στα αρχικά ονόματα αρχείων και τα μεταδεδομένα για τη σωστή επεξεργασία.
 {% endhint %}
 
 ***
 
-## Mixed Camera Datasets
+## Μικτά σύνολα δεδομένων κάμερας
 
-If your project contains images from multiple MAPIR cameras:
+Εάν το έργο σας περιέχει εικόνες από πολλές κάμερες MAPIR:
 
-1. Chloros automatically detects each camera model
-2. Each camera type is processed with its appropriate calibration profile
-3. File Browser displays camera model in the Camera Model column
-4. Processing applies correct settings for each camera type
+1. Το Chloros ανιχνεύει αυτόματα κάθε μοντέλο κάμερας
+2. Κάθε τύπος κάμερας υποβάλλεται σε επεξεργασία με το κατάλληλο προφίλ βαθμονόμησης
+3. Το πρόγραμμα περιήγησης αρχείων εμφανίζει το μοντέλο κάμερας στη στήλη Μοντέλο κάμερας
+4. Η επεξεργασία εφαρμόζει τις σωστές ρυθμίσεις για κάθε τύπο κάμερας
 
-**Example scenario**: Survey3W RGN + Survey3N OCN dual-camera setup
-
-***
-
-## Best Practices
-
-### Organize Before Import
-
-* Keep calibration target images in the same folder as survey images
-* Maintain original folder structure from your camera/SD card
-* Don't mix datasets from different sessions in one project
-
-### File Naming
-
-* Preserve original camera filenames (IMG\_0001.RAW, etc.)
-* Don't rename files before import
-* Original names contain important metadata
-
-### Calibration Target Images
-
-* Always include 1-2 calibration target images per session
-* Capture targets before and after the capture session
-* Place targets in the same lighting conditions as capture area
-* Mark target images using the Target checkbox to speed up processing
+**Παράδειγμα σεναρίου**: Survey3W RGN + Survey3N OCN ρύθμιση διπλής κάμερας
 
 ***
 
-## Common Issues and Solutions
+## Βέλτιστες πρακτικές
 
-### Images Not Appearing After Import
+### Οργάνωση πριν από την εισαγωγή
 
-**Possible causes:**
+* Διατηρήστε τις εικόνες στόχου βαθμονόμησης στον ίδιο φάκελο με τις εικόνες της έρευνας
+* Διατηρήστε την αρχική δομή φακέλων από την κάμερα/κάρτα SD
+* Μην αναμιγνύετε σύνολα δεδομένων από διαφορετικές συνεδρίες σε ένα έργο
 
-* File format not supported (only RAW+JPG and JPG from MAPIR cameras)
-* Images are from non-MAPIR cameras (see [Supported Cameras](../supported-cameras.md))
-* File corruption or incomplete transfer from SD card
+### Ονομασία αρχείων
 
-**Solution**: Verify file format and camera model compatibility
+* Διατηρήστε τα αρχικά ονόματα αρχείων της κάμερας (IMG\_0001.RAW, κ.λπ.)
+* Μην μετονομάζετε τα αρχεία πριν από την εισαγωγή
+* Τα αρχικά ονόματα περιέχουν σημαντικά μεταδεδομένα
 
-### Camera Model Not Detected
+### Εικόνες στόχου βαθμονόμησης
 
-**Possible causes:**
-
-* Modified EXIF metadata
-* Images edited in external software
-* Incomplete file transfer
-
-**Solution**: Re-import original, unmodified files from camera/SD card
-
-### Missing Timestamps
-
-**Possible causes:**
-
-* Camera clock not set correctly
-* EXIF data stripped by external software
-
-**Solution**: Verify camera time settings were correct during capture
+* Να περιλαμβάνετε πάντα 1-2 εικόνες στόχου βαθμονόμησης ανά συνεδρία
+* Να καταγράφετε τους στόχους πριν και μετά τη συνεδρία καταγραφής
+* Να τοποθετείτε τους στόχους στις ίδιες συνθήκες φωτισμού με την περιοχή καταγραφής
+* Να επισημαίνετε τις εικόνες στόχου χρησιμοποιώντας το πλαίσιο ελέγχου Στόχος για να επιταχύνετε την επεξεργασία
 
 ***
 
-## Next Steps
+## Συνηθισμένα προβλήματα και λύσεις
 
-Once your files are imported:
+### Οι εικόνες δεν εμφανίζονται μετά την εισαγωγή
 
-1. **Review the file list** - Ensure all images loaded correctly
-2. **Check camera models** - Verify correct camera detection
-3. **Mark target images** - See [Choosing Target Images](choosing-target-images.md)
-4. **Adjust settings** - Configure processing options in [Project Settings](adjusting-project-settings.md)
-5. **Start processing** - See [Starting the Processing](starting-the-processing.md)
+**Πιθανές αιτίες:**
 
-For detailed information about project configuration, see [Adjusting Project Settings](adjusting-project-settings.md).
+* Η μορφή αρχείου δεν υποστηρίζεται (μόνο RAW+JPG και JPG από κάμερες MAPIR)
+* Οι εικόνες προέρχονται από κάμερες που δεν είναι MAPIR (βλ. [Υποστηριζόμενες κάμερες](../supported-cameras.md))
+* Κατεστραμμένο αρχείο ή ατελής μεταφορά από την κάρτα SD
+
+**Λύση**: Επαληθεύστε τη συμβατότητα της μορφής αρχείου και του μοντέλου της κάμερας.
+
+### Το μοντέλο της κάμερας δεν ανιχνεύεται
+
+**Πιθανές αιτίες:**
+
+* Τροποποιημένα μεταδεδομένα EXIF
+* Εικόνες που έχουν υποστεί επεξεργασία σε εξωτερικό λογισμικό
+* Ατελής μεταφορά αρχείων
+
+**Λύση**: Εισαγάγετε ξανά τα αρχικά, μη τροποποιημένα αρχεία από την κάμερα/κάρτα SD.
+
+### Λείπουν οι χρονικές σημάνσεις
+
+**Πιθανές αιτίες:**
+
+* Το ρολόι της κάμερας δεν έχει ρυθμιστεί σωστά
+* Τα δεδομένα EXIF έχουν αφαιρεθεί από εξωτερικό λογισμικό
+
+**Λύση**: Ελέγξτε ότι οι ρυθμίσεις ώρας της κάμερας ήταν σωστές κατά τη λήψη
+
+***
+
+## Επόμενα βήματα
+
+Μόλις εισαχθούν τα αρχεία σας:
+
+1. **Ελέγξτε τη λίστα αρχείων** - Βεβαιωθείτε ότι όλες οι εικόνες έχουν φορτωθεί σωστά
+2. **Ελέγξτε τα μοντέλα κάμερας** - Ελέγξτε τη σωστή ανίχνευση της κάμερας
+3. **Επιλέξτε τις εικόνες-στόχους** - Δείτε [Επιλογή εικόνων-στόχων](choosing-target-images.md)
+4. **Προσαρμόστε τις ρυθμίσεις** - Διαμορφώστε τις επιλογές επεξεργασίας στις [Ρυθμίσεις έργου](adjusting-project-settings.md)
+5. **Ξεκινήστε την επεξεργασία** - Δείτε [Ξεκινώντας την επεξεργασία](starting-the-processing.md)
+
+Για λεπτομερείς πληροφορίες σχετικά με τη διαμόρφωση του έργου, ανατρέξτε στο [Προσαρμογή ρυθμίσεων έργου](adjusting-project-settings.md).

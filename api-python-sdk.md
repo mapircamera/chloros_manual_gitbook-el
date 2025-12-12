@@ -1,48 +1,48 @@
 # API : Python SDK
 
-The **Chloros Python SDK** provides programmatic access to the Chloros image processing engine, enabling automation, custom workflows, and seamless integration with your Python applications and research pipelines.
+Το **Chloros Python SDK** παρέχει προγραμματιστική πρόσβαση στον κινητήρα επεξεργασίας εικόνων Chloros, επιτρέποντας την αυτοματοποίηση, τις προσαρμοσμένες ροές εργασίας και την απρόσκοπτη ενσωμάτωση με τις εφαρμογές Python και τις ερευνητικές σας διαδικασίες.
 
-### Key Features
+### Βασικά χαρακτηριστικά
 
-* 🐍 **Native Python** - Clean, Pythonic API for image processing
-* 🔧 **Full API Access** - Complete control over Chloros processing
-* 🚀 **Automation** - Build custom batch processing workflows
-* 🔗 **Integration** - Embed Chloros in existing Python applications
-* 📊 **Research-Ready** - Perfect for scientific analysis pipelines
-* ⚡ **Parallel Processing** - Scales to your CPU cores (Chloros+)
+* 🐍 **Εγγενές Python** - Καθαρό, Pythonic API για επεξεργασία εικόνων
+* 🔧 **Πλήρης πρόσβαση στο API** - Πλήρης έλεγχος της επεξεργασίας Chloros
+* 🚀 **Αυτοματοποίηση** - Δημιουργία προσαρμοσμένων ροών εργασίας μαζικής επεξεργασίας
+* 🔗 **Ενσωμάτωση** - Ενσωματώστε το Chloros σε υπάρχουσες εφαρμογές Python
+* 📊 **Έτοιμο για έρευνα** - Ιδανικό για επιστημονικές αναλύσεις
+* ⚡ **Παράλληλη επεξεργασία** - Κλιμακώνεται ανάλογα με τους πυρήνες της CPU σας (Chloros+)
 
-### Requirements
+### Απαιτήσεις
 
-| Requirement          | Details                                                             |
+| Απαίτηση          | Λεπτομέρειες                                                             |
 | -------------------- | ------------------------------------------------------------------- |
-| **Chloros Desktop**  | Must be installed locally                                           |
-| **License**          | Chloros+ ([paid plan required](https://cloud.mapir.camera/pricing)) |
-| **Operating System** | Windows 10/11 (64-bit)                                              |
-| **Python**           | Python 3.7 or higher                                                |
-| **Memory**           | 8GB RAM minimum (16GB recommended)                                  |
-| **Internet**         | Required for license activation                                     |
+| **Chloros Desktop**  | Πρέπει να είναι εγκατεστημένο τοπικά                                           |
+| **Άδεια χρήσης**          | Chloros+ ([απαιτείται πρόγραμμα επί πληρωμή](https://cloud.mapir.camera/pricing)) |
+| **Λειτουργικό σύστημα** | Windows 10/11 (64-bit)                                              |
+| **Python**           | Python 3.7 ή νεότερη έκδοση                                                |
+| **Μνήμη**           | Ελάχιστη μνήμη RAM 8 GB (συνιστάται 16 GB)                                  |
+| **Διαδίκτυο**         | Απαιτείται για την ενεργοποίηση της άδειας χρήσης                                     |
 
-{% hint style="warning" %}
-**License Requirement**: The Python SDK requires a paid Chloros+ subscription for API access. Standard (free) plans do not have API/SDK access. Visit [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) to upgrade.
+{% hint style=&quot;warning&quot; %}
+**Απαιτήσεις άδειας χρήσης**: Το Python SDK απαιτεί συνδρομή Chloros+ επί πληρωμή για πρόσβαση στο API. Τα βασικά (δωρεάν) πακέτα δεν έχουν πρόσβαση στο API/SDK. Επισκεφθείτε το [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) για αναβάθμιση.
 {% endhint %}
 
-## Quick Start
+## Γρήγορη εκκίνηση
 
-### Installation
+### Εγκατάσταση
 
-Install via pip:
+Εγκαταστήστε μέσω pip:
 
 ```bash
 pip install chloros-sdk
 ```
 
-{% hint style="info" %}
-**First-Time Setup**: Before using the SDK, activate your Chloros+ license by opening Chloros, Chloros (Browser) or Chloros CLI and logging in with your credentials. This only needs to be done once.
+{% hint style=&quot;info&quot; %}
+**Πρώτη ρύθμιση**: Πριν χρησιμοποιήσετε το SDK, ενεργοποιήστε την άδεια χρήσης Chloros+ ανοίγοντας το Chloros, Chloros (Browser) ή το Chloros CLI και συνδεθείτε με τα διαπιστευτήριά σας. Αυτό χρειάζεται να γίνει μόνο μία φορά.
 {% endhint %}
 
-### Basic Usage
+### Βασική χρήση
 
-Process a folder with just a few lines:
+Επεξεργαστείτε ένα φάκελο με λίγες μόνο γραμμές:
 
 ```python
 from chloros_sdk import process_folder
@@ -51,9 +51,9 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\DroneImages\\Flight001")
 ```
 
-### Full Control
+### Πλήρης έλεγχος
 
-For advanced workflows:
+Για προηγμένες ροές εργασίας:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -80,39 +80,39 @@ chloros.process(mode="parallel", wait=True)
 
 ***
 
-## Installation Guide
+## Οδηγός εγκατάστασης
 
-### Prerequisites
+### Προαπαιτούμενα
 
-Before installing the SDK, ensure you have:
+Πριν εγκαταστήσετε το SDK, βεβαιωθείτε ότι διαθέτετε:
 
-1. **Chloros Desktop** installed ([download](download.md))
-2. **Python 3.7+** installed ([python.org](https://www.python.org))
-3. **Active Chloros+ license** ([upgrade](https://cloud.mapir.camera/pricing))
+1. **Chloros Desktop** εγκατεστημένο ([download](download.md))
+2. **Python 3.7+** εγκατεστημένο ([python.org](https://www.python.org))
+3. **Ενεργή άδεια Chloros+** ([αναβάθμιση](https://cloud.mapir.camera/pricing))
 
-### Install via pip
+### Εγκατάσταση μέσω pip
 
-**Standard installation:**
+**Τυπική εγκατάσταση:**
 
 ```bash
 pip install chloros-sdk
 ```
 
-**With progress monitoring support:**
+**Με υποστήριξη παρακολούθησης προόδου:**
 
 ```bash
 pip install chloros-sdk[progress]
 ```
 
-**Development installation:**
+**Εγκατάσταση ανάπτυξης:**
 
 ```bash
 pip install chloros-sdk[dev]
 ```
 
-### Verify Installation
+### Επαλήθευση εγκατάστασης
 
-Test that the SDK is installed correctly:
+Ελέγξτε ότι το SDK έχει εγκατασταθεί σωστά:
 
 ```python
 import chloros_sdk
@@ -121,23 +121,23 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 ***
 
-## First-Time Setup
+## Πρώτη ρύθμιση
 
-### License Activation
+### Ενεργοποίηση άδειας χρήσης
 
-The SDK uses the same license as Chloros, Chloros (Browser), and Chloros CLI. Activate once via the GUI or CLI:
+Το SDK χρησιμοποιεί την ίδια άδεια χρήσης με τα Chloros, Chloros (Browser) και Chloros CLI. Ενεργοποιήστε μία φορά μέσω του GUI ή του CLI:
 
-1. Open **Chloros or Chloros (Browser)** and login on the User <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> tab. Or, open the **CLI**.
-2. Enter your Chloros+ credentials and log in
-3. License is cached locally (persists across reboots)
+1. Ανοίξτε το **Chloros ή το Chloros (Browser)** και συνδεθείτε στην καρτέλα Χρήστη <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Εναλλακτικά, ανοίξτε το **CLI**.
+2. Εισαγάγετε τα διαπιστευτήριά σας Chloros+ και συνδεθείτε
+3. Η άδεια αποθηκεύεται τοπικά (διατηρείται μετά την επανεκκίνηση)
 
-{% hint style="success" %}
-**One-Time Setup**: After logging in via the GUI or CLI, the SDK automatically uses the cached license. No additional authentication needed!
+{% hint style=&quot;success&quot; %}
+**Μία φορά ρύθμιση**: Αφού συνδεθείτε μέσω του GUI ή του CLI, το SDK χρησιμοποιεί αυτόματα την αποθηκευμένη άδεια χρήσης. Δεν απαιτείται πρόσθετη πιστοποίηση!
 {% endhint %}
 
-### Test Connection
+### Δοκιμή σύνδεσης
 
-Verify the SDK can connect to Chloros:
+Επαληθεύστε ότι το SDK μπορεί να συνδεθεί στο Chloros:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -152,13 +152,13 @@ print(f"Backend running: {status['running']}")
 
 ***
 
-## API Reference
+## Αναφορά API
 
 ### ChlorosLocal Class
 
-Main class for local Chloros image processing.
+Κύρια κλάση για τοπική επεξεργασία εικόνας Chloros.
 
-#### Constructor
+#### Κατασκευαστής
 
 ```python
 ChlorosLocal(
@@ -170,17 +170,17 @@ ChlorosLocal(
 )
 ```
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter                 | Type | Default                   | Description                           |
+| Παράμετρος                 | Τύπος | Προεπιλογή                   | Περιγραφή                           |
 | ------------------------- | ---- | ------------------------- | ------------------------------------- |
-| `api_url`                 | str  | `"http://localhost:5000"` | URL of local Chloros backend          |
-| `auto_start_backend`      | bool | `True`                    | Automatically start backend if needed |
-| `backend_exe`             | str  | `None` (auto-detect)      | Path to backend executable            |
-| `timeout`                 | int  | `30`                      | Request timeout in seconds            |
-| `backend_startup_timeout` | int  | `60`                      | Timeout for backend startup (seconds) |
+| `api_url`                 | str  | `"http://localhost:5000"` | URL του τοπικού Chloros backend          |
+| `auto_start_backend`      | bool | `True`                    | Αυτόματη εκκίνηση του backend αν χρειαστεί |
+| `backend_exe`             | str  | `None` (αυτόματη ανίχνευση)      | Διαδρομή προς το εκτελέσιμο backend            |
+| `timeout`                 | int  | `30`                      | Χρονικό όριο αιτήματος σε δευτερόλεπτα            |
+| `backend_startup_timeout` | int  | `60`                      | Χρονικό όριο για την εκκίνηση του backend (δευτερόλεπτα) |
 
-**Examples:**
+**Παραδείγματα:**
 
 ```python
 # Default (auto-start backend)
@@ -198,22 +198,22 @@ chloros = ChlorosLocal(timeout=60)
 
 ***
 
-### Methods
+### Μέθοδοι
 
 #### `create_project(project_name, camera=None)`
 
-Create a new Chloros project.
+Δημιουργία νέου έργου Chloros.
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter      | Type | Required | Description                                              |
+| Παράμετρος      | Τύπος | Απαιτείται | Περιγραφή                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
-| `project_name` | str  | Yes      | Name for the project                                     |
-| `camera`       | str  | No       | Camera template (e.g., "Survey3N\_RGN", "Survey3W\_OCN") |
+| `project_name` | str  | Ναι      | Όνομα για το έργο                                     |
+| `camera`       | str  | Όχι       | Πρότυπο κάμερας (π.χ. &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
-**Returns:** `dict` - Project creation response
+**Επιστρέφει:** `dict` - Απόκριση δημιουργίας έργου
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 # Basic project
@@ -227,18 +227,18 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 
 #### `import_images(folder_path, recursive=False)`
 
-Import images from a folder.
+Εισαγωγή εικόνων από φάκελο.
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter     | Type     | Required | Description                        |
+| Παράμετρος     | Τύπος     | Απαιτείται | Περιγραφή                        |
 | ------------- | -------- | -------- | ---------------------------------- |
-| `folder_path` | str/Path | Yes      | Path to folder with images         |
-| `recursive`   | bool     | No       | Search subfolders (default: False) |
+| `folder_path` | str/Path | Ναι      | Διαδρομή προς φάκελο με εικόνες         |
+| `recursive`   | bool     | Όχι       | Αναζήτηση υποφακέλων (προεπιλογή: False) |
 
-**Returns:** `dict` - Import results with file count
+**Επιστρέφει:** `dict` - Εισαγωγή αποτελεσμάτων με αριθμό αρχείων
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 # Import from folder
@@ -252,32 +252,32 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 
 #### `configure(**settings)`
 
-Configure processing settings.
+Διαμόρφωση ρυθμίσεων επεξεργασίας.
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter                 | Type | Default                 | Description                     |
+| Παράμετρος                 | Τύπος | Προεπιλογή                 | Περιγραφή                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | "High Quality (Faster)" | Debayer method                  |
-| `vignette_correction`     | bool | `True`                  | Enable vignette correction      |
-| `reflectance_calibration` | bool | `True`                  | Enable reflectance calibration  |
-| `indices`                 | list | `None`                  | Vegetation indices to calculate |
-| `export_format`           | str  | "TIFF (16-bit)"         | Output format                   |
-| `ppk`                     | bool | `False`                 | Enable PPK corrections          |
-| `custom_settings`         | dict | `None`                  | Advanced custom settings        |
+| `debayer`                 | str  | &quot;Υψηλή ποιότητα (ταχύτερη)&quot; | Μέθοδος Debayer                  |
+| `vignette_correction`     | bool | `True`                  | Ενεργοποίηση διόρθωσης βινιέτας      |
+| `reflectance_calibration` | bool | `True`                  | Ενεργοποίηση βαθμονόμησης ανακλαστικότητας  |
+| `indices`                 | λίστα | `None`                  | Δείκτες βλάστησης προς υπολογισμό |
+| `export_format`           | str  | &quot;TIFF (16-bit)&quot;         | Μορφή εξόδου                   |
+| `ppk`                     | bool | `False`                 | Ενεργοποίηση διορθώσεων PPK          |
+| `custom_settings`         | dict | `None`                  | Προηγμένες προσαρμοσμένες ρυθμίσεις        |
 
-**Export Formats:**
+**Μορφές εξαγωγής:**
 
-* `"TIFF (16-bit)"` - Recommended for GIS/photogrammetry
-* `"TIFF (32-bit, Percent)"` - Scientific analysis
-* `"PNG (8-bit)"` - Visual inspection
-* `"JPG (8-bit)"` - Compressed output
+* `"TIFF (16-bit)"` - Συνιστάται για GIS/φωτογραμμετρία
+* `"TIFF (32-bit, Percent)"` - Επιστημονική ανάλυση
+* `"PNG (8-bit)"` - Οπτική επιθεώρηση
+* `"JPG (8-bit)"` - Συμπιεσμένη έξοδος
 
-**Available Indices:**
+**Διαθέσιμοι δείκτες:**
 
-NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, and more.
+NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2 και άλλα.
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 # Basic configuration
@@ -302,24 +302,24 @@ chloros.configure(
 
 #### `process(mode="parallel", wait=True, progress_callback=None)`
 
-Process the project images.
+Επεξεργασία των εικόνων του έργου.
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter           | Type     | Default      | Description                               |
+| Παράμετρος           | Τύπος     | Προεπιλογή      | Περιγραφή                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Processing mode: "parallel" or "serial"   |
-| `wait`              | bool     | `True`       | Wait for completion                       |
-| `progress_callback` | callable | `None`       | Progress callback function(progress, msg) |
-| `poll_interval`     | float    | `2.0`        | Polling interval for progress (seconds)   |
+| `mode`              | str      | `"parallel"` | Λειτουργία επεξεργασίας: &quot;parallel&quot; ή &quot;serial&quot;   |
+| `wait`              | bool     | `True`       | Αναμονή για ολοκλήρωση                       |
+| `progress_callback` | callable | `None`       | Λειτουργία επιστροφής κλήσης προόδου (progress, msg) |
+| `poll_interval`     | float    | `2.0`        | Διάστημα δειγματοληψίας για την πρόοδο (δευτερόλεπτα)   |
 
-**Returns:** `dict` - Processing results
+**Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
 
-{% hint style="warning" %}
-**Parallel Mode**: Requires Chloros+ license. Automatically scales to your CPU cores (up to 16 workers).
+{% hint style=&quot;warning&quot; %}
+**Παράλληλη λειτουργία**: Απαιτείται άδεια Chloros+. Προσαρμόζεται αυτόματα στους πυρήνες της CPU (έως 16 εργαζόμενους).
 {% endhint %}
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 # Simple processing
@@ -343,11 +343,11 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Get current project configuration.
+Λήψη τρέχουσας διαμόρφωσης έργου.
 
-**Returns:** `dict` - Current project configuration
+**Επιστρέφει:** `dict` - Τρέχουσα διαμόρφωση έργου
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 config = chloros.get_config()
@@ -358,11 +358,11 @@ print(config['Project Settings'])
 
 #### `get_status()`
 
-Get backend status information.
+Λήψη πληροφοριών κατάστασης backend.
 
-**Returns:** `dict` - Backend status
+**Επιστρέφει:** `dict` - Κατάσταση του backend
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 status = chloros.get_status()
@@ -374,9 +374,9 @@ print(f"URL: {status['url']}")
 
 #### `shutdown_backend()`
 
-Shutdown the backend (if started by SDK).
+Τερματίζει το backend (εάν έχει ξεκινήσει από το SDK).
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 chloros.shutdown_backend()
@@ -384,29 +384,29 @@ chloros.shutdown_backend()
 
 ***
 
-### Convenience Functions
+### Λειτουργίες ευκολίας
 
 #### `process_folder(folder_path, **options)`
 
-One-line convenience function to process a folder.
+Λειτουργία ευκολίας μιας γραμμής για την επεξεργασία ενός φακέλου.
 
-**Parameters:**
+**Παράμετροι:**
 
-| Parameter                 | Type     | Default         | Description                    |
+| Παράμετρος                 | Τύπος     | Προεπιλογή         | Περιγραφή                    |
 | ------------------------- | -------- | --------------- | ------------------------------ |
-| `folder_path`             | str/Path | Required        | Path to folder with images     |
-| `project_name`            | str      | Auto-generated  | Project name                   |
-| `camera`                  | str      | `None`          | Camera template                |
-| `indices`                 | list     | `["NDVI"]`      | Indices to calculate           |
-| `vignette_correction`     | bool     | `True`          | Enable vignette correction     |
-| `reflectance_calibration` | bool     | `True`          | Enable reflectance calibration |
-| `export_format`           | str      | "TIFF (16-bit)" | Output format                  |
-| `mode`                    | str      | `"parallel"`    | Processing mode                |
-| `progress_callback`       | callable | `None`          | Progress callback              |
+| `folder_path`             | str/Path | Απαιτείται        | Διαδρομή προς φάκελο με εικόνες     |
+| `project_name`            | str      | Αυτόματη δημιουργία  | Όνομα έργου                   |
+| `camera`                  | str      | `None`          | Πρότυπο κάμερας                |
+| `indices`                 | list     | `["NDVI"]`      | Δείκτες για υπολογισμό           |
+| `vignette_correction`     | bool     | `True`          | Ενεργοποίηση διόρθωσης βινιέτας     |
+| `reflectance_calibration` | bool     | `True`          | Ενεργοποίηση βαθμονόμησης ανακλαστικότητας |
+| `export_format`           | str      | &quot;TIFF (16-bit)&quot; | Μορφή εξόδου                  |
+| `mode`                    | str      | `"parallel"`    | Λειτουργία επεξεργασίας                |
+| `progress_callback`       | callable | `None`          | Επιστροφή κλήσης προόδου              |
 
-**Returns:** `dict` - Processing results
+**Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
 
-**Example:**
+**Παράδειγμα:**
 
 ```python
 from chloros_sdk import process_folder
@@ -435,9 +435,9 @@ results = process_folder(
 
 ***
 
-## Context Manager Support
+## Υποστήριξη διαχειριστή περιβάλλοντος
 
-The SDK supports context managers for automatic cleanup:
+Το SDK υποστηρίζει διαχειριστές περιβάλλοντος για αυτόματο καθαρισμό:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -453,11 +453,11 @@ with ChlorosLocal() as chloros:
 
 ***
 
-## Complete Examples
+## Πλήρη παραδείγματα
 
-### Example 1: Basic Processing
+### Παράδειγμα 1: Βασική επεξεργασία
 
-Process a folder with default settings:
+Επεξεργασία φακέλου με τις προεπιλεγμένες ρυθμίσεις:
 
 ```python
 from chloros_sdk import process_folder
@@ -470,9 +470,9 @@ print(f"Processing complete: {results}")
 
 ***
 
-### Example 2: Custom Workflow
+### Παράδειγμα 2: Προσαρμοσμένη ροή εργασίας
 
-Full control over processing pipeline:
+Πλήρης έλεγχος της ροής επεξεργασίας:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -512,9 +512,9 @@ print("Processing complete!")
 
 ***
 
-### Example 3: Batch Processing Multiple Folders
+### Παράδειγμα 3: Μαζική επεξεργασία πολλαπλών φακέλων
 
-Process multiple flight datasets:
+Επεξεργασία πολλαπλών συνόλων δεδομένων πτήσεων:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -564,9 +564,9 @@ print("All flights processed!")
 
 ***
 
-### Example 4: Research Pipeline Integration
+### Παράδειγμα 4: Ενσωμάτωση ροής έρευνας
 
-Integrate Chloros with data analysis:
+Ενσωμάτωση του Chloros με ανάλυση δεδομένων:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -619,9 +619,9 @@ print(df)
 
 ***
 
-### Example 5: Custom Progress Monitoring
+### Παράδειγμα 5: Προσαρμοσμένη παρακολούθηση προόδου
 
-Advanced progress tracking with logging:
+Προηγμένη παρακολούθηση προόδου με καταγραφή:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -658,9 +658,9 @@ logging.info("Processing complete!")
 
 ***
 
-### Example 6: Error Handling
+### Παράδειγμα 6: Αντιμετώπιση σφαλμάτων
 
-Robust error handling for production use:
+Σταθερή αντιμετώπιση σφαλμάτων για χρήση σε παραγωγή:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -710,9 +710,9 @@ else:
 
 ***
 
-### Example 7: Command-Line Tool
+### Παράδειγμα 7: Εργαλείο γραμμής εντολών
 
-Build a custom CLI tool with the SDK:
+Δημιουργήστε ένα προσαρμοσμένο εργαλείο CLI με το SDK:
 
 ```python
 #!/usr/bin/env python
@@ -775,7 +775,7 @@ if __name__ == '__main__':
     sys.exit(main())
 ```
 
-**Usage:**
+**Χρήση:**
 
 ```bash
 python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
@@ -783,11 +783,11 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ***
 
-## Exception Handling
+## Χειρισμός εξαιρέσεων
 
-The SDK provides specific exception classes for different error types:
+Το SDK παρέχει συγκεκριμένες κατηγορίες εξαιρέσεων για διαφορετικούς τύπους σφαλμάτων:
 
-### Exception Hierarchy
+### Ιεραρχία εξαιρέσεων
 
 ```python
 ChlorosError                    # Base exception
@@ -799,7 +799,7 @@ ChlorosError                    # Base exception
 └── ChlorosConfigurationError  # Configuration errors
 ```
 
-### Exception Examples
+### Παραδείγματα εξαιρέσεων
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -824,11 +824,11 @@ except ChlorosError as e:
 
 ***
 
-## Advanced Topics
+## Προχωρημένα θέματα
 
-### Custom Backend Configuration
+### Προσαρμοσμένη διαμόρφωση backend
 
-Use a custom backend location or configuration:
+Χρησιμοποιήστε μια προσαρμοσμένη θέση ή διαμόρφωση backend:
 
 ```python
 chloros = ChlorosLocal(
@@ -839,9 +839,9 @@ chloros = ChlorosLocal(
 )
 ```
 
-### Non-Blocking Processing
+### Επεξεργασία χωρίς μπλοκάρισμα
 
-Start processing and continue with other tasks:
+Ξεκινήστε την επεξεργασία και συνεχίστε με άλλες εργασίες:
 
 ```python
 # Start processing (non-blocking)
@@ -861,9 +861,9 @@ while True:
 print("Processing complete!")
 ```
 
-### Memory Management
+### Διαχείριση μνήμης
 
-For large datasets, process in batches:
+Για μεγάλα σύνολα δεδομένων, επεξεργαστείτε τα σε παρτίδες:
 
 ```python
 from pathlib import Path
@@ -888,15 +888,15 @@ for i in range(0, len(images), batch_size):
 
 ***
 
-## Troubleshooting
+## Αντιμετώπιση προβλημάτων
 
-### Backend Not Starting
+### Το backend δεν ξεκινά
 
-**Issue:** SDK fails to start backend
+**Πρόβλημα:** Το SDK δεν ξεκινά το backend.
 
-**Solutions:**
+**Λύσεις:**
 
-1. Verify Chloros Desktop is installed:
+1. Βεβαιωθείτε ότι το Chloros Desktop είναι εγκατεστημένο:
 
 ```python
 import os
@@ -904,8 +904,8 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Check Windows Firewall isn't blocking
-3. Try manual backend path:
+2. Ελέγξτε ότι το Windows Firewall δεν το μπλοκάρει
+3. Δοκιμάστε τη χειροκίνητη διαδρομή του backend:
 
 ```python
 chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
@@ -913,14 +913,14 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 ***
 
-### License Not Detected
+### Η άδεια χρήσης δεν ανιχνεύεται
 
-**Issue:** SDK warns about missing license
+**Πρόβλημα:** Το SDK προειδοποιεί για την έλλειψη άδειας χρήσης
 
-**Solutions:**
+**Λύσεις:**
 
-1. Open Chloros, Chloros (Browser) or Chloros CLI and login.
-2. Verify license is cached:
+1. Ανοίξτε το Chloros, το Chloros (πρόγραμμα περιήγησης) ή το Chloros CLI και συνδεθείτε.
+2. Βεβαιωθείτε ότι η άδεια χρήσης είναι αποθηκευμένη στην προσωρινή μνήμη:
 
 ```python
 from pathlib import Path
@@ -931,15 +931,15 @@ cache_path = Path(os.getenv('APPDATA')) / 'Chloros' / 'cache'
 print(f"Cache exists: {cache_path.exists()}")
 ```
 
-3. Contact support: info@mapir.camera
+3. Επικοινωνήστε με την υποστήριξη: info@mapir.camera
 
 ***
 
-### Import Errors
+### Σφάλματα εισαγωγής
 
-**Issue:** `ModuleNotFoundError: No module named 'chloros_sdk'`
+**Πρόβλημα:** `ModuleNotFoundError: No module named 'chloros_sdk'`
 
-**Solutions:**
+**Λύσεις:**
 
 ```bash
 # Verify installation
@@ -955,36 +955,36 @@ python -c "import sys; print(sys.path)"
 
 ***
 
-### Processing Timeout
+### Χρονικό όριο επεξεργασίας
 
-**Issue:** Processing times out
+**Πρόβλημα:** Χρονικό όριο επεξεργασίας
 
-**Solutions:**
+**Λύσεις:**
 
-1. Increase timeout:
+1. Αυξήστε το χρονικό όριο:
 
 ```python
 chloros = ChlorosLocal(timeout=120)  # 2 minutes
 ```
 
-2. Process smaller batches
-3. Check available disk space
-4. Monitor system resources
+2. Επεξεργαστείτε μικρότερες παρτίδες
+3. Ελέγξτε τον διαθέσιμο χώρο στο δίσκο
+4. Παρακολουθήστε τους πόρους του συστήματος
 
 ***
 
-### Port Already in Use
+### Θύρα ήδη σε χρήση
 
-**Issue:** Backend port 5000 occupied
+**Πρόβλημα:** Η θύρα 5000 του backend είναι κατειλημμένη
 
-**Solutions:**
+**Λύσεις:**
 
 ```python
 # Use different port
 chloros = ChlorosLocal(api_url="http://localhost:5001")
 ```
 
-Or find and close conflicting process:
+Ή εντοπίστε και κλείστε τη διεργασία που προκαλεί τη σύγκρουση:
 
 ```powershell
 # PowerShell
@@ -993,36 +993,36 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## Performance Tips
+## Συμβουλές απόδοσης
 
-### Optimize Processing Speed
+### Βελτιστοποίηση ταχύτητας επεξεργασίας
 
-1. **Use Parallel Mode** (requires Chloros+)
+1. **Χρησιμοποιήστε την παράλληλη λειτουργία** (απαιτείται Chloros+)
 
 ```python
 chloros.process(mode="parallel")  # Up to 16 workers
 ```
 
-2. **Reduce Output Resolution** (if acceptable)
+2. **Μειώστε την ανάλυση εξόδου** (εάν είναι αποδεκτό)
 
 ```python
 chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 ```
 
-3. **Disable Unnecessary Indices**
+3. **Απενεργοποιήστε τους περιττούς δείκτες**
 
 ```python
 # Only calculate needed indices
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Process on SSD** (not HDD)
+4. **Επεξεργασία σε SSD** (όχι HDD)
 
 ***
 
-### Memory Optimization
+### Βελτιστοποίηση μνήμης
 
-For large datasets:
+Για μεγάλα σύνολα δεδομένων:
 
 ```python
 # Process in batches instead of all at once
@@ -1031,9 +1031,9 @@ For large datasets:
 
 ***
 
-### Background Processing
+### Επεξεργασία στο παρασκήνιο
 
-Free up Python for other tasks:
+Απελευθερώστε Python για άλλες εργασίες:
 
 ```python
 chloros.process(wait=False)  # Non-blocking
@@ -1044,9 +1044,9 @@ chloros.process(wait=False)  # Non-blocking
 
 ***
 
-## Integration Examples
+## Παραδείγματα ενσωμάτωσης
 
-### Django Integration
+### Ενσωμάτωση Django
 
 ```python
 # views.py
@@ -1119,49 +1119,49 @@ chloros.process(progress_callback=notebook_progress)
 
 ***
 
-## FAQ
+## Συχνές ερωτήσεις
 
-### Q: Does the SDK require an internet connection?
+### Ε: Το SDK απαιτεί σύνδεση στο διαδίκτυο;
 
-**A:** Only for initial license activation. After logging in via Chloros, Chloros (Browser) or Chloros CLI the license is cached locally and works offline for 30 days.
-
-***
-
-### Q: Can I use the SDK on a server without GUI?
-
-**A:** Yes! Requirements:
-
-* Windows Server 2016 or later
-* Chloros installed (one-time)
-* License activated on any machine (cached license copied to server)
+**Α:** Μόνο για την αρχική ενεργοποίηση της άδειας χρήσης. Μετά τη σύνδεση μέσω Chloros, Chloros (Browser) ή Chloros CLI, η άδεια αποθηκεύεται τοπικά και λειτουργεί εκτός σύνδεσης για 30 ημέρες.
 
 ***
 
-### Q: What's the difference between Desktop, CLI, and SDK?
+### Ε: Μπορώ να χρησιμοποιήσω το SDK σε έναν διακομιστή χωρίς GUI;
 
-| Feature         | Desktop GUI | CLI Command Line | Python SDK  |
+**Α:** Ναι! Απαιτήσεις:
+
+* Windows Server 2016 ή νεότερη έκδοση
+* Chloros εγκατεστημένο (μία φορά)
+* Άδεια χρήσης ενεργοποιημένη σε οποιονδήποτε υπολογιστή (άδεια χρήσης αποθηκευμένη στο cache και αντιγραμμένη στον διακομιστή)
+
+***
+
+### Ε: Ποια είναι η διαφορά μεταξύ Desktop, CLI και SDK;
+
+| Χαρακτηριστικό         | Desktop GUI | CLI Γραμμή εντολών | Python SDK  |
 | --------------- | ----------- | ---------------- | ----------- |
-| **Interface**   | Point-click | Command          | Python API  |
-| **Best For**    | Visual work | Scripting        | Integration |
-| **Automation**  | Limited     | Good             | Excellent   |
-| **Flexibility** | Basic       | Good             | Maximum     |
-| **License**     | Chloros+    | Chloros+         | Chloros+    |
+| **Διεπαφή**   | Point-click | Εντολή          | Python API  |
+| **Κατάλληλο για**    | Οπτική εργασία | Σενάρια        | Ενσωμάτωση |
+| **Αυτοματοποίηση**  | Περιορισμένη     | Καλή             | Εξαιρετική   |
+| **Ευελιξία** | Βασική       | Καλή             | Μέγιστη     |
+| **Άδεια χρήσης**     | Chloros+    | Chloros+         | Chloros+    |
 
 ***
 
-### Q: Can I distribute apps built with the SDK?
+### Ε: Μπορώ να διανέμω εφαρμογές που έχουν δημιουργηθεί με το SDK;
 
-**A:** SDK code can be integrated into your applications, but:
+**Α:** Ο κώδικας SDK μπορεί να ενσωματωθεί στις εφαρμογές σας, αλλά:
 
-* End users need Chloros installed
-* End users need active Chloros+ licenses
-* Commercial distribution requires OEM licensing
+* Οι τελικοί χρήστες πρέπει να έχουν εγκατεστημένο το Chloros.
+* Οι τελικοί χρήστες πρέπει να έχουν ενεργές άδειες χρήσης Chloros+.
+* Η εμπορική διανομή απαιτεί άδεια χρήσης OEM.
 
-Contact info@mapir.camera for OEM inquiries.
+Επικοινωνήστε με το info@mapir.camera για ερωτήσεις σχετικά με το OEM.
 
 ***
 
-### Q: How do I update the SDK?
+### Ε: Πώς μπορώ να ενημερώσω το SDK;
 
 ```bash
 pip install --upgrade chloros-sdk
@@ -1169,9 +1169,9 @@ pip install --upgrade chloros-sdk
 
 ***
 
-### Q: Where are processed images saved?
+### Ε: Πού αποθηκεύονται οι επεξεργασμένες εικόνες;
 
-By default, in the Project Path :
+Από προεπιλογή, στη διαδρομή του έργου:
 
 ```
 Project_Path/
@@ -1181,9 +1181,9 @@ Project_Path/
 
 ***
 
-### Q: Can I process images from Python scripts running on schedule?
+### Ε: Μπορώ να επεξεργαστώ εικόνες από σενάρια Python που εκτελούνται σύμφωνα με το πρόγραμμα;
 
-**A:** Yes! Use Windows Task Scheduler with Python scripts:
+**Α:** Ναι! Χρησιμοποιήστε το Windows Task Scheduler με σενάρια Python:
 
 ```python
 # scheduled_processing.py
@@ -1193,13 +1193,13 @@ from chloros_sdk import process_folder
 results = process_folder("C:\\Flights\\Today")
 ```
 
-Schedule via Task Scheduler to run daily.
+Προγραμματίστε μέσω του Task Scheduler να εκτελείται καθημερινά.
 
 ***
 
-### Q: Does the SDK support async/await?
+### Ε: Το SDK υποστηρίζει async/await;
 
-**A:** Current version is synchronous. For async behavior, use `wait=False` or run in separate thread:
+**Α:** Η τρέχουσα έκδοση είναι συγχρονισμένη. Για ασύγχρονη συμπεριφορά, χρησιμοποιήστε το `wait=False` ή εκτελέστε σε ξεχωριστό νήμα:
 
 ```python
 import threading
@@ -1215,26 +1215,26 @@ thread.start()
 
 ***
 
-## Getting Help
+## Λήψη βοήθειας
 
-### Documentation
+### Τεκμηρίωση
 
-* **API Reference**: This page
+* **Αναφορά API**: Αυτή η σελίδα
 
-### Support Channels
+### Κανάλια υποστήριξης
 
 * **Email**: info@mapir.camera
-* **Website**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Pricing**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
+* **Ιστότοπος**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Τιμές**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
-### Sample Code
+### Δείγμα κώδικα
 
-All examples listed here are tested and production-ready. Copy and adapt them for your use case.
+Όλα τα παραδείγματα που αναφέρονται εδώ έχουν δοκιμαστεί και είναι έτοιμα για παραγωγή. Αντιγράψτε τα και προσαρμόστε τα για τη δική σας περίπτωση χρήσης.
 
 ***
 
-## License
+## Άδεια
 
-**Proprietary Software** - Copyright (c) 2025 MAPIR Inc.
+**Ιδιόκτητο λογισμικό** - Πνευματικά δικαιώματα (c) 2025 MAPIR Inc.
 
-SDK requires an active Chloros+ subscription. Unauthorized use, distribution, or modification is prohibited.
+Το SDK απαιτεί ενεργή συνδρομή Chloros+. Απαγορεύεται η μη εξουσιοδοτημένη χρήση, διανομή ή τροποποίηση.

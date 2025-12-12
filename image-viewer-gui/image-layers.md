@@ -1,352 +1,352 @@
-# Image Layers
+# Επίπεδα εικόνας
 
-The Image Layers dropdown in the Chloros Image Viewer allows you to quickly switch between different versions of the same image - from the original captures to processed reflectance outputs and calculated index images.
+Το αναπτυσσόμενο μενού «Επίπεδα εικόνας» στο πρόγραμμα προβολής εικόνων Chloros σάς επιτρέπει να εναλλάσσεστε γρήγορα μεταξύ διαφορετικών εκδόσεων της ίδιας εικόνας - από τις αρχικές λήψεις έως τις επεξεργασμένες εκτυπώσεις ανακλαστικότητας και τις υπολογισμένες εικόνες δείκτη.
 
-## What are Image Layers?
+## Τι είναι τα επίπεδα εικόνας;
 
-In Chloros, **layers** refer to the different image outputs available for a single source image. When you process images, Chloros creates multiple versions:
+Στο Chloros, τα **επίπεδα** αναφέρονται στις διαφορετικές εκτυπώσεις εικόνας που είναι διαθέσιμες για μια μεμονωμένη εικόνα πηγής. Όταν επεξεργάζεστε εικόνες, το Chloros δημιουργεί πολλαπλές εκδόσεις:
 
-* **Original images** (JPG and RAW files from your camera)
-* **Reflectance calibrated** outputs (if reflectance calibration was enabled)
-* **Target images** (if the image contains calibration targets)
-* **Index images** (NDVI, NDRE, GNDVI, etc. if indices were configured)
+* **Αρχικές εικόνες** (αρχεία JPG και RAW από την κάμερά σας)
+* **Εξόδους με βαθμονόμηση ανακλαστικότητας** (εάν η βαθμονόμηση ανακλαστικότητας ήταν ενεργοποιημένη)
+* **Εικόνες στόχους** (εάν η εικόνα περιέχει στόχους βαθμονόμησης)
+* **Εικόνες ευρετηρίου** (NDVI, NDRE, GNDVI κ.λπ., εάν είχαν διαμορφωθεί ευρετήρια)
 
-The **Layer Selector dropdown** in the top-right of the Image Viewer lets you instantly switch between these versions without leaving the viewer.
+Το **αναπτυσσόμενο μενού επιλογής επιπέδου** στην επάνω δεξιά γωνία του προγράμματος προβολής εικόνων σάς επιτρέπει να εναλλάσσεστε άμεσα μεταξύ αυτών των εκδόσεων χωρίς να βγείτε από το πρόγραμμα προβολής.
 
 ***
 
-## Available Layer Types
+## Διαθέσιμοι τύποι επιπέδων
 
 ### JPG
 
-* The original JPG preview image from your camera
-* Always available for all images
-* Unprocessed, as captured by the camera
-* Fastest to load and display
+* Η αρχική εικόνα προεπισκόπησης JPG από τη φωτογραφική σας μηχανή
+* Πάντα διαθέσιμη για όλες τις εικόνες
+* Μη επεξεργασμένη, όπως καταγράφηκε από τη φωτογραφική μηχανή
+* Ταχύτερη φόρτωση και εμφάνιση
 
-**When to view:**
+**Πότε να την προβάλετε:**
 
-* Quick preview of original capture
-* Checking image composition and framing
-* Verifying capture quality before processing
+* Γρήγορη προεπισκόπηση της αρχικής λήψης
+* Έλεγχος της σύνθεσης και του καδραρίσματος της εικόνας
+* Επαλήθευση της ποιότητας της λήψης πριν από την επεξεργασία
 
-### RAW (Original)
+### RAW (αρχική)
 
-* The original RAW sensor data from your camera
-* Debayered with no post processing applied
-* Higher bit depth than JPG (typically 12-bit or 14-bit sensor data)
+* Τα αρχικά δεδομένα RAW του αισθητήρα από την κάμερά σας
+* Χωρίς αποδιαμόρφωση και χωρίς εφαρμογή μετα-επεξεργασίας
+* Μεγαλύτερο βάθος bit από το JPG (συνήθως δεδομένα αισθητήρα 12 bit ή 14 bit)
 
-**When to view:**
+**Πότε να το προβάλετε:**
 
-* Inspecting original sensor data quality
-* Checking for sensor issues or artifacts
-* Comparing before/after processing results
+* Επιθεώρηση της ποιότητας των αρχικών δεδομένων του αισθητήρα
+* Έλεγχος για προβλήματα ή τεχνητά στοιχεία του αισθητήρα
+* Σύγκριση των αποτελεσμάτων πριν και μετά την επεξεργασία
 
-### RAW (Target)
+### RAW (Στόχος)
 
-* Only appears for images identified as containing calibration targets
-* Shows the original RAW image with target detected
-* Used to verify target detection was successful
+* Εμφανίζεται μόνο για εικόνες που έχουν αναγνωριστεί ως περιέχουσες στόχους βαθμονόμησης
+* Εμφανίζει την αρχική εικόνα RAW με τον στόχο που έχει ανιχνευθεί
+* Χρησιμοποιείται για την επαλήθευση της επιτυχούς ανίχνευσης του στόχου
 
-**When to view:**
+**Πότε να το προβάλετε:**
 
-* Confirming calibration targets were detected correctly
-* Checking target image quality
-* Troubleshooting calibration issues
+* Επιβεβαίωση ότι οι στόχοι βαθμονόμησης ανιχνεύθηκαν σωστά
+* Έλεγχος της ποιότητας της εικόνας στόχου
+* Αντιμετώπιση προβλημάτων βαθμονόμησης
 
-{% hint style="info" %}
-**Target Layer**: This layer only appears in the dropdown for images that contain calibration targets. Regular capture images will not have this option.
+{% hint style=&quot;info&quot; %}
+**Επίπεδο στόχου**: Αυτό το επίπεδο εμφανίζεται μόνο στο αναπτυσσόμενο μενού για εικόνες που περιέχουν στόχους βαθμονόμησης. Οι κανονικές εικόνες λήψης δεν θα έχουν αυτήν την επιλογή.
 {% endhint %}
 
-### RAW (Reflectance)
+### RAW (Αντανάκλαση)
 
-* The calibrated reflectance output image
-* Vignette corrected (if enabled in processing)
-* Reflectance calibrated using target data (if enabled)
-* Multi-band TIFF with all camera channels
-* Pixel values represent percent reflectance (when using percent mode)
-* Ready to manipulate with the [Index/LUT Sandbox](index-lut-sandbox.md)
+* Η βαθμονομημένη εικόνα εξόδου αντανάκλασης
+* Διόρθωση βινιέτας (εάν είναι ενεργοποιημένη στην επεξεργασία)
+* Αντανάκλαση βαθμονομημένη χρησιμοποιώντας δεδομένα στόχου (εάν είναι ενεργοποιημένη)
+* Πολυζωνικό TIFF με όλα τα κανάλια της κάμερας
+* Οι τιμές pixel αντιπροσωπεύουν το ποσοστό αντανάκλασης (όταν χρησιμοποιείται η λειτουργία ποσοστού)
+* Έτοιμο για επεξεργασία με το [Index/LUT Sandbox](index-lut-sandbox.md)
 
-**When to view:**
+**Πότε να το δείτε:**
 
-* Inspecting calibrated results
-* Verifying calibration quality
-* Checking pixel values for scientific accuracy
-* Comparing with original to see calibration effects
+* Επιθεώρηση βαθμονομημένων αποτελεσμάτων
+* Επαλήθευση της ποιότητας της βαθμονόμησης
+* Έλεγχος των τιμών pixel για επιστημονική ακρίβεια
+* Σύγκριση με το πρωτότυπο για να δείτε τα αποτελέσματα της βαθμονόμησης
 
-{% hint style="success" %}
-**Recommended**: Use RAW (Reflectance) layer when checking pixel values for scientific measurements and analysis.
+{% hint style=&quot;success&quot; %}
+**Συνιστάται**: Χρησιμοποιήστε το επίπεδο RAW (ανακλαστικότητα) όταν ελέγχετε τις τιμές των εικονοστοιχείων για επιστημονικές μετρήσεις και αναλύσεις.
 {% endhint %}
 
-### RAW (NDVI Index)... and similar
+### RAW (NDVI Δείκτης)... και παρόμοια
 
-* Calculated vegetation index image (NDVI in this example)
-* The index name changes based on which index was configured during processing
-* Examples: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), etc.
-* Single-band grayscale image showing index calculation results
-* One layer appears for each index configured in Project Settings
+* Υπολογισμένη εικόνα δείκτη βλάστησης (NDVI σε αυτό το παράδειγμα)
+* Το όνομα του δείκτη αλλάζει ανάλογα με τον δείκτη που έχει ρυθμιστεί κατά την επεξεργασία.
+* Παραδείγματα: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index) κ.λπ.
+* Εικόνα μονής ζώνης σε κλίμακα του γκρι που δείχνει τα αποτελέσματα του υπολογισμού του δείκτη
+* Εμφανίζεται ένα επίπεδο για κάθε δείκτη που έχει ρυθμιστεί στις Ρυθμίσεις έργου
 
-**Possible index names:**
+**Πιθανά ονόματα δεικτών:**
 
-* RAW (NDVI Index)
-* RAW (NDRE Index)
-* RAW (GNDVI Index)
-* RAW (OSAVI Index)
-* RAW (EVI Index)
-* RAW (SAVI Index)
-* And many more... (see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md))
+* RAW (Δείκτης NDVI)
+* RAW (Δείκτης NDRE)
+* RAW (Δείκτης GNDVI)
+* RAW (Δείκτης OSAVI)
+* RAW (Δείκτης EVI)
+* RAW (SAVI Δείκτης)
+* Και πολλά άλλα... (βλ. [Τύποι πολυφασματικών δεικτών](../project-settings/multispectral-index-formulas.md))
 
-**When to view:**
+**Πότε να τα προβάλετε:**
 
-* Examining index calculation results
-* Checking index value ranges
-* Identifying areas of interest
-* Verifying index images before using in GIS or analysis
-
-***
-
-## Using the Layer Selector
-
-### Opening the Dropdown
-
-1. Open an image in fullscreen mode (click any thumbnail in the Image Viewer)
-2. Locate the **layer dropdown** in the top-right corner of the viewer
-3. The dropdown shows the currently selected layer (e.g., "JPG")
-4. Click the dropdown to see all available layers
-
-### Switching Layers
-
-1. Click the layer dropdown to open the list
-2. All available layers for the current image are shown
-3. Click any layer name to switch to that version
-4. The image updates immediately to show the selected layer
-
-**Quick switching:**
-
-* The dropdown remembers your last selection
-* When navigating to the next image, Chloros attempts to show the same layer type
-* If that layer doesn't exist on the next image, it defaults to JPG
-
-### Layer Availability
-
-Not all layers are available for every image:
-
-**Always available:**
-
-* ✅ JPG (every image has a JPG preview)
-
-**Conditionally available:**
-
-* ⚠️ RAW (Original) - Only if image was captured in RAW or RAW+JPG mode
-* ⚠️ RAW (Target) - Only if image contains detected calibration targets
-* ⚠️ RAW (Reflectance) - Only after processing with reflectance calibration enabled
-* ⚠️ RAW (\[Index] Index) - Only after processing with indices configured
+* Εξέταση των αποτελεσμάτων υπολογισμού των δεικτών
+* Έλεγχος των εύρων τιμών των δεικτών
+* Προσδιορισμός των περιοχών ενδιαφέροντος
+* Επαλήθευση εικόνων δείκτη πριν από τη χρήση σε GIS ή ανάλυση
 
 ***
 
-## Layer Persistence
+## Χρήση του επιλογέα επιπέδων
 
-### Navigating Between Images
+### Άνοιγμα του αναπτυσσόμενου μενού
 
-When you navigate to a different image (using arrow keys or clicking thumbnails):
+1. Ανοίξτε μια εικόνα σε λειτουργία πλήρους οθόνης (κάντε κλικ σε οποιαδήποτε μικρογραφία στο πρόγραμμα προβολής εικόνων)
+2. Εντοπίστε το **αναπτυσσόμενο μενού επιπέδων** στην επάνω δεξιά γωνία του προγράμματος προβολής
+3. Το αναπτυσσόμενο μενού εμφανίζει το τρέχον επιλεγμένο επίπεδο (π.χ. &quot;JPG&quot;)
+4. Κάντε κλικ στο αναπτυσσόμενο μενού για να δείτε όλα τα διαθέσιμα επίπεδα
 
-**Layer preference is preserved:**
+### Αλλαγή επιπέδων
 
-* If viewing "RAW (Reflectance)", next image shows "RAW (Reflectance)" (if available)
-* If viewing "RAW (NDVI Index)", next image shows "RAW (NDVI Index)" (if available)
-* If the same layer doesn't exist, defaults to JPG
+1. Κάντε κλικ στο αναπτυσσόμενο μενού επιπέδων για να ανοίξετε τη λίστα
+2. Εμφανίζονται όλα τα διαθέσιμα επίπεδα για την τρέχουσα εικόνα
+3. Κάντε κλικ σε οποιοδήποτε όνομα επιπέδου για να μεταβείτε σε αυτήν την έκδοση
+4. Η εικόνα ενημερώνεται αμέσως για να εμφανίσει το επιλεγμένο επίπεδο
 
-**Example workflow:**
+**Γρήγορη αλλαγή:**
 
-1. Open Image 1, switch to RAW (NDVI Index)
-2. Press → to view Image 2
-3. Image 2 automatically displays RAW (NDVI Index) layer
-4. Continue navigating - all images show NDVI layer
-5. Very efficient for reviewing index results across many images
+* Το αναπτυσσόμενο μενού θυμάται την τελευταία επιλογή σας.
+* Όταν μεταβαίνετε στην επόμενη εικόνα, το Chloros προσπαθεί να εμφανίσει τον ίδιο τύπο επιπέδου.
+* Εάν αυτό το επίπεδο δεν υπάρχει στην επόμενη εικόνα, η προεπιλογή είναι JPG.
 
-***
+### Διαθεσιμότητα επιπέδων
 
-## Common Workflows
+Δεν είναι όλα τα επίπεδα διαθέσιμα για κάθε εικόνα:
 
-### Workflow 1: Before/After Comparison
+**Πάντα διαθέσιμα:**
 
-**Goal**: Compare original vs. calibrated image
+* ✅ JPG (κάθε εικόνα έχει προεπισκόπηση JPG)
 
-1. Open processed image in Image Viewer
-2. Select **RAW (Original)** from dropdown
-3. Note the vignetting and uncalibrated values
-4. Switch to **RAW (Reflectance)** from dropdown
-5. Compare - vignetting removed, values calibrated
+**Διαθέσιμα υπό όρους:**
 
-### Workflow 2: Index Review
-
-**Goal**: Quickly review NDVI results across dataset
-
-1. Open first processed image
-2. Select **RAW (NDVI Index)** from dropdown
-3. Use → arrow key to navigate to next image
-4. NDVI layer persists automatically
-5. Continue through all images, checking NDVI patterns
-6. Switch to **RAW (NDRE Index)** to compare
-
-### Workflow 3: Target Verification
-
-**Goal**: Verify all target images were detected correctly
-
-1. Navigate to a target image
-2. Select **RAW (Target)** from dropdown
-3. Verify calibration targets are clearly visible and detected
-4. Navigate to next target image
-5. Repeat verification for all targets
-
-### Workflow 4: Pixel Value Inspection
-
-**Goal**: Check reflectance values for scientific accuracy
-
-1. Open processed image
-2. Select **RAW (Reflectance)** layer
-3. Enable **Pixel Percent** mode (button in top-right toolbar)
-4. Move cursor over vegetation areas
-5. Verify pixel values are in expected ranges (30-70% for NIR, 5-15% for Red)
-6. Check soil and water areas for appropriate values
+* ⚠️ RAW (Original) - Μόνο εάν η εικόνα τραβήχτηκε σε λειτουργία RAW ή RAW+JPG
+* ⚠️ RAW (Target) - Μόνο εάν η εικόνα περιέχει ανιχνευμένους στόχους βαθμονόμησης
+* ⚠️ RAW (Αντανάκλαση) - Μόνο μετά από επεξεργασία με ενεργοποιημένη τη βαθμονόμηση αντανάκλασης
+* ⚠️ RAW (\[Δείκτης] Δείκτης) - Μόνο μετά από επεξεργασία με διαμορφωμένους δείκτες
 
 ***
 
-## Understanding Pixel Values by Layer
+## Διατήρηση επιπέδων
 
-Different layers show different pixel value ranges:
+### Πλοήγηση μεταξύ εικόνων
 
-### JPG Layer
+Όταν πλοηγείστε σε μια διαφορετική εικόνα (χρησιμοποιώντας τα πλήκτρα βέλους ή κάνοντας κλικ στις μικρογραφίες):
 
-* **Range**: 0-255 (8-bit)
-* **Meaning**: Display values, gamma-corrected
-* **Use**: Visual inspection only, not for scientific measurement
+**Η προτίμηση επιπέδου διατηρείται:**
 
-### RAW (Original)
+* Εάν προβάλλετε &quot;RAW (Αντανάκλαση)&quot;, η επόμενη εικόνα εμφανίζει &quot;RAW (Αντανάκλαση)&quot; (εάν είναι διαθέσιμη)
+* Εάν προβάλλετε &quot;RAW (NDVI Δείκτης)&quot;, η επόμενη εικόνα εμφανίζει &quot;RAW (NDVI Δείκτης)&quot; (εάν είναι διαθέσιμη)
+* Εάν δεν υπάρχει το ίδιο επίπεδο, η προεπιλογή είναι JPG
 
-* **Range**: 0-65535 (16-bit)
-* **Meaning**: Raw sensor digital numbers
-* **Use**: Checking sensor performance, not calibrated
+**Παράδειγμα ροής εργασίας:**
 
-### RAW (Reflectance)
-
-* **Range**: 0-65,535 (16-bit TIFF) or 0.0-1.0 (32-bit Percent)
-* **Meaning**: Calibrated percent reflectance
-* **Use**: Scientific measurements and analysis
-
-**For 16-bit TIFF:** Divide by 65,535 to get percent reflectance **For 32-bit Percent:** Values directly represent percent (0.5 = 50% reflectance)
-
-### RAW (Index Images)
-
-* **Range**: Varies by index (typically -1.0 to +1.0 for normalized indices)
-* **Meaning**: Index calculation result
-* **Examples**:
-  * NDVI: -1 to +1 (vegetation typically 0.4 to 0.9)
-  * NDRE: -1 to +1 (stress detection)
-  * EVI: 0 to 1 (enhanced vegetation)
+1. Ανοίξτε την Εικόνα 1, μεταβείτε στο RAW (NDVI Index)
+2. Πατήστε → για να δείτε την Εικόνα 2
+3. Η Εικόνα 2 εμφανίζει αυτόματα το επίπεδο RAW (NDVI Index)
+4. Συνεχίστε την πλοήγηση - όλες οι εικόνες εμφανίζουν το επίπεδο NDVI
+5. Πολύ αποτελεσματικό για την αναθεώρηση των αποτελεσμάτων του ευρετηρίου σε πολλές εικόνες
 
 ***
 
-## Tips and Best Practices
+## Κοινές ροές εργασίας
 
-### Efficient Layer Switching
+### Ροή εργασίας 1: Σύγκριση πριν/μετά
 
-* **Keyboard shortcut awareness**: While there's no keyboard shortcut for layers, navigation arrows (←/→) work across all layers
-* **Consistent workflows**: Pick one layer (e.g., NDVI) and review entire dataset before switching to another
-* **Quick comparisons**: Toggle between Original and Reflectance to verify processing quality
+**Στόχος**: Σύγκριση της αρχικής εικόνας με την βαθμονομημένη εικόνα
 
-### Performance Considerations
+1. Ανοίξτε την επεξεργασμένη εικόνα στο Image Viewer
+2. Επιλέξτε **RAW (Original)** από το αναπτυσσόμενο μενού
+3. Σημειώστε το βινιέτ και τις μη βαθμονομημένες τιμές
+4. Μεταβείτε στο **RAW (Reflectance)** από το αναπτυσσόμενο μενού
+5. Συγκρίνετε - το βινιέτ έχει αφαιρεθεί, οι τιμές έχουν βαθμονομηθεί
 
-* **JPG loads fastest**: Use for quick navigation through many images
-* **RAW layers load slower**: Higher resolution and bit depth
-* **Index layers**: Similar speed to Reflectance layers
-* **First load is slowest**: Subsequent views of same layer are cached and faster
+### Ροή εργασίας 2: Αναθεώρηση ευρετηρίου
 
-### Quality Verification
+**Στόχος**: Γρήγορη αναθεώρηση των αποτελεσμάτων NDVI σε όλο το σύνολο δεδομένων
 
-* **Always check RAW (Original)**: Verify source data quality before trusting processed outputs
-* **Compare layers**: Use layer switching to validate processing worked correctly
-* **Check index ranges**: Use Pixel Percent mode with index layers to verify values are reasonable
+1. Ανοίξτε την πρώτη επεξεργασμένη εικόνα
+2. Επιλέξτε **RAW (NDVI Index)** από το αναπτυσσόμενο μενού
+3. Χρησιμοποιήστε το πλήκτρο βέλους → για να μεταβείτε στην επόμενη εικόνα
+4. Το επίπεδο NDVI παραμένει αυτόματα
+5. Συνεχίστε με όλες τις εικόνες, ελέγχοντας τα μοτίβα NDVI
+6. Μεταβείτε στο **RAW (NDRE Index)** για σύγκριση
 
-***
+### Ροή εργασίας 3: Επαλήθευση στόχου
 
-## Troubleshooting
+**Στόχος**: Επαλήθευση ότι όλες οι εικόνες στόχου ανιχνεύθηκαν σωστά
 
-### Layer Not Available
+1. Μεταβείτε σε μια εικόνα στόχου
+2. Επιλέξτε **RAW (Target)** από το αναπτυσσόμενο μενού
+3. Επαληθεύστε ότι οι στόχοι βαθμονόμησης είναι σαφώς ορατοί και ανιχνεύονται
+4. Μεταβείτε στην επόμενη εικόνα στόχου
+5. Επαναλάβετε την επαλήθευση για όλους τους στόχους
 
-**Problem**: Expected layer doesn't appear in dropdown
+### Ροή εργασίας 4: Επιθεώρηση τιμών pixel
 
-**Possible causes:**
+**Στόχος**: Έλεγχος των τιμών ανακλαστικότητας για επιστημονική ακρίβεια
 
-* Image wasn't processed (only JPG and RAW (Original) available)
-* Reflectance calibration was disabled during processing
-* Specific index wasn't configured in Project Settings
-* Image is a target-only image (no indices generated for targets)
-
-**Solutions:**
-
-1. Verify image was processed (check output folder for processed files)
-2. Check Project Settings to confirm indices were configured
-3. Reprocess with desired indices enabled
-
-### Wrong Layer Shown
-
-**Problem**: Image opens in unexpected layer
-
-**Cause**: Layer preference from previous image carried forward, but that layer doesn't exist on current image
-
-**Solution**: Chloros automatically falls back to JPG when preferred layer unavailable - this is normal behavior
-
-### Can't See Calibration Targets
-
-**Problem**: RAW (Target) layer doesn't show target detection
-
-**Possible causes:**
-
-* Targets weren't detected during processing
-* Image doesn't actually contain targets
-* Target detection settings too strict
-
-**Solutions:**
-
-1. Check Debug Log for "Target found" messages
-2. Verify image actually contains visible calibration targets
-3. Adjust target detection settings in Project Settings
-4. See [Choosing Target Images](../processing-images-gui/choosing-target-images.md)
+1. Ανοίξτε την επεξεργασμένη εικόνα
+2. Επιλέξτε το επίπεδο **RAW (Ανακλαστικότητα)**
+3. Ενεργοποιήστε τη λειτουργία **Ποσοστό pixel** (κουμπί στην επάνω δεξιά γωνία της γραμμής εργαλείων)
+4. Μετακινήστε τον κέρσορα πάνω από τις περιοχές βλάστησης
+5. Βεβαιωθείτε ότι οι τιμές pixel βρίσκονται στα αναμενόμενα εύρη (30-70% για NIR, 5-15% για Red)
+6. Ελέγξτε τις περιοχές εδάφους και νερού για τις κατάλληλες τιμές
 
 ***
 
-## Related Features
+## Κατανόηση των τιμών pixel ανά επίπεδο
 
-### Image Viewer Tools
+Τα διαφορετικά επίπεδα εμφανίζουν διαφορετικά εύρη τιμών pixel:
 
-When viewing any layer, you can use:
+### Επίπεδο JPG
 
-* **Zoom controls**: Magnify to inspect details
-* **Pan**: Click and drag to move around zoomed image
-* **Pixel value inspection**: See values at cursor location
-* **Navigation arrows**: Move between images while maintaining layer
-* **Pixel Percent mode**: Toggle between DN and percent display
+* **Εύρος**: 0-255 (8-bit)
+* **Σημασία**: Εμφάνιση τιμών, με διόρθωση γάμμα
+* **Χρήση**: Μόνο οπτική επιθεώρηση, όχι για επιστημονικές μετρήσεις
 
-See [Opening an Image Full Screen](page-3.md) for complete Image Viewer documentation.
+### RAW (Πρωτότυπο)
 
-### Index/LUT Sandbox
+* **Εύρος**: 0-65535 (16-bit)
+* **Σημασία**: Ακατέργαστοι ψηφιακοί αριθμοί αισθητήρα
+* **Χρήση**: Έλεγχος απόδοσης αισθητήρα, χωρίς βαθμονόμηση
 
-For interactive index testing and visualization:
+### RAW (Ανακλαστικότητα)
 
-* **Real-time index calculation**: Test different index formulas
-* **LUT color mapping**: Apply color gradients to grayscale indices
-* **Export visualizations**: Save colored index images
+* **Εύρος**: 0-65.535 (16-bit TIFF) ή 0,0-1,0 (32-bit Ποσοστό)
+* **Σημασία**: Βαθμονομημένη ανακλαστικότητα σε ποσοστό
+* **Χρήση**: Επιστημονικές μετρήσεις και αναλύσεις
 
-See [Index/LUT Sandbox](index-lut-sandbox.md) for details.
+**Για 16-bit TIFF:** Διαιρέστε με 65.535 για να λάβετε την ανακλαστικότητα σε ποσοστό **Για 32-bit Percent:** Οι τιμές αντιπροσωπεύουν άμεσα το ποσοστό (0,5 = 50% ανακλαστικότητα)
+
+### RAW (εικόνες δείκτη)
+
+* **Εύρος**: Διαφέρει ανάλογα με τον δείκτη (συνήθως -1,0 έως +1,0 για κανονικοποιημένους δείκτες)
+* **Σημασία**: Αποτέλεσμα υπολογισμού δείκτη
+* **Παραδείγματα**:
+  * NDVI: -1 έως +1 (βλάστηση συνήθως 0,4 έως 0,9)
+  * NDRE: -1 έως +1 (ανίχνευση στρες)
+  * EVI: 0 έως 1 (ενισχυμένη βλάστηση)
 
 ***
 
-## Next Steps
+## Συμβουλές και βέλτιστες πρακτικές
 
-Now that you understand image layers:
+### Αποτελεσματική εναλλαγή επιπέδων
 
-* [**Opening an Image Full Screen**](page-3.md) - Complete Image Viewer guide
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Interactive index visualization
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Available indices reference
-* [**Finishing the Processing**](../processing-images-gui/finishing-the-processing.md) - Understanding processed outputs
+* **Γνώση των συντομεύσεων πληκτρολογίου**: Αν και δεν υπάρχουν συντομεύσεις πληκτρολογίου για τα επίπεδα, τα βέλη πλοήγησης (←/→) λειτουργούν σε όλα τα επίπεδα
+* **Συνεπείς ροές εργασίας**: Επιλέξτε ένα επίπεδο (π.χ. NDVI) και ελέγξτε ολόκληρο το σύνολο δεδομένων πριν μεταβείτε σε άλλο
+* **Γρήγορες συγκρίσεις**: Εναλλάξτε μεταξύ Original (Πρωτότυπο) και Reflectance (Αντανάκλαση) για να επαληθεύσετε την ποιότητα της επεξεργασίας
+
+### Σκέψεις σχετικά με την απόδοση
+
+* **Το JPG φορτώνεται πιο γρήγορα**: Χρησιμοποιήστε το για γρήγορη πλοήγηση σε πολλές εικόνες.
+* **Τα επίπεδα RAW φορτώνουν πιο αργά**: Υψηλότερη ανάλυση και βάθος bit.
+* **Επίπεδα ευρετηρίου**: Παρόμοια ταχύτητα με τα επίπεδα ανακλαστικότητας.
+* **Η πρώτη φόρτωση είναι η πιο αργή**: Οι επόμενες προβολές του ίδιου επιπέδου αποθηκεύονται στην προσωρινή μνήμη και είναι ταχύτερες.
+
+### Έλεγχος ποιότητας
+
+* **Ελέγχετε πάντα το RAW (Original)**: Επαληθεύστε την ποιότητα των δεδομένων πηγής πριν εμπιστευτείτε τα επεξεργασμένα αποτελέσματα
+* **Συγκρίνετε τα επίπεδα**: Χρησιμοποιήστε την εναλλαγή επιπέδων για να επαληθεύσετε ότι η επεξεργασία λειτούργησε σωστά
+* **Ελέγξτε τα εύρη ευρετηρίου**: Χρησιμοποιήστε τη λειτουργία Pixel Percent με επίπεδα ευρετηρίου για να επαληθεύσετε ότι οι τιμές είναι λογικές
+
+***
+
+## Αντιμετώπιση προβλημάτων
+
+### Το επίπεδο δεν είναι διαθέσιμο
+
+**Πρόβλημα**: Το αναμενόμενο επίπεδο δεν εμφανίζεται στο αναπτυσσόμενο μενού
+
+**Πιθανές αιτίες:**
+
+* Η εικόνα δεν υποβλήθηκε σε επεξεργασία (διατίθενται μόνο JPG και RAW (Original))
+* Η βαθμονόμηση ανακλαστικότητας απενεργοποιήθηκε κατά τη διάρκεια της επεξεργασίας
+* Ο συγκεκριμένος δείκτης δεν έχει ρυθμιστεί στις Ρυθμίσεις έργου
+* Η εικόνα είναι εικόνα μόνο για στόχους (δεν έχουν δημιουργηθεί δείκτες για στόχους)
+
+**Λύσεις:**
+
+1. Επαληθεύστε ότι η εικόνα υποβλήθηκε σε επεξεργασία (ελέγξτε το φάκελο εξόδου για αρχεία που έχουν υποβληθεί σε επεξεργασία)
+2. Ελέγξτε τις Ρυθμίσεις έργου για να επιβεβαιώσετε ότι οι δείκτες έχουν ρυθμιστεί
+3. Επεξεργαστείτε ξανά με τους επιθυμητούς δείκτες ενεργοποιημένους
+
+### Εμφάνιση λανθασμένου επιπέδου
+
+**Πρόβλημα**: Η εικόνα ανοίγει σε μη αναμενόμενο επίπεδο
+
+**Αιτία**: Η προτίμηση επιπέδου από την προηγούμενη εικόνα μεταφέρθηκε, αλλά αυτό το επίπεδο δεν υπάρχει στην τρέχουσα εικόνα
+
+**Λύση**: Το Chloros επιστρέφει αυτόματα σε JPG όταν το προτιμώμενο επίπεδο δεν είναι διαθέσιμο - αυτή είναι η κανονική συμπεριφορά
+
+### Δεν είναι δυνατή η προβολή των στόχων βαθμονόμησης
+
+**Πρόβλημα**: Το επίπεδο RAW (στόχος) δεν εμφανίζει την ανίχνευση στόχων.
+
+**Πιθανές αιτίες:**
+
+* Οι στόχοι δεν ανιχνεύθηκαν κατά τη διάρκεια της επεξεργασίας.
+* Η εικόνα δεν περιέχει στόχους.
+* Οι ρυθμίσεις ανίχνευσης στόχων είναι πολύ αυστηρές.
+
+**Λύσεις:**
+
+1. Ελέγξτε το αρχείο καταγραφής σφαλμάτων για μηνύματα &quot;Target found&quot; (Εντοπίστηκε στόχος)
+2. Βεβαιωθείτε ότι η εικόνα περιέχει ορατούς στόχους βαθμονόμησης
+3. Προσαρμόστε τις ρυθμίσεις ανίχνευσης στόχων στις Ρυθμίσεις έργου
+4. Δείτε [Επιλογή εικόνων στόχων](../processing-images-gui/choosing-target-images.md)
+
+***
+
+## Σχετικές λειτουργίες
+
+### Εργαλεία προβολής εικόνων
+
+Κατά την προβολή οποιουδήποτε επιπέδου, μπορείτε να χρησιμοποιήσετε:
+
+* **Χειριστήρια ζουμ**: Μεγέθυνση για έλεγχο λεπτομερειών
+* **Πανόραμα**: Κάντε κλικ και σύρετε για να μετακινηθείτε στην μεγεθυμένη εικόνα
+* **Έλεγχος τιμής pixel**: Δείτε τις τιμές στη θέση του δρομέα
+* **Βέλη πλοήγησης**: Μετακίνηση μεταξύ εικόνων διατηρώντας το επίπεδο
+* **Λειτουργία ποσοστού pixel**: Εναλλαγή μεταξύ εμφάνισης DN και ποσοστού
+
+Δείτε [Άνοιγμα εικόνας σε πλήρη οθόνη](opening-an-image-full-screen.md) για την πλήρη τεκμηρίωση του προγράμματος προβολής εικόνων.
+
+### Sandbox ευρετηρίου/LUT
+
+Για διαδραστική δοκιμή και οπτικοποίηση ευρετηρίου:
+
+* **Υπολογισμός ευρετηρίου σε πραγματικό χρόνο**: Δοκιμάστε διαφορετικούς τύπους ευρετηρίου
+* **Χαρτογράφηση χρωμάτων LUT**: Εφαρμόστε χρωματικές διαβαθμίσεις σε ευρετήρια κλίμακας του γκρι
+* **Εξαγωγή οπτικοποιήσεων**: Αποθηκεύστε έγχρωμες εικόνες ευρετηρίου
+
+Δείτε [Index/LUT Sandbox](index-lut-sandbox.md) για λεπτομέρειες.
+
+***
+
+## Επόμενα βήματα
+
+Τώρα που κατανοείτε τα επίπεδα εικόνας:
+
+* [**Άνοιγμα εικόνας σε πλήρη οθόνη**](opening-an-image-full-screen.md) - Πλήρης οδηγός Image Viewer
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Διαδραστική απεικόνιση δεικτών
+* [**Τύποι πολυφασματικών δεικτών**](../project-settings/multispectral-index-formulas.md) - Αναφορά διαθέσιμων δεικτών
+* [**Ολοκλήρωση της επεξεργασίας**](../processing-images-gui/finishing-the-processing.md) - Κατανόηση των επεξεργασμένων αποτελεσμάτων

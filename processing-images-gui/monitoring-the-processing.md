@@ -1,165 +1,165 @@
-# Monitoring the Processing
+# Παρακολούθηση της επεξεργασίας
 
-Once processing has started, Chloros provides several ways to monitor progress, check for issues, and understand what's happening with your dataset. This page explains how to track your processing and interpret the information Chloros provides.
+Μόλις ξεκινήσει η επεξεργασία, το Chloros παρέχει διάφορους τρόπους για να παρακολουθείτε την πρόοδο, να ελέγχετε για προβλήματα και να κατανοείτε τι συμβαίνει με το σύνολο δεδομένων σας. Αυτή η σελίδα εξηγεί πώς να παρακολουθείτε την επεξεργασία σας και να ερμηνεύετε τις πληροφορίες που παρέχει το Chloros.
 
-## Progress Bar Overview
+## Επισκόπηση της γραμμής προόδου
 
-The progress bar in the top header shows real-time processing status and completion percentage.
+Η γραμμή προόδου στην επάνω κεφαλίδα δείχνει την κατάσταση της επεξεργασίας σε πραγματικό χρόνο και το ποσοστό ολοκλήρωσης.
 
-### Free Mode Progress Bar
+### Γραμμή προόδου σε ελεύθερη λειτουργία
 
-For users without Chloros+ license:
+Για χρήστες χωρίς άδεια Chloros+:
 
-**2-Stage Progress Display:**
+**Εμφάνιση προόδου σε 2 στάδια:**
 
-1. **Target Detect** - Finding calibration targets in images
-2. **Processing** - Applying corrections and exporting
+1. **Ανίχνευση στόχου** - Εύρεση στόχων βαθμονόμησης στις εικόνες
+2. **Επεξεργασία** - Εφαρμογή διορθώσεων και εξαγωγή
 
-**Progress bar shows:**
+**Η γραμμή προόδου εμφανίζει:**
 
-* Overall completion percentage (0-100%)
-* Current stage name
-* Simple horizontal bar visualization
+* Συνολικό ποσοστό ολοκλήρωσης (0-100%)
+* Όνομα τρέχοντος σταδίου
+* Απλή οριζόντια γραμμή απεικόνισης
 
-### Chloros+ Progress Bar
+### Γραμμή προόδου Chloros+
 
-For users with Chloros+ license:
+Για χρήστες με άδεια χρήσης Chloros+:
 
-**4-Stage Progress Display:**
+**Εμφάνιση προόδου σε 4 στάδια:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining images and preparing pipeline
-3. **Calibrating** - Applying vignette and reflectance corrections
-4. **Exporting** - Saving processed files
+1. **Ανίχνευση** - Εύρεση στόχων βαθμονόμησης
+2. **Ανάλυση** - Εξέταση εικόνων και προετοιμασία αγωγού
+3. **Βαθμονόμηση** - Εφαρμογή διορθώσεων βινιέτας και ανακλαστικότητας
+4. **Εξαγωγή** - Αποθήκευση επεξεργασμένων αρχείων
 
-**Interactive Features:**
+**Διαδραστικές λειτουργίες:**
 
-* **Hover over** progress bar to see expanded 4-stage panel
-* **Click** progress bar to freeze/pin the expanded panel
-* **Click again** to unfreeze and auto-hide on mouse leave
-* Each stage shows individual progress (0-100%)
-
-***
-
-## Understanding Each Processing Stage
-
-### Stage 1: Detecting (Target Detection)
-
-**What's happening:**
-
-* Chloros scans images marked with Target checkbox
-* Computer vision algorithms identify the 4 calibration panels
-* Reflectance values extracted from each panel
-* Target timestamps recorded for proper calibration scheduling
-
-**Duration:**
-
-* With marked targets: 10-60 seconds
-* Without marked targets: 5-30+ minutes (scans all images)
-
-**Progress indicator:**
-
-* Detecting: 0% → 100%
-* Number of images scanned
-* Targets found count
-
-**What to watch for:**
-
-* Should complete quickly if targets properly marked
-* If taking too long, targets may not be marked
-* Check Debug Log for "Target found" messages
-
-### Stage 2: Analyzing
-
-**What's happening:**
-
-* Reading image EXIF metadata (timestamps, exposure settings)
-* Determining calibration strategy based on target timestamps
-* Organizing image processing queue
-* Preparing parallel processing workers (Chloros+ only)
-
-**Duration:** 5-30 seconds
-
-**Progress indicator:**
-
-* Analyzing: 0% → 100%
-* Fast stage, usually completes quickly
-
-**What to watch for:**
-
-* Should progress steadily without pauses
-* Warnings about missing metadata will appear in Debug Log
-
-### Stage 3: Calibrating
-
-**What's happening:**
-
-* **Debayering**: Converting RAW Bayer pattern to 3 channels
-* **Vignette correction**: Removing lens edge darkening
-* **Reflectance calibration**: Normalizing with target values
-* **Index calculation**: Computing multispectral indices
-* Processing each image through the full pipeline
-
-**Duration:** Majority of total processing time (60-80%)
-
-**Progress indicator:**
-
-* Calibrating: 0% → 100%
-* Current image being processed
-* Images completed / Total images
-
-**Processing behavior:**
-
-* **Free mode**: Processes one image at a time sequentially
-* **Chloros+ mode**: Processes up to 16 images simultaneously
-* **GPU acceleration**: Significantly speeds up this stage
-
-**What to watch for:**
-
-* Steady progress through image count
-* Check Debug Log for per-image completion messages
-* Warnings about image quality or calibration issues
-
-### Stage 4: Exporting
-
-**What's happening:**
-
-* Writing calibrated images to disk in selected format
-* Exporting multispectral index images with LUT colors
-* Creating camera model subfolders
-* Preserving original filenames with appropriate suffixes
-
-**Duration:** 10-20% of total processing time
-
-**Progress indicator:**
-
-* Exporting: 0% → 100%
-* Files being written
-* Export format and destination
-
-**What to watch for:**
-
-* Disk space warnings
-* File write errors
-* Completion of all configured outputs
+* **Τοποθετήστε το δείκτη του ποντικιού πάνω από** τη γραμμή προόδου για να δείτε το αναπτυγμένο πλαίσιο 4 σταδίων
+* **Κάντε κλικ** στη γραμμή προόδου για να παγώσετε/καρφιτσώσετε το αναπτυγμένο πλαίσιο
+* **Κάντε ξανά κλικ** για να ξεπαγώσετε και να αποκρύψετε αυτόματα όταν απομακρύνετε το ποντίκι
+* Κάθε στάδιο δείχνει την ατομική πρόοδο (0-100%)
 
 ***
 
-## Debug Log Tab
+## Κατανόηση κάθε σταδίου επεξεργασίας
 
-The Debug Log provides detailed information about processing progress and any issues encountered.
+### Στάδιο 1: Ανίχνευση (ανίχνευση στόχου)
 
-### Accessing the Debug Log
+**Τι συμβαίνει:**
 
-1. Click the **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> icon in the left sidebar
-2. Log panel opens showing real-time processing messages
-3. Auto-scrolls to show latest messages
+* Το Chloros σαρώνει εικόνες που έχουν επισημανθεί με το πλαίσιο ελέγχου Στόχος
+* Αλγόριθμοι υπολογιστικής όρασης αναγνωρίζουν τα 4 πάνελ βαθμονόμησης
+* Τιμές ανακλαστικότητας που εξάγονται από κάθε πάνελ
+* Χρονοσημάνσεις στόχων που καταγράφονται για τον σωστό προγραμματισμό της βαθμονόμησης
 
-### Understanding Log Messages
+**Διάρκεια:**
 
-#### Information Messages (White/Gray)
+* Με επισημασμένους στόχους: 10-60 δευτερόλεπτα
+* Χωρίς επισημασμένους στόχους: 5-30+ λεπτά (σαρώνει όλες τις εικόνες)
 
-Normal processing updates:
+**Ένδειξη προόδου:**
+
+* Ανίχνευση: 0% → 100%
+* Αριθμός εικόνων που σαρώθηκαν
+* Αριθμός στόχων που βρέθηκαν
+
+**Τι πρέπει να προσέξετε:**
+
+* Θα πρέπει να ολοκληρωθεί γρήγορα εάν οι στόχοι έχουν επισημανθεί σωστά
+* Εάν διαρκεί πολύ, οι στόχοι ενδέχεται να μην έχουν επισημανθεί
+* Ελέγξτε το αρχείο καταγραφής σφαλμάτων για μηνύματα &quot;Target found&quot; (Βρέθηκε στόχος)
+
+### Στάδιο 2: Ανάλυση
+
+**Τι συμβαίνει:**
+
+* Ανάγνωση μεταδεδομένων EXIF εικόνας (χρονοσημάνσεις, ρυθμίσεις έκθεσης)
+* Προσδιορισμός στρατηγικής βαθμονόμησης με βάση τις χρονικές σημάνσεις στόχων
+* Οργάνωση ουράς επεξεργασίας εικόνων
+* Προετοιμασία παράλληλων εργαζομένων επεξεργασίας (μόνο Chloros+)
+
+**Διάρκεια:** 5-30 δευτερόλεπτα
+
+**Ένδειξη προόδου:**
+
+* Ανάλυση: 0% → 100%
+* Γρήγορο στάδιο, συνήθως ολοκληρώνεται γρήγορα
+
+**Τι πρέπει να προσέξετε:**
+
+* Η πρόοδος πρέπει να είναι σταθερή χωρίς διακοπές
+* Προειδοποιήσεις για ελλείπουσα μεταδεδομένα θα εμφανίζονται στο αρχείο καταγραφής σφαλμάτων
+
+### Στάδιο 3: Βαθμονόμηση
+
+**Τι συμβαίνει:**
+
+* **Debayering**: Μετατροπή μοτίβου RAW Bayer σε 3 κανάλια
+* **Διόρθωση βινιέτας**: Αφαίρεση σκουρόχρωμης άκρης φακού
+* **Βαθμονόμηση ανακλαστικότητας**: Ομαλοποίηση με τιμές-στόχους
+* **Υπολογισμός δείκτη**: Υπολογισμός πολυφασματικών δεικτών
+* Επεξεργασία κάθε εικόνας μέσω της πλήρους διαδικασίας
+
+**Διάρκεια:** Το μεγαλύτερο μέρος του συνολικού χρόνου επεξεργασίας (60-80%)
+
+**Ένδειξη προόδου:**
+
+* Βαθμονόμηση: 0% → 100%
+* Επεξεργασία τρέχουσας εικόνας
+* Ολοκληρωμένες εικόνες / Συνολικές εικόνες
+
+**Συμπεριφορά επεξεργασίας:**
+
+* **Ελεύθερη λειτουργία**: Επεξεργάζεται μία εικόνα κάθε φορά διαδοχικά
+* **Λειτουργία Chloros+**: Επεξεργάζεται έως και 16 εικόνες ταυτόχρονα
+* **Επιτάχυνση GPU**: Επιταχύνει σημαντικά αυτό το στάδιο
+
+**Τι πρέπει να προσέξετε:**
+
+* Σταθερή πρόοδος μέσω του αριθμού εικόνων
+* Ελέγξτε το αρχείο καταγραφής σφαλμάτων για μηνύματα ολοκλήρωσης ανά εικόνα
+* Προειδοποιήσεις σχετικά με προβλήματα ποιότητας εικόνας ή βαθμονόμησης
+
+### Στάδιο 4: Εξαγωγή
+
+**Τι συμβαίνει:**
+
+* Εγγραφή βαθμονομημένων εικόνων στο δίσκο στην επιλεγμένη μορφή
+* Εξαγωγή εικόνων πολυφασματικού δείκτη με χρώματα LUT
+* Δημιουργία υποφακέλων μοντέλων κάμερας
+* Διατήρηση των αρχικών ονομάτων αρχείων με τα κατάλληλα επιθήματα
+
+**Διάρκεια:** 10-20% του συνολικού χρόνου επεξεργασίας
+
+**Ένδειξη προόδου:**
+
+* Εξαγωγή: 0% → 100%
+* Αρχεία που εγγράφονται
+* Μορφή εξαγωγής και προορισμός
+
+**Τι πρέπει να προσέξετε:**
+
+* Προειδοποιήσεις χώρου στο δίσκο
+* Σφάλματα εγγραφής αρχείων
+* Ολοκλήρωση όλων των διαμορφωμένων εξόδων
+
+***
+
+## Καρτέλα αρχείου καταγραφής σφαλμάτων
+
+Το αρχείο καταγραφής σφαλμάτων παρέχει λεπτομερείς πληροφορίες σχετικά με την πρόοδο της επεξεργασίας και τυχόν προβλήματα που συναντήθηκαν.
+
+### Πρόσβαση στο αρχείο καταγραφής σφαλμάτων
+
+1. Κάντε κλικ στο εικονίδιο **Αρχείο καταγραφής σφαλμάτων** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> στην αριστερή πλευρική γραμμή
+2. Ανοίγει το παράθυρο καταγραφής με μηνύματα επεξεργασίας σε πραγματικό χρόνο
+3. Αυτόματη κύλιση για εμφάνιση των πιο πρόσφατων μηνυμάτων
+
+### Κατανόηση των μηνυμάτων καταγραφής
+
+#### Μηνύματα πληροφοριών (λευκά/γκρι)
+
+Κανονικές ενημερώσεις επεξεργασίας:
 
 ```
 [INFO] Processing started
@@ -169,9 +169,9 @@ Normal processing updates:
 [INFO] Processing complete
 ```
 
-#### Warning Messages (Yellow)
+#### Μηνύματα προειδοποίησης (κίτρινα)
 
-Non-critical issues that don't stop processing:
+Μη κρίσιμα προβλήματα που δεν σταματούν την επεξεργασία:
 
 ```
 [WARN] No GPS data found in IMG_0145.RAW
@@ -179,11 +179,11 @@ Non-critical issues that don't stop processing:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Action:** Review warnings after processing, but don't interrupt
+**Ενέργεια:** Ελέγξτε τις προειδοποιήσεις μετά την επεξεργασία, αλλά μην διακόψετε τη διαδικασία.
 
-#### Error Messages (Red)
+#### Μηνύματα σφάλματος (Red)
 
-Critical issues that may cause processing to fail:
+Κρίσιμα προβλήματα που ενδέχεται να προκαλέσουν αποτυχία της επεξεργασίας:
 
 ```
 [ERROR] Cannot write file - disk full
@@ -191,202 +191,202 @@ Critical issues that may cause processing to fail:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Action:** Stop processing, resolve error, restart
+**Ενέργεια:** Διακόψτε την επεξεργασία, επιλύστε το σφάλμα, επανεκκινήστε.
 
-### Common Log Messages
+### Κοινά μηνύματα καταγραφής
 
-| Message                          | Meaning                                | Action Needed                                         |
+| Μήνυμα                          | Σημασία                                | Απαιτούμενη ενέργεια                                         |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
-| "Processing image X of Y"        | Current progress update                | None - normal                                         |
-| "No targets found"               | No calibration targets detected        | Mark target images or disable reflectance calibration |
-| "Insufficient disk space"        | Not enough storage for output          | Free up disk space                                    |
-| "Skipping corrupted file"        | Image file is damaged                  | Re-copy file from SD card                             |
-| "PPK data applied"               | GPS corrections from .daq file applied | None - normal                                         |
+| &quot;Εντοπίστηκε στόχος στο \[όνομα αρχείου]&quot; | Ο στόχος βαθμονόμησης εντοπίστηκε με επιτυχία  | Καμία - κανονική                                         |
+| &quot;Επεξεργασία εικόνας X από Y&quot;        | Ενημέρωση τρέχουσας προόδου                | Καμία - κανονική                                         |
+| &quot;Δεν εντοπίστηκαν στόχοι&quot;               | Δεν εντοπίστηκαν στόχοι βαθμονόμησης        | Επισημάνετε τις εικόνες στόχων ή απενεργοποιήστε τη βαθμονόμηση ανάκλασης |
+| «Ανεπαρκής χώρος στο δίσκο»        | Ανεπαρκής χώρος αποθήκευσης για έξοδο          | Ελευθερώστε χώρο στο δίσκο                                    |
+| «Παράλειψη κατεστραμμένου αρχείου»        | Το αρχείο εικόνας είναι κατεστραμμένο                  | Αντιγράψτε ξανά το αρχείο από την κάρτα SD                             |
+| «Εφαρμογή δεδομένων PPK»               | Εφαρμογή διορθώσεων GPS από αρχείο .daq | Καμία - κανονική                                         |
 
-### Copying Log Data
+### Αντιγραφή δεδομένων καταγραφής
 
-To copy log for troubleshooting or support:
+Για να αντιγράψετε το αρχείο καταγραφής για την αντιμετώπιση προβλημάτων ή την υποστήριξη:
 
-1. Open Debug Log panel
-2. Click **"Copy Log"** button (or right-click → Select All)
-3. Paste into text file or email
-4. Send to MAPIR support if needed
+1. Ανοίξτε τον πίνακα καταγραφής σφαλμάτων
+2. Κάντε κλικ στο κουμπί **&quot;Αντιγραφή αρχείου καταγραφής&quot;** (ή κάντε δεξί κλικ → Επιλογή όλων)
+3. Επικολλήστε σε αρχείο κειμένου ή email
+4. Στείλτε στο MAPIR υποστήριξη, αν χρειαστεί
 
 ***
 
-## System Resource Monitoring
+## Παρακολούθηση πόρων συστήματος
 
-### CPU Usage
+### Χρήση CPU
 
-**Free Mode:**
+**Ελεύθερη λειτουργία:**
 
-* 1 CPU core at \~100%
-* Other cores idle or available
-* System remains responsive
+* 1 πυρήνας CPU στο \~100%
+* Άλλοι πυρήνες αδρανείς ή διαθέσιμοι
+* Το σύστημα παραμένει ανταποκρινόμενο
 
-**Chloros+ Parallel Mode:**
+**Chloros+ Παράλληλη λειτουργία:**
 
-* Multiple cores at 80-100% (up to 16 cores)
-* High overall CPU utilization
-* System may feel less responsive
+* Πολλαπλοί πυρήνες στο 80-100% (έως 16 πυρήνες)
+* Υψηλή συνολική χρήση CPU
+* Το σύστημα μπορεί να φαίνεται λιγότερο ανταποκρινόμενο
 
-**To monitor:**
+**Για παρακολούθηση:**
 
-* Windows Task Manager (Ctrl+Shift+Esc)
-* Performance tab → CPU section
-* Look for "Chloros" or "chloros-backend" processes
+* Windows Διαχείριση εργασιών (Ctrl+Shift+Esc)
+* Καρτέλα Απόδοση → Ενότητα CPU
+* Αναζητήστε τις διεργασίες &quot;Chloros&quot; ή &quot;chloros-backend&quot;
 
-### Memory (RAM) Usage
+### Χρήση μνήμης (RAM)
 
-**Typical usage:**
+**Τυπική χρήση:**
 
-* Small projects (< 100 images): 2-4 GB
-* Medium projects (100-500 images): 4-8 GB
-* Large projects (500+ images): 8-16 GB
-* Chloros+ parallel mode uses more RAM
+* Μικρά έργα (&lt; 100 εικόνες): 2-4 GB
+* Μεσαία έργα (100-500 εικόνες): 4-8 GB
+* Μεγάλα έργα (500+ εικόνες): 8-16 GB
+* Η παράλληλη λειτουργία Chloros+ χρησιμοποιεί περισσότερη μνήμη RAM
 
-**If memory is low:**
+**Εάν η μνήμη είναι χαμηλή:**
 
-* Process smaller batches
-* Close other applications
-* Upgrade RAM if regularly processing large datasets
+* Επεξεργαστείτε μικρότερες παρτίδες
+* Κλείστε άλλες εφαρμογές
+* Αναβαθμίστε τη μνήμη RAM εάν επεξεργάζεστε τακτικά μεγάλα σύνολα δεδομένων
 
-### GPU Usage (Chloros+ with CUDA)
+### Χρήση GPU (Chloros+ με CUDA)
 
-When GPU acceleration is enabled:
+Όταν είναι ενεργοποιημένη η επιτάχυνση GPU:
 
-* NVIDIA GPU shows high utilization (60-90%)
-* VRAM usage increases (requires 4GB+ VRAM)
-* Calibrating stage is significantly faster
+* Η GPU NVIDIA εμφανίζει υψηλή χρήση (60-90%)
+* Η χρήση VRAM αυξάνεται (απαιτεί 4GB+ VRAM)
+* Το στάδιο βαθμονόμησης είναι σημαντικά ταχύτερο
 
-**To monitor:**
+**Για παρακολούθηση:**
 
-* NVIDIA System Tray icon
+* Εικονίδιο NVIDIA στο System Tray
 * Task Manager → Performance → GPU
-* GPU-Z or similar monitoring tool
+* GPU-Z ή παρόμοιο εργαλείο παρακολούθησης
 
 ### Disk I/O
 
-**What to expect:**
+**Τι να περιμένετε:**
 
-* High disk read during Analyzing stage
-* High disk write during Exporting stage
-* SSD significantly faster than HDD
+* Υψηλή ανάγνωση δίσκου κατά τη φάση ανάλυσης
+* Υψηλή εγγραφή δίσκου κατά τη φάση εξαγωγής
+* SSD σημαντικά ταχύτερο από HDD
 
-**Performance tip:**
+**Συμβουλή απόδοσης:**
 
-* Use SSD for project folder when possible
-* Avoid network drives for large datasets
-* Ensure disk isn't near capacity (affects write speed)
-
-***
-
-## Detecting Problems During Processing
-
-### Warning Signs
-
-**Progress stalls (no change for 5+ minutes):**
-
-* Check Debug Log for errors
-* Verify disk space available
-* Check Task Manager to ensure Chloros is running
-
-**Error messages appear frequently:**
-
-* Stop processing and review errors
-* Common causes: disk space, corrupted files, memory issues
-* See Troubleshooting section below
-
-**System becomes unresponsive:**
-
-* Chloros+ parallel mode using too many resources
-* Consider reducing concurrent tasks or upgrading hardware
-* Free mode is less resource-intensive
-
-### When to Stop Processing
-
-Stop processing if you see:
-
-* ❌ "Disk full" or "Cannot write file" errors
-* ❌ Repeated image file corruption errors
-* ❌ System completely frozen (not responding)
-* ❌ Realized wrong settings were configured
-* ❌ Wrong images imported
-
-**How to stop:**
-
-1. Click **Stop/Cancel button** (replaces Start button)
-2. Processing halts, progress is lost
-3. Fix issues and restart from beginning
+* Χρησιμοποιήστε SSD για το φάκελο του έργου, όταν είναι δυνατόν
+* Αποφύγετε τις μονάδες δικτύου για μεγάλα σύνολα δεδομένων
+* Βεβαιωθείτε ότι ο δίσκος δεν είναι σχεδόν γεμάτος (επηρεάζει την ταχύτητα εγγραφής)
 
 ***
 
-## Troubleshooting During Processing
+## Ανίχνευση προβλημάτων κατά τη διάρκεια της επεξεργασίας
 
-### Processing is Very Slow
+### Προειδοποιητικά σημάδια
 
-**Possible causes:**
+**Η πρόοδος σταματά (καμία αλλαγή για 5+ λεπτά):**
 
-* Unmarked target images (scanning all images)
-* HDD instead of SSD storage
-* Insufficient system resources
-* Many indices configured
-* Network drive access
+* Ελέγξτε το αρχείο καταγραφής σφαλμάτων για σφάλματα
+* Ελέγξτε τον διαθέσιμο χώρο στο δίσκο
+* Ελέγξτε τη Διαχείριση εργασιών για να βεβαιωθείτε ότι το Chloros εκτελείται
 
-**Solutions:**
+**Εμφανίζονται συχνά μηνύματα σφάλματος:**
 
-1. If just started and in Detecting stage: Cancel, mark targets, restart
-2. For future: Use SSD, reduce indices, upgrade hardware
-3. Consider CLI for batch processing large datasets
+* Σταματήστε την επεξεργασία και ελέγξτε τα σφάλματα
+* Συνηθισμένες αιτίες: χώρος στο δίσκο, κατεστραμμένα αρχεία, προβλήματα μνήμης
+* Ανατρέξτε στην ενότητα Αντιμετώπιση προβλημάτων παρακάτω
 
-### "Disk Space" Warnings
+**Το σύστημα δεν ανταποκρίνεται:**
 
-**Solutions:**
+* Η παράλληλη λειτουργία Chloros+ χρησιμοποιεί πάρα πολλούς πόρους
+* Εξετάστε το ενδεχόμενο να μειώσετε τις ταυτόχρονες εργασίες ή να αναβαθμίσετε τον εξοπλισμό
+* Η ελεύθερη λειτουργία απαιτεί λιγότερους πόρους
 
-1. Free up disk space immediately
-2. Move project to drive with more space
-3. Reduce number of indices to export
-4. Use JPG format instead of TIFF (smaller files)
+### Πότε να σταματήσετε την επεξεργασία
 
-### Frequent "Corrupted File" Messages
+Σταματήστε την επεξεργασία εάν δείτε:
 
-**Solutions:**
+* ❌ Σφάλματα «Ο δίσκος είναι πλήρης» ή «Δεν είναι δυνατή η εγγραφή αρχείου»
+* ❌ Επαναλαμβανόμενα σφάλματα αλλοίωσης αρχείων εικόνας
+* ❌ Το σύστημα έχει παγώσει εντελώς (δεν ανταποκρίνεται)
+* ❌ Διαπιστώθηκε ότι έχουν ρυθμιστεί λανθασμένες παραμέτρους
+* ❌ Εισήχθησαν λανθασμένες εικόνες
 
-1. Re-copy images from SD card to ensure integrity
-2. Test SD card for errors
-3. Remove corrupted files from project
-4. Continue processing remaining images
+**Πώς να σταματήσετε:**
 
-### System Overheating / Throttling
-
-**Solutions:**
-
-1. Ensure adequate ventilation
-2. Clean dust from computer vents
-3. Reduce processing load (use Free mode instead of Chloros+)
-4. Process during cooler times of day
+1. Κάντε κλικ στο **κουμπί Διακοπή/Ακύρωση** (αντικαθιστά το κουμπί Έναρξη)
+2. Η επεξεργασία διακόπτεται, η πρόοδος χάνεται
+3. Διορθώστε τα προβλήματα και ξεκινήστε ξανά από την αρχή
 
 ***
 
-## Processing Complete Notification
+## Αντιμετώπιση προβλημάτων κατά τη διάρκεια της επεξεργασίας
 
-When processing finishes:
+### Η επεξεργασία είναι πολύ αργή
 
-* Progress bar reaches 100%
-* **"Processing Complete"** message appears in Debug Log
-* Start button becomes enabled again
-* All output files are in camera model subfolder
+**Πιθανές αιτίες:**
+
+* Μη επισημασμένες εικόνες-στόχοι (σάρωση όλων των εικόνων)
+* HDD αντί για SSD αποθήκευση
+* Ανεπαρκείς πόροι συστήματος
+* Πολλές διαμορφωμένες ευρετηριακές καταχωρήσεις
+* Πρόσβαση σε δικτυακό δίσκο
+
+**Λύσεις:**
+
+1. Εάν μόλις ξεκίνησε και βρίσκεται στο στάδιο ανίχνευσης: Ακύρωση, επισήμανση στόχων, επανεκκίνηση
+2. Για το μέλλον: Χρήση SSD, μείωση ευρετηρίων, αναβάθμιση υλικού
+3. Εξετάστε το CLI για μαζική επεξεργασία μεγάλων συνόλων δεδομένων
+
+### Προειδοποιήσεις «Χώρος στο δίσκο»
+
+**Λύσεις:**
+
+1. Απελευθερώστε αμέσως χώρο στο δίσκο
+2. Μετακινήστε το έργο σε μονάδα δίσκου με περισσότερο χώρο
+3. Μειώστε τον αριθμό των δεικτών που θα εξαγάγετε.
+4. Χρησιμοποιήστε μορφή JPG αντί για TIFF (μικρότερα αρχεία).
+
+### Συχνά μηνύματα «Κατεστραμμένο αρχείο»
+
+**Λύσεις:**
+
+1. Αντιγράψτε ξανά τις εικόνες από την κάρτα SD για να διασφαλίσετε την ακεραιότητά τους.
+2. Ελέγξτε την κάρτα SD για σφάλματα.
+3. Αφαιρέστε τα κατεστραμμένα αρχεία από το έργο.
+4. Συνεχίστε την επεξεργασία των υπόλοιπων εικόνων.
+
+### Υπερθέρμανση/περιορισμός του συστήματος
+
+**Λύσεις:**
+
+1. Εξασφαλίστε επαρκή αερισμό.
+2. Καθαρίστε τη σκόνη από τις οπές εξαερισμού του υπολογιστή.
+3. Μειώστε το φορτίο επεξεργασίας (χρησιμοποιήστε τη λειτουργία Free αντί για Chloros+).
+4. Εκτελέστε την επεξεργασία κατά τις πιο δροσερές ώρες της ημέρας.
 
 ***
 
-## Next Steps
+## Ειδοποίηση ολοκλήρωσης επεξεργασίας
 
-Once processing completes:
+Όταν ολοκληρωθεί η επεξεργασία:
 
-1. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
-2. **Check output folder** - Verify all files exported correctly
-3. **Review Debug Log** - Check for any warnings or errors
-4. **Preview processed images** - Use Image Viewer or external software
+* Η γραμμή προόδου φτάνει στο 100%
+* Εμφανίζεται το μήνυμα **&quot;Επεξεργασία ολοκληρώθηκε&quot;** στο αρχείο καταγραφής σφαλμάτων
+* Το κουμπί έναρξης ενεργοποιείται ξανά
+* Όλα τα αρχεία εξόδου βρίσκονται στον υποφάκελο του μοντέλου της κάμερας
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+***
+
+## Επόμενα βήματα
+
+Μόλις ολοκληρωθεί η επεξεργασία:
+
+1. **Ελέγξτε τα αποτελέσματα** - Δείτε [Ολοκλήρωση της επεξεργασίας](finishing-the-processing.md)
+2. **Ελέγξτε το φάκελο εξόδου** - Βεβαιωθείτε ότι όλα τα αρχεία έχουν εξαχθεί σωστά
+3. **Ελέγξτε το αρχείο καταγραφής σφαλμάτων** - Ελέγξτε για τυχόν προειδοποιήσεις ή σφάλματα
+4. **Προβάλετε τις επεξεργασμένες εικόνες** - Χρησιμοποιήστε το πρόγραμμα προβολής εικόνων ή εξωτερικό λογισμικό
+
+Για πληροφορίες σχετικά με την προβολή και τη χρήση των επεξεργασμένων αποτελεσμάτων, ανατρέξτε στο [Ολοκλήρωση της επεξεργασίας](finishing-the-processing.md).

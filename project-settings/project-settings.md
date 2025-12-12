@@ -1,255 +1,255 @@
-# Project Settings
+# Ρυθμίσεις έργου
 
-The Project Settings <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> sidebar in Chloros allows you to configure all aspects of image processing, calibration target detection, multispectral index calculations, and export options for your project. These settings are saved with your project and can be saved as templates for reuse across multiple projects.
+Η πλευρική γραμμή Ρυθμίσεις έργου <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> στο Chloros σας επιτρέπουν να διαμορφώσετε όλες τις πτυχές της επεξεργασίας εικόνων, της ανίχνευσης στόχων βαθμονόμησης, των υπολογισμών πολυφασματικών δεικτών και των επιλογών εξαγωγής για το έργο σας. Αυτές οι ρυθμίσεις αποθηκεύονται μαζί με το έργο σας και μπορούν να αποθηκευτούν ως πρότυπα για επαναχρησιμοποίηση σε πολλά έργα.
 
-## Accessing Project Settings
+## Πρόσβαση στις ρυθμίσεις έργου
 
-To access Project Settings:
+Για να αποκτήσετε πρόσβαση στις ρυθμίσεις έργου:
 
-1. Open a project in Chloros
-2. Click the **Project Settings**  <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> tab in the left sidebar
-3. The settings panel will display all available configuration options organized by category
-
-***
-
-## Target Detection
-
-These settings control how Chloros detects and processes calibration targets in your images.
-
-### Minimum calibration sample area (px)
-
-* **Type**: Number
-* **Range**: 0 to 10,000 pixels
-* **Default**: 25 pixels
-* **Description**: Sets the minimum area (in pixels) required for a detected region to be considered a valid calibration target sample. Smaller values will detect smaller targets but may increase false positives. Larger values require bigger, clearer target regions for detection.
-* **When to adjust**:
-  * Increase if you're getting false detections on small image artifacts
-  * Decrease if your calibration targets appear small in your images and are not being detected
-
-### Minimum Target Clustering (0-100)
-
-* **Type**: Number
-* **Range**: 0 to 100
-* **Default**: 60
-* **Description**: Controls the clustering threshold for grouping similar colored regions when detecting calibration targets. Higher values require more similar colors to be grouped together, resulting in more conservative target detection. Lower values allow more color variation within a target group.
-* **When to adjust**:
-  * Increase if calibration targets are being split into multiple detections
-  * Decrease if calibration targets with color variation are not being fully detected
+1. Ανοίξτε ένα έργο στο Chloros
+2. Κάντε κλικ στην καρτέλα **Ρυθμίσεις έργου**  <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> στην αριστερή πλευρική γραμμή
+3. Ο πίνακας ρυθμίσεων θα εμφανίσει όλες τις διαθέσιμες επιλογές διαμόρφωσης οργανωμένες ανά κατηγορία
 
 ***
 
-## Processing
+## Ανίχνευση στόχων
 
-These settings control how Chloros processes and calibrates your images.
+Αυτές οι ρυθμίσεις ελέγχουν τον τρόπο με τον οποίο το Chloros ανιχνεύει και επεξεργάζεται τους στόχους βαθμονόμησης στις εικόνες σας.
 
-### Vignette correction
+### Ελάχιστη περιοχή δείγματος βαθμονόμησης (px)
 
-* **Type**: Checkbox
-* **Default**: Enabled (checked)
-* **Description**: Applies vignette correction to compensate for lens darkening at the edges of images. Vignetting is a common optical phenomenon where the corners and edges of an image appear darker than the center due to lens characteristics.
-* **When to disable**: Only disable if your camera/lens combination has already applied vignette correction, or if you want to manually correct vignetting in post-processing.
+* **Τύπος**: Αριθμός
+* **Εύρος**: 0 έως 10.000 pixel
+* **Προεπιλογή**: 25 pixel
+* **Περιγραφή**: Ορίζει την ελάχιστη περιοχή (σε pixel) που απαιτείται για να θεωρηθεί μια ανιχνευμένη περιοχή έγκυρο δείγμα στόχου βαθμονόμησης. Οι μικρότερες τιμές θα ανιχνεύουν μικρότερους στόχους, αλλά ενδέχεται να αυξήσουν τα ψευδώς θετικά αποτελέσματα. Οι μεγαλύτερες τιμές απαιτούν μεγαλύτερες, σαφέστερες περιοχές στόχων για ανίχνευση.
+* **Πότε να προσαρμόσετε**:
+  * Αυξήστε την τιμή εάν λαμβάνετε ψευδείς ανιχνεύσεις σε μικρά τεχνητά στοιχεία της εικόνας.
+  * Μειώστε την τιμή εάν οι στόχοι βαθμονόμησης εμφανίζονται μικροί στις εικόνες σας και δεν ανιχνεύονται.
 
-### Reflectance calibration / white balance
+### Ελάχιστη ομαδοποίηση στόχων (0-100)
 
-* **Type**: Checkbox
-* **Default**: Enabled (checked)
-* **Description**: Enables automatic reflectance calibration using detected calibration targets in your images. This normalizes the reflectance values across your dataset and ensures consistent measurements regardless of lighting conditions.
-* **When to disable**: Disable only if you want to process raw, uncalibrated images or if you're using a different calibration workflow.
-
-### Debayer method
-
-* **Type**: Dropdown selection
-* **Options**:
-  * High Quality (Faster) - Currently the only option available
-* **Default**: High Quality (Faster)
-* **Description**: Selects the demosaicing algorithm used to convert raw Bayer pattern sensor data into full-color images. The "High Quality (Faster)" method provides an optimal balance between processing speed and image quality.
-* **Note**: Additional debayer methods may be added in future versions of Chloros.
-
-### Minimum recalibration interval
-
-* **Type**: Number
-* **Range**: 0 to 3,600 seconds
-* **Default**: 0 seconds
-* **Description**: Sets the minimum time interval (in seconds) between using calibration targets. When set to 0, Chloros will use every detected calibration target. When set to a higher value, Chloros will only use calibration targets that are separated by at least this many seconds, reducing processing time for datasets with frequent calibration target captures.
-* **When to adjust**:
-  * Set to 0 for maximum calibration accuracy when lighting conditions vary
-  * Increase (e.g., to 60-300 seconds) for faster processing when lighting is consistent and you have frequent calibration target images
-
-### Light sensor timezone offset
-
-* **Type**: Number
-* **Range**: -12 to +12 hours
-* **Default**: 0 hours
-* **Description**: Specifies the timezone offset (in hours from UTC) for light sensor data timestamps. This is used when processing PPK (Post-Processed Kinematic) data files to ensure correct time synchronization between image captures and GPS data.
-* **When to adjust**: Set this to your local timezone offset if your PPK data uses local time instead of UTC. For example:
-  * Pacific Time: -8 or -7 (depending on DST)
-  * Eastern Time: -5 or -4 (depending on DST)
-  * Central European Time: +1 or +2 (depending on DST)
-
-### Apply PPK corrections
-
-* **Type**: Checkbox
-* **Default**: Disabled (unchecked)
-* **Description**: Enables the use of Post-Processed Kinematic (PPK) corrections from MAPIR DAQ recorders containing a GPS (GNSS). When enabled, Chloros will use any .daq log files containing exposure pin data in your project directory and apply precise geolocation corrections to your images.
-* **Requirement**: .daq log file with exposure pin entries must be present in your project directory
-* **When to enable**: It is recommended to always enable PPK correction if you have exposure feedback entries in your .daq log file.
-
-### Exposure Pin 1
-
-* **Type**: Dropdown selection
-* **Visibility**: Only visible when "Apply PPK corrections" is enabled AND exposure data is available for Pin 1
-* **Options**:
-  * Camera model names detected in the project
-  * "Do Not Use" - Ignore this exposure pin
-* **Default**: Auto-selected based on project configuration
-* **Description**: Assigns a specific camera to Exposure Pin 1 for PPK time synchronization. The exposure pin records the exact timing when the camera shutter is triggered, which is critical for accurate PPK geolocation.
-* **Auto-selection behavior**:
-  * Single camera + single pin: Automatically selects the camera
-  * Single camera + two pins: Pin 1 automatically assigned to the camera
-  * Multiple cameras: Manual selection required
-
-### Exposure Pin 2
-
-* **Type**: Dropdown selection
-* **Visibility**: Only visible when "Apply PPK corrections" is enabled AND exposure data is available for Pin 2
-* **Options**:
-  * Camera model names detected in the project
-  * "Do Not Use" - Ignore this exposure pin
-* **Default**: Auto-selected based on project configuration
-* **Description**: Assigns a specific camera to Exposure Pin 2 for PPK time synchronization when using a dual-camera setup.
-* **Auto-selection behavior**:
-  * Single camera + single pin: Pin 2 automatically set to "Do Not Use"
-  * Single camera + two pins: Pin 2 automatically set to "Do Not Use"
-  * Multiple cameras: Manual selection required
-* **Note**: The same camera cannot be assigned to both Pin 1 and Pin 2 simultaneously.
+* **Τύπος**: Αριθμός
+* **Εύρος**: 0 έως 100
+* **Προεπιλογή**: 60
+* **Περιγραφή**: Ελέγχει το όριο ομαδοποίησης για την ομαδοποίηση περιοχών με παρόμοια χρώματα κατά την ανίχνευση στόχων βαθμονόμησης. Οι υψηλότερες τιμές απαιτούν την ομαδοποίηση περισσότερων παρόμοιων χρωμάτων, με αποτέλεσμα πιο συντηρητική ανίχνευση στόχων. Οι χαμηλότερες τιμές επιτρέπουν μεγαλύτερη χρωματική ποικιλία εντός μιας ομάδας στόχων.
+* **Πότε να προσαρμόσετε**:
+  * Αυξήστε εάν οι στόχοι βαθμονόμησης χωρίζονται σε πολλαπλές ανιχνεύσεις.
+  * Μειώστε εάν οι στόχοι βαθμονόμησης με χρωματική διακύμανση δεν ανιχνεύονται πλήρως.
 
 ***
 
-## Index
+## Επεξεργασία
 
-These settings allow you to configure multispectral indices for analysis and visualization.
+Αυτές οι ρυθμίσεις ελέγχουν τον τρόπο με τον οποίο το Chloros επεξεργάζεται και βαθμονομεί τις εικόνες σας.
 
-### Add index
+### Διόρθωση βινιέτας
 
-* **Type**: Special index configuration panel
-* **Description**: Opens an interactive panel where you can select and configure multispectral vegetation indices (NDVI, NDRE, EVI, etc.) to calculate during image processing. You can add multiple indices, each with its own visualization settings.
-* **Available indices**: The system includes 30+ pre-defined multispectral indices including:
-  * NDVI (Normalized Difference Vegetation Index)
-  * NDRE (Normalized Difference RedEdge)
-  * EVI (Enhanced Vegetation Index)
+* **Τύπος**: Πλαίσιο ελέγχου
+* **Προεπιλογή**: Ενεργοποιημένη (επιλεγμένη)
+* **Περιγραφή**: Εφαρμόζει διόρθωση βινιέτας για να αντισταθμίσει το σκούρο χρώμα των φακών στα άκρα των εικόνων. Η βινιέτα είναι ένα κοινό οπτικό φαινόμενο όπου οι γωνίες και τα άκρα μιας εικόνας εμφανίζονται πιο σκούρα από το κέντρο λόγω των χαρακτηριστικών του φακού.
+* **Πότε να απενεργοποιήσετε**: Απενεργοποιήστε μόνο εάν ο συνδυασμός κάμερας/φακού έχει ήδη εφαρμόσει διόρθωση βινιέτας ή εάν θέλετε να διορθώσετε χειροκίνητα τη βινιέτα κατά την επεξεργασία μετά τη λήψη.
+
+### Βαθμονόμηση ανακλαστικότητας / ισορροπία λευκού
+
+* **Τύπος**: Πλαίσιο ελέγχου
+* **Προεπιλογή**: Ενεργοποιημένη (επιλεγμένη)
+* **Περιγραφή**: Ενεργοποιεί την αυτόματη βαθμονόμηση ανακλαστικότητας χρησιμοποιώντας ανιχνευμένους στόχους βαθμονόμησης στις εικόνες σας. Αυτό ομαλοποιεί τις τιμές ανακλαστικότητας σε όλο το σύνολο δεδομένων σας και εξασφαλίζει συνεπείς μετρήσεις ανεξάρτητα από τις συνθήκες φωτισμού.
+* **Πότε να απενεργοποιήσετε**: Απενεργοποιήστε μόνο εάν θέλετε να επεξεργαστείτε ακατέργαστες, μη βαθμονομημένες εικόνες ή εάν χρησιμοποιείτε διαφορετική ροή εργασίας βαθμονόμησης.
+
+### Μέθοδος Debayer
+
+* **Τύπος**: Αναπτυσσόμενο μενού
+* **Επιλογές**:
+  * Υψηλή ποιότητα (ταχύτερη) - Προς το παρόν η μόνη διαθέσιμη επιλογή
+* **Προεπιλογή**: Υψηλή ποιότητα (ταχύτερη)
+* **Περιγραφή**: Επιλέγει τον αλγόριθμο αποσυμπίεσης που χρησιμοποιείται για τη μετατροπή των ακατέργαστων δεδομένων του αισθητήρα μοτίβου Bayer σε έγχρωμες εικόνες. Η μέθοδος «Υψηλή ποιότητα (ταχύτερη)» παρέχει τη βέλτιστη ισορροπία μεταξύ ταχύτητας επεξεργασίας και ποιότητας εικόνας.
+* **Σημείωση**: Πρόσθετες μέθοδοι debayer ενδέχεται να προστεθούν σε μελλοντικές εκδόσεις του Chloros.
+
+### Ελάχιστο διάστημα επαναβαθμονόμησης
+
+* **Τύπος**: Αριθμός
+* **Εύρος**: 0 έως 3.600 δευτερόλεπτα
+* **Προεπιλογή**: 0 δευτερόλεπτα
+* **Περιγραφή**: Ορίζει το ελάχιστο χρονικό διάστημα (σε δευτερόλεπτα) μεταξύ της χρήσης στόχων βαθμονόμησης. Όταν ορίζεται σε 0, το Chloros θα χρησιμοποιεί κάθε ανιχνευμένο στόχο βαθμονόμησης. Όταν ορίζεται σε υψηλότερη τιμή, το Chloros θα χρησιμοποιεί μόνο στόχους βαθμονόμησης που απέχουν τουλάχιστον αυτό το χρονικό διάστημα, μειώνοντας τον χρόνο επεξεργασίας για σύνολα δεδομένων με συχνές καταγραφές στόχων βαθμονόμησης.
+* **Πότε να προσαρμόσετε**:
+  * Ορίστε σε 0 για μέγιστη ακρίβεια βαθμονόμησης όταν οι συνθήκες φωτισμού ποικίλλουν.
+  * Αυξήστε (π.χ. σε 60-300 δευτερόλεπτα) για ταχύτερη επεξεργασία όταν ο φωτισμός είναι σταθερός και έχετε συχνές εικόνες στόχων βαθμονόμησης.
+
+### Διαφορά ζώνης ώρας αισθητήρα φωτός
+
+* **Τύπος**: Αριθμός
+* **Εύρος**: -12 έως +12 ώρες
+* **Προεπιλογή**: 0 ώρες
+* **Περιγραφή**: Καθορίζει τη διαφορά ζώνης ώρας (σε ώρες από UTC) για τις χρονικές σημάνσεις των δεδομένων του αισθητήρα φωτός. Χρησιμοποιείται κατά την επεξεργασία αρχείων δεδομένων PPK (Post-Processed Kinematic) για να εξασφαλιστεί ο σωστός συγχρονισμός χρόνου μεταξύ των καταγραφών εικόνων και των δεδομένων GPS.
+* **Πότε να ρυθμίσετε**: Ορίστε την τιμή αυτή στη διαφορά ζώνης ώρας της περιοχής σας, εάν τα δεδομένα PPK χρησιμοποιούν τοπική ώρα αντί για UTC. Για παράδειγμα:
+  * Ώρα Ειρηνικού: -8 ή -7 (ανάλογα με την θερινή ώρα)
+  * Ώρα Ανατολικής Ακτής: -5 ή -4 (ανάλογα με την θερινή ώρα)
+  * Ώρα Κεντρικής Ευρώπης: +1 ή +2 (ανάλογα με την θερινή ώρα)
+
+### Εφαρμογή διορθώσεων PPK
+
+* **Τύπος**: Πλαίσιο επιλογής
+* **Προεπιλογή**: Απενεργοποιημένο (μη επιλεγμένο)
+* **Περιγραφή**: Ενεργοποιεί τη χρήση διορθώσεων Post-Processed Kinematic (PPK) από καταγραφείς MAPIR DAQ που περιέχουν GPS (GNSS). Όταν είναι ενεργοποιημένο, το Chloros θα χρησιμοποιεί όλα τα αρχεία καταγραφής .daq που περιέχουν δεδομένα pin έκθεσης στον κατάλογο του έργου σας και θα εφαρμόζει ακριβείς διορθώσεις γεωγραφικής θέσης στις εικόνες σας.
+* **Απαίτηση**: Το αρχείο καταγραφής .daq με καταχωρήσεις pin έκθεσης πρέπει να υπάρχει στον κατάλογο του έργου σας
+* **Πότε να ενεργοποιήσετε**: Συνιστάται να ενεργοποιείτε πάντα τη διόρθωση PPK εάν έχετε καταχωρήσεις ανατροφοδότησης έκθεσης στο αρχείο καταγραφής .daq.
+
+### Pin έκθεσης 1
+
+* **Τύπος**: Επιλογή από αναπτυσσόμενο μενού
+* **Ορατότητα**: Ορατό μόνο όταν είναι ενεργοποιημένη η επιλογή «Εφαρμογή διορθώσεων PPK» ΚΑΙ υπάρχουν διαθέσιμα δεδομένα έκθεσης για το Pin 1
+* **Επιλογές**:
+  * Ονόματα μοντέλων κάμερας που ανιχνεύονται στο έργο
+  * «Μην χρησιμοποιείτε» - Αγνοήστε αυτό το pin έκθεσης
+* **Προεπιλογή**: Αυτόματη επιλογή με βάση τη διαμόρφωση του έργου
+* **Περιγραφή**: Αναθέτει μια συγκεκριμένη κάμερα στην ακίδα έκθεσης 1 για συγχρονισμό χρόνου PPK. Η ακίδα έκθεσης καταγράφει τον ακριβή χρόνο ενεργοποίησης του κλείστρου της κάμερας, ο οποίος είναι κρίσιμος για την ακριβή γεωγραφική τοποθεσία PPK.
+* **Συμπεριφορά αυτόματης επιλογής**:
+  * Μία κάμερα + μία ακίδα: Επιλέγει αυτόματα την κάμερα
+  * Μία κάμερα + δύο ακίδες: Η ακίδα 1 ανατίθεται αυτόματα στην κάμερα
+  * Πολλές κάμερες: Απαιτείται χειροκίνητη επιλογή
+
+### Ακροδέκτης έκθεσης 2
+
+* **Τύπος**: Αναπτυσσόμενο μενού επιλογών
+* **Ορατότητα**: Ορατό μόνο όταν είναι ενεργοποιημένη η επιλογή «Εφαρμογή διορθώσεων PPK» ΚΑΙ υπάρχουν διαθέσιμα δεδομένα έκθεσης για τον ακροδέκτη 2
+* **Επιλογές**:
+  * Ονόματα μοντέλων κάμερας που έχουν ανιχνευθεί στο έργο
+  * «Μην χρησιμοποιείτε» - Αγνοήστε αυτόν τον ακροδέκτη έκθεσης
+* **Προεπιλογή**: Αυτόματη επιλογή με βάση τη διαμόρφωση του έργου
+* **Περιγραφή**: Εκχωρεί μια συγκεκριμένη κάμερα στην ακίδα έκθεσης 2 για συγχρονισμό χρόνου PPK όταν χρησιμοποιείται ρύθμιση διπλής κάμερας.
+* **Συμπεριφορά αυτόματης επιλογής**:
+  * Μία κάμερα + μία ακίδα: Η ακίδα 2 ορίζεται αυτόματα σε «Μην χρησιμοποιείτε»
+  * Μία κάμερα + δύο ακίδες: Η ακίδα 2 ορίζεται αυτόματα σε «Μην χρησιμοποιείτε»
+  * Πολλαπλές κάμερες: Απαιτείται χειροκίνητη επιλογή
+* **Σημείωση**: Η ίδια κάμερα δεν μπορεί να αντιστοιχιστεί ταυτόχρονα στο Pin 1 και στο Pin 2.
+
+***
+
+## Δείκτης
+
+Αυτές οι ρυθμίσεις σας επιτρέπουν να διαμορφώσετε πολυφασματικούς δείκτες για ανάλυση και οπτικοποίηση.
+
+### Προσθήκη δείκτη
+
+* **Τύπος**: Ειδικός πίνακας διαμόρφωσης δεικτών
+* **Περιγραφή**: Ανοίγει ένα διαδραστικό πλαίσιο όπου μπορείτε να επιλέξετε και να διαμορφώσετε πολυφασματικούς δείκτες βλάστησης (NDVI, NDRE, EVI κ.λπ.) για υπολογισμό κατά την επεξεργασία εικόνων. Μπορείτε να προσθέσετε πολλούς δείκτες, ο καθένας με τις δικές του ρυθμίσεις οπτικοποίησης.
+* **Διαθέσιμοι δείκτες**: Το σύστημα περιλαμβάνει περισσότερους από 30 προκαθορισμένους πολυφασματικούς δείκτες, μεταξύ των οποίων:
+  * NDVI (Κανονικοποιημένος δείκτης διαφοράς βλάστησης)
+  * NDRE (Κανονικοποιημένη διαφορά RedEdge)
+  * EVI (Ενισχυμένος δείκτης βλάστησης)
   * GNDVI, SAVI, OSAVI, MSAVI2
-  * And many more (see [Multispectral Index Formulas](multispectral-index-formulas.md) for complete list)
-* **Features**:
-  * Select from pre-defined index formulas
-  * Configure visualization color gradients (LUT - Look-Up Tables)
-  * Set threshold values for analysis
-  * Create custom index formulas
+  * Και πολλά άλλα (βλ. [Τύποι πολυφασματικών δεικτών](multispectral-index-formulas.md) για τον πλήρη κατάλογο)
+* **Χαρακτηριστικά**:
+  * Επιλογή από προκαθορισμένους τύπους δεικτών
+  * Διαμόρφωση χρωματικών διαβαθμίσεων οπτικοποίησης (LUT - Πίνακες αναζήτησης)
+  * Ρύθμιση οριακών τιμών για ανάλυση
+  * Δημιουργία προσαρμοσμένων τύπων δεικτών
 
-### Custom Formulas (Chloros+ Feature)
+### Προσαρμοσμένοι τύποι (λειτουργία Chloros+)
 
-* **Type**: Array of custom formula definitions
-* **Description**: Allows you to create and save custom multispectral index formulas using band math. Custom formulas are saved with your project settings and can be used just like built-in indices.
-* **How to create**:
-  1. In the Index configuration panel, look for the custom formula option
-  2. Define your formula using band identifiers (e.g., NIR, Red, Green, Blue)
-  3. Save the formula with a descriptive name
-* **Formula syntax**: Standard mathematical operations are supported, including:
-  * Arithmetic: `+`, `-`, `*`, `/`
-  * Parentheses for order of operations
-  * Band references: NIR, Red, Green, Blue, RedEdge, Cyan, Orange, NIR1, NIR2
-
-***
-
-## Export
-
-These settings control the format and quality of exported processed images.
-
-### Calibrated image format
-
-* **Type**: Dropdown selection
-* **Options**:
-  * **TIFF (16-bit)** - Uncompressed 16-bit TIFF format
-  * **TIFF (32-bit, Percent)** - 32-bit floating-point TIFF with reflectance values as percentages
-  * **PNG (8-bit)** - Compressed 8-bit PNG format
-  * **JPG (8-bit)** - Compressed 8-bit JPEG format
-* **Default**: TIFF (16-bit)
-* **Description**: Selects the file format for saving processed and calibrated images.
-* **Format recommendations**:
-  * **TIFF (16-bit)**: Recommended for scientific analysis and professional workflows. Preserves maximum data quality with no compression artifacts. Best for multispectral analysis and further processing in GIS software.
-  * **TIFF (32-bit, Percent)**: Best for workflows that require reflectance values as percentages (0-100%). Offers maximum precision for radiometric measurements.
-  * **PNG (8-bit)**: Good for web viewing and general visualization. Smaller file sizes with lossless compression, but reduced dynamic range.
-  * **JPG (8-bit)**: Smallest file sizes, best for previews and web display only. Uses lossy compression which is not suitable for scientific analysis.
+* **Τύπος**: Πίνακας ορισμών προσαρμοσμένων τύπων
+* **Περιγραφή**: Σας επιτρέπει να δημιουργείτε και να αποθηκεύετε προσαρμοσμένους τύπους πολυφασματικών δεικτών χρησιμοποιώντας μαθηματικές συναρτήσεις ζωνών. Οι προσαρμοσμένοι τύποι αποθηκεύονται με τις ρυθμίσεις του έργου σας και μπορούν να χρησιμοποιηθούν όπως οι ενσωματωμένοι δείκτες.
+* **Πώς να δημιουργήσετε**:
+  1. Στον πίνακα διαμόρφωσης δείκτη, αναζητήστε την επιλογή προσαρμοσμένου τύπου.
+  2. Ορίστε τον τύπο σας χρησιμοποιώντας αναγνωριστικά ζώνης (π.χ. NIR, Red, Green, Blue).
+  3. Αποθηκεύστε τον τύπο με ένα περιγραφικό όνομα
+* **Σύνταξη τύπου**: Υποστηρίζονται οι τυπικές μαθηματικές πράξεις, όπως:
+  * Αριθμητική: `+`, `-`, `*`, `/`
+  * Παρένθεση για τη σειρά των πράξεων
+* Αναφορές ζώνης: NIR, Red, Green, Blue, RedEdge, Cyan, Orange, NIR1, NIR2
 
 ***
 
-## Save Project Template
+## Εξαγωγή
 
-This feature allows you to save your current project settings as a reusable template.
+Αυτές οι ρυθμίσεις ελέγχουν τη μορφή και την ποιότητα των εξαγόμενων επεξεργασμένων εικόνων.
 
-* **Type**: Text input + Save button
-* **Description**: Enter a descriptive name for your settings template and click the save icon. The template will store all your current project settings (target detection, processing options, indices, and export format) for easy reuse in future projects.
-* **Use cases**:
-  * Create templates for different camera systems (RGB, multispectral, NIR)
-  * Save standard configurations for specific crop types or analysis workflows
-  * Share consistent settings across a team
-* **How to use**:
-  1. Configure all your desired project settings
-  2. Enter a template name (e.g., "RedEdge Survey3 NDVI Standard")
-  3. Click the save icon
-  4. The template can now be loaded when creating new projects
+### Μορφή βαθμονομημένης εικόνας
 
-***
-
-## Save Project Folder
-
-This setting specifies where new projects are saved by default.
-
-* **Type**: Directory path display + Edit button
-* **Default**: `C:\Users\[Username]\Chloros Projects`
-* **Description**: Shows the current default directory where new Chloros projects are created. Click the edit icon to select a different directory.
-* **When to change**:
-  * Set to a network drive for team collaboration
-  * Change to a drive with more storage space for large datasets
-  * Organize projects by year, client, or project type in different folders
-* **Note**: Changing this setting only affects NEW projects. Existing projects remain in their original locations.
+* **Τύπος**: Αναπτυσσόμενο μενού επιλογών
+* **Επιλογές**:
+  * **TIFF (16-bit)** - Μη συμπιεσμένη μορφή 16-bit TIFF
+  * **TIFF (32-bit, Ποσοστό)** - 32-bit κινητής υποδιαστολής TIFF με τιμές ανακλαστικότητας ως ποσοστά
+  * **PNG (8-bit)** - Συμπιεσμένη μορφή PNG 8 bit
+  * **JPG (8 bit)** - Συμπιεσμένη μορφή JPEG 8 bit
+* **Προεπιλογή**: TIFF (16-bit)
+* **Περιγραφή**: Επιλέγει τη μορφή αρχείου για την αποθήκευση επεξεργασμένων και βαθμονομημένων εικόνων.
+* **Συστάσεις μορφής**:
+  * **TIFF (16-bit)**: Συνιστάται για επιστημονική ανάλυση και επαγγελματικές ροές εργασίας. Διατηρεί τη μέγιστη ποιότητα δεδομένων χωρίς τεχνητά στοιχεία συμπίεσης. Ιδανικό για πολυφασματική ανάλυση και περαιτέρω επεξεργασία σε λογισμικό GIS.
+  * **TIFF (32-bit, Ποσοστό)**: Ιδανικό για ροές εργασίας που απαιτούν τιμές ανακλαστικότητας ως ποσοστά (0-100%). Προσφέρει μέγιστη ακρίβεια για ραδιομετρικές μετρήσεις.
+  * **PNG (8-bit)**: Καλό για προβολή στο διαδίκτυο και γενική οπτικοποίηση. Μικρότερα μεγέθη αρχείων με συμπίεση χωρίς απώλειες, αλλά μειωμένο δυναμικό εύρος.
+  * **JPG (8-bit)**: Μικρότερα μεγέθη αρχείων, ιδανικό μόνο για προεπισκοπήσεις και προβολή στο διαδίκτυο. Χρησιμοποιεί συμπίεση με απώλειες, η οποία δεν είναι κατάλληλη για επιστημονική ανάλυση.
 
 ***
 
-## Settings Persistence
+## Αποθήκευση προτύπου έργου
 
-All project settings are automatically saved with your project file (`.mapir` project format). When you reopen a project, all settings are restored exactly as you left them.
+Αυτή η λειτουργία σας επιτρέπει να αποθηκεύσετε τις τρέχουσες ρυθμίσεις του έργου σας ως πρότυπο που μπορεί να επαναχρησιμοποιηθεί.
 
-### Settings Hierarchy
-
-Settings are applied in the following order:
-
-1. **System defaults** - Built-in defaults defined by Chloros
-2. **Template settings** - If you load a template when creating a project
-3. **Saved project settings** - Settings saved with the project file
-4. **Manual adjustments** - Any changes you make during the current session
-
-### Settings and Image Processing
-
-Most settings changes (especially in Processing and Export categories) will trigger reprocessing of images to reflect the new settings. However, some settings are "export-only" and don't require immediate reprocessing:
-
-* Save Project Template
-* Working Directory
-* Calibrated image format (applies when exporting)
+* **Τύπος**: Εισαγωγή κειμένου + κουμπί αποθήκευσης
+* **Περιγραφή**: Εισαγάγετε ένα περιγραφικό όνομα για το πρότυπο ρυθμίσεων και κάντε κλικ στο εικονίδιο αποθήκευσης. Το πρότυπο θα αποθηκεύσει όλες τις τρέχουσες ρυθμίσεις του έργου σας (ανίχνευση στόχου, επιλογές επεξεργασίας, δείκτες και μορφή εξαγωγής) για εύκολη επαναχρησιμοποίηση σε μελλοντικά έργα.
+* **Περιπτώσεις χρήσης**:
+  * Δημιουργήστε πρότυπα για διαφορετικά συστήματα καμερών (RGB, πολυφασματικό, NIR)
+  * Αποθηκεύστε τυπικές διαμορφώσεις για συγκεκριμένους τύπους καλλιεργειών ή ροές εργασιών ανάλυσης
+  * Μοιραστείτε συνεπείς ρυθμίσεις σε όλη την ομάδα
+* **Τρόπος χρήσης**:
+  1. Διαμορφώστε όλες τις επιθυμητές ρυθμίσεις του έργου
+  2. Εισαγάγετε ένα όνομα προτύπου (π.χ. «RedEdge Survey3 NDVI Standard»).
+  3. Κάντε κλικ στο εικονίδιο αποθήκευσης.
+  4. Το πρότυπο μπορεί πλέον να φορτωθεί κατά τη δημιουργία νέων έργων.
 
 ***
 
-## Best Practices
+## Φάκελος αποθήκευσης έργου
 
-1. **Start with defaults**: The default settings work well for most MAPIR camera systems and typical workflows.
-2. **Create templates**: Once you've optimized settings for a specific workflow or camera, save them as a template to ensure consistency across projects.
-3. **Test before full processing**: When experimenting with new settings, test on a small subset of images before processing your entire dataset.
-4. **Document your settings**: Use descriptive template names that indicate the camera system, processing type, and intended use (e.g., "Survey3\_RGB\_NDVI\_Agriculture").
-5. **Export format selection**: Choose your export format based on your end use:
-   * Scientific analysis → TIFF (16-bit or 32-bit)
-   * GIS processing → TIFF (16-bit)
-   * Quick visualization → PNG (8-bit)
-   * Web sharing → JPG (8-bit)
+Αυτή η ρύθμιση καθορίζει πού αποθηκεύονται τα νέα έργα από προεπιλογή.
+
+* **Τύπος**: Εμφάνιση διαδρομής καταλόγου + κουμπί Επεξεργασία
+* **Προεπιλογή**: `C:\Users\[Username]\Chloros Projects`
+* **Περιγραφή**: Εμφανίζει τον τρέχοντα προεπιλεγμένο κατάλογο όπου δημιουργούνται τα νέα έργα Chloros. Κάντε κλικ στο εικονίδιο επεξεργασίας για να επιλέξετε έναν διαφορετικό κατάλογο.
+* **Πότε να αλλάξετε**:
+  * Ορίστε έναν δίσκο δικτύου για συνεργασία ομάδας
+  * Αλλάξτε σε έναν δίσκο με περισσότερο χώρο αποθήκευσης για μεγάλα σύνολα δεδομένων
+  * Οργανώστε τα έργα ανά έτος, πελάτη ή τύπο έργου σε διαφορετικούς φακέλους
+* **Σημείωση**: Η αλλαγή αυτής της ρύθμισης επηρεάζει μόνο τα ΝΕΑ έργα. Τα υπάρχοντα έργα παραμένουν στις αρχικές τους θέσεις.
 
 ***
 
-For more information on multispectral indices in Chloros, see [Multispectral Index Formulas](multispectral-index-formulas.md) page.
+## Διατήρηση ρυθμίσεων
+
+Όλες οι ρυθμίσεις του έργου αποθηκεύονται αυτόματα με το αρχείο του έργου σας (μορφή έργου `.mapir`). Όταν ανοίγετε ξανά ένα έργο, όλες οι ρυθμίσεις αποκαθίστανται ακριβώς όπως τις αφήσατε.
+
+### Ιεραρχία ρυθμίσεων
+
+Οι ρυθμίσεις εφαρμόζονται με την ακόλουθη σειρά:
+
+1. **Προεπιλογές συστήματος** - Ενσωματωμένες προεπιλογές που ορίζονται από το Chloros
+2. **Ρυθμίσεις προτύπου** - Εάν φορτώσετε ένα πρότυπο κατά τη δημιουργία ενός έργου
+3. **Αποθηκευμένες ρυθμίσεις έργου** - Ρυθμίσεις που αποθηκεύονται με το αρχείο έργου
+4. **Χειροκίνητες προσαρμογές** - Οποιεσδήποτε αλλαγές κάνετε κατά τη διάρκεια της τρέχουσας συνεδρίας
+
+### Ρυθμίσεις και επεξεργασία εικόνας
+
+Οι περισσότερες αλλαγές στις ρυθμίσεις (ειδικά στις κατηγορίες Επεξεργασία και Εξαγωγή) θα ενεργοποιήσουν την επανεπεξεργασία των εικόνων, ώστε να αντικατοπτρίζουν τις νέες ρυθμίσεις. Ωστόσο, ορισμένες ρυθμίσεις είναι «μόνο για εξαγωγή» και δεν απαιτούν άμεση επανεπεξεργασία:
+
+* Αποθήκευση προτύπου έργου
+* Κατάλογος εργασίας
+* Βαθμονομημένη μορφή εικόνας (ισχύει κατά την εξαγωγή)
+
+***
+
+## Βέλτιστες πρακτικές
+
+1. **Ξεκινήστε με τις προεπιλογές**: Οι προεπιλεγμένες ρυθμίσεις λειτουργούν καλά για τα περισσότερα συστήματα καμερών MAPIR και τις τυπικές ροές εργασίας.
+2. **Δημιουργήστε πρότυπα**: Αφού βελτιστοποιήσετε τις ρυθμίσεις για μια συγκεκριμένη ροή εργασίας ή κάμερα, αποθηκεύστε τις ως πρότυπο για να εξασφαλίσετε συνέπεια σε όλα τα έργα.
+3. **Δοκιμάστε πριν από την πλήρη επεξεργασία**: Όταν πειραματίζεστε με νέες ρυθμίσεις, δοκιμάστε τις σε ένα μικρό υποσύνολο εικόνων πριν επεξεργαστείτε ολόκληρο το σύνολο δεδομένων.
+4. **Τεκμηριώστε τις ρυθμίσεις σας**: Χρησιμοποιήστε περιγραφικά ονόματα προτύπων που υποδεικνύουν το σύστημα κάμερας, τον τύπο επεξεργασίας και την προβλεπόμενη χρήση (π.χ. &quot;Survey3\_RGB\_NDVI\_Agriculture&quot;).
+5. **Επιλογή μορφής εξαγωγής**: Επιλέξτε τη μορφή εξαγωγής με βάση την τελική χρήση:
+   * Επιστημονική ανάλυση → TIFF (16-bit ή 32-bit)
+   * Επεξεργασία GIS → TIFF (16-bit)
+   * Γρήγορη οπτικοποίηση → PNG (8-bit)
+   * Κοινή χρήση στο διαδίκτυο → JPG (8-bit)
+
+***
+
+Για περισσότερες πληροφορίες σχετικά με τους πολυφασματικούς δείκτες στο Chloros, ανατρέξτε στη σελίδα [Τύποι πολυφασματικών δεικτών](multispectral-index-formulas.md).

@@ -1,366 +1,366 @@
-# Starting the Processing
+# Έναρξη της επεξεργασίας
 
-Once you've imported your images, marked your calibration targets, and configured your project settings, you're ready to begin processing. This page guides you through initiating the Chloros processing pipeline.
+Αφού εισαγάγετε τις εικόνες σας, επισημάνετε τους στόχους βαθμονόμησης και διαμορφώσετε τις ρυθμίσεις του έργου σας, είστε έτοιμοι να ξεκινήσετε την επεξεργασία. Αυτή η σελίδα σας καθοδηγεί στην έναρξη της διαδικασίας επεξεργασίας Chloros.
 
-## Pre-Processing Checklist
+## Λίστα ελέγχου πριν από την επεξεργασία
 
-Before clicking the Start button, verify that everything is ready:
+Πριν κάνετε κλικ στο κουμπί Έναρξη, βεβαιωθείτε ότι όλα είναι έτοιμα:
 
-* [ ] **Files imported** - All images appear in File Browser
-* [ ] **Target images marked** - Target column checked for calibration images
-* [ ] **Camera models detected** - Camera Model column shows correct cameras
-* [ ] **Settings configured** - Project Settings reviewed and adjusted
-* [ ] **Indices selected** - Desired multispectral indices added (if needed)
-* [ ] **Export format chosen** - Output format appropriate for your workflow
+* [ ] **Αρχεία εισαχθέντα** - Όλες οι εικόνες εμφανίζονται στο πρόγραμμα περιήγησης αρχείων
+* [ ] **Εικόνες στόχων επισημασμένες** - Η στήλη στόχων έχει επιλεγεί για εικόνες βαθμονόμησης
+* [ ] **Μοντέλα κάμερας ανιχνευμένα** - Η στήλη Μοντέλο κάμερας εμφανίζει τις σωστές κάμερες
+* [ ] **Ρυθμίσεις διαμορφωμένες** - Οι ρυθμίσεις του έργου έχουν ελεγχθεί και προσαρμοστεί
+* [ ] **Δείκτες επιλεγμένοι** - Οι επιθυμητοί πολυφασματικοί δείκτες έχουν προστεθεί (εάν απαιτείται)
+* [ ] **Μορφή εξαγωγής επιλεγμένη** - Μορφή εξόδου κατάλληλη για τη ροή εργασίας σας
 
-{% hint style="info" %}
-**Tip**: Click through a few images in the File Browser to verify they loaded correctly before processing.
+{% hint style=&quot;info&quot; %}
+**Συμβουλή**: Κάντε κλικ σε μερικές εικόνες στο File Browser για να βεβαιωθείτε ότι έχουν φορτωθεί σωστά πριν από την επεξεργασία.
 {% endhint %}
 
 ***
 
-## Starting the Processing
+## Έναρξη της επεξεργασίας
 
-### Locate the Start Button
+### Εντοπίστε το κουμπί Έναρξη
 
-The Start/Play button is located in the top header bar of Chloros:
+Το κουμπί Έναρξη/Αναπαραγωγή βρίσκεται στην επάνω γραμμή κεφαλίδας του Chloros:
 
-* Position: Top center of the window
-* Icon: **Play/Start button** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
-* Status: Button is enabled (bright) when ready to process
+* Θέση: Επάνω στο κέντρο του παραθύρου
+* Εικονίδιο: **Κουμπί Αναπαραγωγή/Έναρξη** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Κατάσταση: Το κουμπί είναι ενεργοποιημένο (φωτεινό) όταν είναι έτοιμο για επεξεργασία
 
-### Click to Start
+### Κάντε κλικ για να ξεκινήσετε
 
-1. Click the **Play/Start button** in the top header
-2. Processing begins immediately
-3. The button becomes disabled (grayed out) during processing
-4. Progress bar updates, showing processing status
+1. Κάντε κλικ στο **κουμπί Αναπαραγωγή/Έναρξη** στην επάνω κεφαλίδα
+2. Η επεξεργασία ξεκινά αμέσως
+3. Το κουμπί απενεργοποιείται (γκριζάρει) κατά τη διάρκεια της επεξεργασίας
+4. Η γραμμή προόδου ενημερώνεται, δείχνοντας την κατάσταση της επεξεργασίας
 
-{% hint style="success" %}
-**Processing Started**: Once clicked, Chloros automatically handles all processing steps - target detection, debayering, calibration, index calculation, and export.
+{% hint style=&quot;success&quot; %}
+**Έναρξη επεξεργασίας**: Μόλις κάνετε κλικ, το Chloros χειρίζεται αυτόματα όλα τα βήματα επεξεργασίας - ανίχνευση στόχου, αποδιαμόρφωση, βαθμονόμηση, υπολογισμός δείκτη και εξαγωγή.
 {% endhint %}
 
 ***
 
-## Understanding Processing Modes
+## Κατανόηση των τρόπων επεξεργασίας
 
-Chloros operates in two different processing modes depending on your license:
+Το Chloros λειτουργεί σε δύο διαφορετικούς τρόπους επεξεργασίας, ανάλογα με την άδεια χρήσης που διαθέτετε:
 
-### Free Mode (Sequential Processing)
+### Δωρεάν τρόπος (διαδοχική επεξεργασία)
 
-**Available to all users**
+**Διαθέσιμο σε όλους τους χρήστες**
 
-**How it works:**
+**Πώς λειτουργεί:**
 
-* Processes images one at a time, sequentially
-* Single-threaded operation
-* Lower memory usage
+* Επεξεργάζεται τις εικόνες μία προς μία, διαδοχικά.
+* Λειτουργία ενός νήματος.
+* Χαμηλότερη χρήση μνήμης.
 
-**Progress bar shows 2 stages:**
+**Η γραμμή προόδου εμφανίζει 2 στάδια:**
 
-1. **Target Detect** - Scanning for calibration targets
-2. **Processing** - Applying calibration and exporting images
+1. **Ανίχνευση στόχου** - Σάρωση για στόχους βαθμονόμησης.
+2. **Επεξεργασία** - Εφαρμογή βαθμονόμησης και εξαγωγή εικόνων.
 
-**Processing time:**
+**Χρόνος επεξεργασίας:**
 
-* Much slower than Chloros+ parallel mode
-* Suitable for small to medium datasets (< 200 images)
+* Πολύ πιο αργή από την παράλληλη λειτουργία Chloros+
+* Κατάλληλη για μικρά έως μεσαία σύνολα δεδομένων (&lt; 200 εικόνες)
 
-### Chloros+ Mode (Parallel Processing)
+### Λειτουργία Chloros+ (Παράλληλη επεξεργασία)
 
-**Requires Chloros+ license**
+**Απαιτείται άδεια χρήσης Chloros+**
 
-**How it works:**
+**Πώς λειτουργεί:**
 
-* Processes multiple images simultaneously
-* Multi-threaded operation (up to 16 parallel workers)
-* Utilizes multiple CPU cores
-* Optional GPU (CUDA) acceleration with NVIDIA graphics cards
+* Επεξεργάζεται ταυτόχρονα πολλές εικόνες
+* Λειτουργία πολλαπλών νημάτων (έως 16 παράλληλοι εργαζόμενοι)
+* Χρησιμοποιεί πολλαπλούς πυρήνες CPU
+* Προαιρετική επιτάχυνση GPU (CUDA) με κάρτες γραφικών NVIDIA
 
-**Progress bar shows 4 stages:**
+**Η γραμμή προόδου εμφανίζει 4 στάδια:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining image metadata and preparing pipeline
-3. **Calibrating** - Applying corrections and calibrations
-4. **Exporting** - Saving processed images and indices
+1. **Ανίχνευση** - Εύρεση στόχων βαθμονόμησης
+2. **Ανάλυση** - Εξέταση μεταδεδομένων εικόνας και προετοιμασία αγωγού
+3. **Βαθμονόμηση** - Εφαρμογή διορθώσεων και βαθμονομήσεων
+4. **Εξαγωγή** - Αποθήκευση επεξεργασμένων εικόνων και δεικτών
 
-**Progress bar interaction:**
+**Αλληλεπίδραση με τη γραμμή προόδου:**
 
-* **Hover mouse** over bar to see detailed 4-stage dropdown panel
-* **Click** progress bar to freeze the dropdown panel in place
-* **Click again** to unfreeze and hide panel
+* **Τοποθετήστε το ποντίκι** πάνω από τη γραμμή για να δείτε το αναλυτικό αναπτυσσόμενο πλαίσιο 4 σταδίων
+* **Κάντε κλικ** στη γραμμή προόδου για να παγώσετε το αναπτυσσόμενο πλαίσιο στη θέση του
+* **Κάντε ξανά κλικ** για να ξεπαγώσετε και να αποκρύψετε το πλαίσιο
 
-**Processing time:**
+**Χρόνος επεξεργασίας:**
 
-* Significantly faster than free mode
-* Scales with CPU core count
-* GPU acceleration further improves speed
+* Σημαντικά ταχύτερος από την ελεύθερη λειτουργία
+* Κλιμακώνεται ανάλογα με τον αριθμό των πυρήνων της CPU
+* Η επιτάχυνση της GPU βελτιώνει περαιτέρω την ταχύτητα
 
-{% hint style="info" %}
-**Chloros+ Speed**: Parallel processing can be 5-10x faster than sequential mode for large datasets. A 500-image project that takes 2 hours in free mode may complete in 15-20 minutes with Chloros+.
+{% hint style=&quot;info&quot; %}
+**Chloros+ Ταχύτητα**: Η παράλληλη επεξεργασία μπορεί να είναι 5-10 φορές ταχύτερη από τη διαδοχική λειτουργία για μεγάλα σύνολα δεδομένων. Ένα έργο 500 εικόνων που διαρκεί 2 ώρες στη δωρεάν λειτουργία μπορεί να ολοκληρωθεί σε 15-20 λεπτά με το Chloros+.
 {% endhint %}
 
 ***
 
-## What Happens During Processing
+## Τι συμβαίνει κατά τη διάρκεια της επεξεργασίας
 
-### Stage 1: Target Detection
+### Στάδιο 1: Ανίχνευση στόχου
 
-**What Chloros does:**
+**Τι κάνει το Chloros:**
 
-* Scans marked target images (or all images if none marked)
-* Identifies the 4 calibration panels in each target
-* Extracts reflectance values from target panels
-* Records target timestamps for calibration scheduling
+* Σαρώνει τις επισημασμένες εικόνες στόχου (ή όλες τις εικόνες, αν δεν έχει επισημανθεί καμία)
+* Προσδιορίζει τα 4 πάνελ βαθμονόμησης σε κάθε στόχο
+* Εξάγει τιμές ανακλαστικότητας από τα πάνελ στόχων
+* Καταγράφει τις χρονικές σημάνσεις των στόχων για τον προγραμματισμό της βαθμονόμησης
 
-**Duration:** 1-30 seconds (with marked targets), 5-30+ minutes (unmarked)
+**Διάρκεια:** 1-30 δευτερόλεπτα (με επισημασμένους στόχους), 5-30+ λεπτά (χωρίς επισημάνσεις)
 
-### Stage 2: Debayering (RAW Conversion)
+### Στάδιο 2: Debayering (μετατροπή RAW)
 
-**What Chloros does:**
+**Τι κάνει το Chloros:**
 
-* Converts RAW Bayer pattern data to full RGB images
-* Applies high-quality demosaicing algorithm
-* Preserves maximum image quality and detail
+* Μετατρέπει τα δεδομένα μοτίβου RAW Bayer σε πλήρεις εικόνες RGB
+* Εφαρμόζει αλγόριθμο αποσυμπίεσης υψηλής ποιότητας
+* Διατηρεί τη μέγιστη ποιότητα και λεπτομέρεια της εικόνας
 
-**Duration:** Varies by image count and CPU speed
+**Διάρκεια:** Διαφέρει ανάλογα με τον αριθμό των εικόνων και την ταχύτητα της CPU
 
-### Stage 3: Calibration
+### Στάδιο 3: Βαθμονόμηση
 
-**What Chloros does:**
+**Τι κάνει το Chloros:**
 
-* **Vignette correction**: Removes lens darkening at edges
-* **Reflectance calibration**: Normalizes using target reflectance values
-* Applies corrections across all bands/channels
-* Uses appropriate calibration target for each image based on timestamp
+* **Διόρθωση βινιέτας**: Αφαιρεί το σκούρο χρώμα των φακών στα άκρα
+* **Βαθμονόμηση ανακλαστικότητας**: Ομαλοποιεί χρησιμοποιώντας τιμές ανακλαστικότητας στόχου
+* Εφαρμόζει διορθώσεις σε όλες τις ζώνες/κανάλια
+* Χρησιμοποιεί τον κατάλληλο στόχο βαθμονόμησης για κάθε εικόνα με βάση τη χρονική σήμανση
 
-**Duration:** Majority of processing time
+**Διάρκεια:** Το μεγαλύτερο μέρος του χρόνου επεξεργασίας
 
-### Stage 4: Index Calculation
+### Στάδιο 4: Υπολογισμός δείκτη
 
-**What Chloros does:**
+**Τι κάνει το Chloros:**
 
-* Calculates configured multispectral indices (NDVI, NDRE, etc.)
-* Applies band math to calibrated images
-* Generates index images for each selected index
+* Υπολογίζει τους διαμορφωμένους πολυφασματικούς δείκτες (NDVI, NDRE, κ.λπ.)
+* Εφαρμόζει μαθηματικές λειτουργίες ζώνης στις βαθμονομημένες εικόνες
+* Δημιουργεί εικόνες δείκτη για κάθε επιλεγμένο δείκτη
 
-**Duration:** A few seconds per image
+**Διάρκεια:** Λίγα δευτερόλεπτα ανά εικόνα
 
-### Stage 5: Export
+### Στάδιο 5: Εξαγωγή
 
-**What Chloros does:**
+**Τι κάνει το Chloros:**
 
-* Saves calibrated images in selected format
-* Exports index images with configured LUT colors
-* Writes files to camera model subfolders
-* Preserves original filenames with suffixes
+* Αποθηκεύει τις βαθμονομημένες εικόνες στην επιλεγμένη μορφή
+* Εξαγάγει εικόνες δείκτη με διαμορφωμένα χρώματα LUT
+* Γράφει αρχεία σε υποφακέλους μοντέλου κάμερας
+* Διατηρεί τα αρχικά ονόματα αρχείων με καταλήξεις
 
-**Duration:** Varies by export format and file size
+**Διάρκεια:** Διαφέρει ανάλογα με τη μορφή εξαγωγής και το μέγεθος του αρχείου
 
 ***
 
-## Processing Behavior
+## Συμπεριφορά επεξεργασίας
 
-### Automatic Processing Pipeline
+### Αυτόματη ροή επεξεργασίας
 
-Once started, the entire pipeline runs automatically:
+Μόλις ξεκινήσει, ολόκληρη η ροή εκτελείται αυτόματα:
 
-* No user interaction needed
-* All configured steps execute in sequence
-* Progress updates shown in real-time
+* Δεν απαιτείται αλληλεπίδραση με τον χρήστη
+* Όλα τα διαμορφωμένα βήματα εκτελούνται με τη σειρά
+* Ενημερώσεις προόδου εμφανίζονται σε πραγματικό χρόνο
 
-### Computer Usage During Processing
+### Χρήση υπολογιστή κατά τη διάρκεια της επεξεργασίας
 
-**Free Mode:**
+**Ελεύθερη λειτουργία:**
 
-* Relatively low CPU usage (single-threaded)
-* Computer remains responsive for other tasks
-* Safe to minimize Chloros and work in other applications
+* Σχετικά χαμηλή χρήση CPU (μονής ροής)
+* Ο υπολογιστής παραμένει ανταποκρινόμενος για άλλες εργασίες
+* Είναι ασφαλές να ελαχιστοποιήσετε το Chloros και να εργαστείτε σε άλλες εφαρμογές
 
-**Chloros+ Parallel Mode:**
+**Chloros+ Παράλληλη λειτουργία:**
 
-* High CPU usage (multi-threaded, up to 16 cores)
-* With GPU acceleration: High GPU usage
-* Computer may be less responsive during processing
-* Avoid starting other CPU-intensive tasks
+* Υψηλή χρήση CPU (πολυνηματικό, έως 16 πυρήνες)
+* Με επιτάχυνση GPU: Υψηλή χρήση GPU
+* Ο υπολογιστής ενδέχεται να είναι λιγότερο ανταποκρινόμενος κατά τη διάρκεια της επεξεργασίας
+* Αποφύγετε την εκκίνηση άλλων εργασιών που απαιτούν υψηλή χρήση CPU
 
-{% hint style="warning" %}
-**Performance Tip**: For best Chloros+ performance, close other applications and let Chloros use full system resources.
+{% hint style=&quot;warning&quot; %}
+**Συμβουλή απόδοσης**: Για βέλτιστη απόδοση Chloros+, κλείστε άλλες εφαρμογές και αφήστε το Chloros να χρησιμοποιήσει όλους τους πόρους του συστήματος.
 {% endhint %}
 
-### Processing Cannot Be Paused
+### Η επεξεργασία δεν μπορεί να διακοπεί
 
-**Important limitations:**
+**Σημαντικοί περιορισμοί:**
 
-* Once started, processing cannot be paused
-* You can cancel processing, but progress is lost
-* Partial results are not saved
-* Must restart from beginning if canceled
+* Μόλις ξεκινήσει, η επεξεργασία δεν μπορεί να διακοπεί
+* Μπορείτε να ακυρώσετε την επεξεργασία, αλλά η πρόοδος θα χαθεί
+* Τα μερικά αποτελέσματα δεν αποθηκεύονται
+* Σε περίπτωση ακύρωσης, πρέπει να ξεκινήσετε από την αρχή
 
-**Planning tip:** For very large projects, consider processing in batches or using CLI for better control.
-
-***
-
-## Monitoring Your Processing
-
-While processing runs, you can:
-
-* **Watch progress bar** - See overall completion percentage
-* **View current stage** - Detect, Analyze, Calibrate, or Export
-* **Check log tab** - See detailed processing messages and warnings
-* **Preview completed images** - Some export files may appear during processing
-
-For detailed information on monitoring, see [Monitoring the Processing](monitoring-the-processing.md).
+**Συμβουλή σχεδιασμού:** Για πολύ μεγάλα έργα, εξετάστε το ενδεχόμενο επεξεργασίας σε παρτίδες ή χρήσης του CLI για καλύτερο έλεγχο.
 
 ***
 
-## Canceling Processing
+## Παρακολούθηση της επεξεργασίας
 
-If you need to stop processing:
+Κατά τη διάρκεια της επεξεργασίας, μπορείτε:
 
-### How to Cancel
+* **Να παρακολουθήσετε τη γραμμή προόδου** - Δείτε το συνολικό ποσοστό ολοκλήρωσης
+* **Να δείτε το τρέχον στάδιο** - Ανίχνευση, Ανάλυση, Βαθμονόμηση ή Εξαγωγή
+* **Να ελέγξετε την καρτέλα καταγραφής** - Δείτε λεπτομερή μηνύματα και προειδοποιήσεις επεξεργασίας
+* **Να κάνετε προεπισκόπηση των ολοκληρωμένων εικόνων** - Ορισμένα αρχεία εξαγωγής ενδέχεται να εμφανιστούν κατά τη διάρκεια της επεξεργασίας
 
-1. Locate the **Stop/Cancel button** (replaces Start button during processing)
-2. Click the Stop button
-3. Processing halts immediately
-4. Partial results are discarded
+Για λεπτομερείς πληροφορίες σχετικά με την παρακολούθηση, ανατρέξτε στο [Παρακολούθηση της επεξεργασίας](monitoring-the-processing.md).
 
-### When to Cancel
+***
 
-**Valid reasons to cancel:**
+## Ακύρωση της επεξεργασίας
 
-* Realized incorrect settings were used
-* Forgot to mark target images
-* Wrong images imported
-* System running too slow or unresponsive
+Εάν πρέπει να σταματήσετε την επεξεργασία:
 
-**After canceling:**
+### Πώς να ακυρώσετε
 
-* Review and fix any issues
-* Adjust settings as needed
-* Restart processing from the beginning
-* For the cleanest experience, completely close Chloros and restart
+1. Εντοπίστε το **κουμπί Διακοπή/Ακύρωση** (αντικαθιστά το κουμπί Έναρξη κατά τη διάρκεια της επεξεργασίας)
+2. Κάντε κλικ στο κουμπί Διακοπή
+3. Η επεξεργασία σταματά αμέσως
+4. Τα μερικά αποτελέσματα απορρίπτονται
 
-{% hint style="warning" %}
-**No Partial Results**: Canceling discards all progress. Chloros does not save partially processed images.
+### Πότε να ακυρώσετε
+
+**Έγκυροι λόγοι ακύρωσης:**
+
+* Συνειδητοποιήσατε ότι χρησιμοποιήθηκαν λανθασμένες ρυθμίσεις
+* Ξεχάσατε να επισημάνετε τις εικόνες-στόχους
+* Εισαγάγατε λάθος εικόνες
+* Το σύστημα λειτουργεί πολύ αργά ή δεν ανταποκρίνεται
+
+**Μετά την ακύρωση:**
+
+* Ελέγξτε και διορθώστε τυχόν προβλήματα
+* Προσαρμόστε τις ρυθμίσεις όπως απαιτείται
+* Επανεκκινήστε την επεξεργασία από την αρχή
+* Για την καλύτερη δυνατή εμπειρία, κλείστε εντελώς το Chloros και επανεκκινήστε το
+
+{% hint style=&quot;warning&quot; %}
+**Χωρίς μερικά αποτελέσματα**: Η ακύρωση απορρίπτει όλη την πρόοδο. Το Chloros δεν αποθηκεύει εικόνες που έχουν υποστεί μερική επεξεργασία.
 {% endhint %}
 
 ***
 
-## Processing Time Estimates
+## Εκτιμήσεις χρόνου επεξεργασίας
 
-Actual processing time varies greatly based on:
+Ο πραγματικός χρόνος επεξεργασίας ποικίλλει σημαντικά ανάλογα με:
 
-* Number of images
-* Image resolution
-* RAW vs JPG input format
-* Processing mode (Free vs Chloros+)
-* CPU speed and core count
-* GPU availability (Chloros+ only)
-* Number of indices to calculate
-* Export format complexity
+* Τον αριθμό των εικόνων
+* Την ανάλυση των εικόνων
+* Τη μορφή εισόδου RAW ή JPG
+* Τη λειτουργία επεξεργασίας (Δωρεάν έναντι Chloros+)
+* Ταχύτητα CPU και αριθμός πυρήνων
+* Διαθεσιμότητα GPU (μόνο Chloros+)
+* Αριθμός δεικτών προς υπολογισμό
+* Πολυπλοκότητα μορφής εξαγωγής
 
-### Rough Estimates (Chloros+, 12MP images, modern CPU)
+### Προσεγγιστικές εκτιμήσεις (Chloros+, εικόνες 12MP, σύγχρονη CPU)
 
-| Image Count | Free Mode | Chloros+ (CPU) | Chloros+ (GPU) |
+| Αριθμός εικόνων | Λειτουργία Free | Chloros+ (CPU) | Chloros+ (GPU) |
 | ----------- | --------- | -------------- | -------------- |
-| 50 images   | 15-20 min | 5-8 min        | 3-5 min        |
-| 100 images  | 30-40 min | 10-15 min      | 5-8 min        |
-| 200 images  | 1-1.5 hrs | 20-30 min      | 10-15 min      |
-| 500 images  | 2-3 hrs   | 45-60 min      | 20-30 min      |
-| 1000 images | 4-6 hrs   | 1.5-2 hrs      | 40-60 min      |
+| 50 εικόνες   | 15-20 λεπτά | 5-8 λεπτά        | 3-5 λεπτά        |
+| 100 εικόνες  | 30-40 λεπτά | 10-15 λεπτά      | 5-8 λεπτά        |
+| 200 εικόνες  | 1-1,5 ώρες | 20-30 λεπτά      | 10-15 λεπτά      |
+| 500 εικόνες  | 2-3 ώρες   | 45-60 λεπτά      | 20-30 λεπτά      |
+| 1000 εικόνες | 4-6 ώρες   | 1,5-2 ώρες      | 40-60 λεπτά      |
 
-{% hint style="info" %}
-**First Run**: Initial processing may take longer as Chloros builds caches and profiles. Subsequent processing of similar datasets will be faster.
+{% hint style=&quot;info&quot; %}
+**Πρώτη εκτέλεση**: Η αρχική επεξεργασία μπορεί να διαρκέσει περισσότερο, καθώς το Chloros δημιουργεί cache και προφίλ. Η επακόλουθη επεξεργασία παρόμοιων συνόλων δεδομένων θα είναι ταχύτερη.
 {% endhint %}
 
 ***
 
-## Common Issues at Start
+## Συνηθισμένα προβλήματα κατά την εκκίνηση
 
-### Start Button Disabled (Grayed Out)
+### Το κουμπί εκκίνησης είναι απενεργοποιημένο (γκριζαρισμένο)
 
-**Possible causes:**
+**Πιθανές αιτίες:**
 
-* No images imported
-* Backend not fully started
-* Previous processing still running
-* Project not fully loaded
+* Δεν έχουν εισαχθεί εικόνες
+* Το backend δεν έχει εκκινηθεί πλήρως
+* Η προηγούμενη επεξεργασία εξακολουθεί να εκτελείται
+* Το έργο δεν έχει φορτωθεί πλήρως
 
-**Solutions:**
+**Λύσεις:**
 
-1. Wait for backend to fully initialize (check main menu icon)
-2. Verify images are imported in File Browser
-3. Restart Chloros if button remains disabled
-4. Check Debug Log for error messages
+1. Περιμένετε να ολοκληρωθεί η αρχικοποίηση του backend (ελέγξτε το εικονίδιο του κύριου μενού)
+2. Βεβαιωθείτε ότι οι εικόνες έχουν εισαχθεί στο File Browser
+3. Επανεκκινήστε το Chloros εάν το κουμπί παραμένει απενεργοποιημένο
+4. Ελέγξτε το Debug Log για μηνύματα σφάλματος
 
-### Processing Starts Then Immediately Fails
+### Η επεξεργασία ξεκινά και στη συνέχεια αποτυγχάνει αμέσως
 
-**Possible causes:**
+**Πιθανές αιτίες:**
 
-* No valid images in project
-* Corrupted image files
-* Insufficient disk space
-* Insufficient memory (RAM)
+* Δεν υπάρχουν έγκυρες εικόνες στο έργο
+* Κατεστραμμένα αρχεία εικόνων
+* Ανεπαρκής χώρος στο δίσκο
+* Ανεπαρκής μνήμη (RAM)
 
-**Solutions:**
+**Λύσεις:**
 
-1. Check Debug Log <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> for error messages
-2. Verify disk space available
-3. Try processing a smaller subset of images
-4. Verify images are not corrupted
+1. Ελέγξτε το αρχείο καταγραφής σφαλμάτων <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> για μηνύματα σφάλματος
+2. Ελέγξτε τον διαθέσιμο χώρο στο δίσκο
+3. Δοκιμάστε να επεξεργαστείτε ένα μικρότερο υποσύνολο εικόνων
+4. Ελέγξτε ότι οι εικόνες δεν είναι κατεστραμμένες
 
-### "No Targets Detected" Warning
+### Προειδοποίηση &quot;Δεν εντοπίστηκαν στόχοι&quot;
 
-**Possible causes:**
+**Πιθανές αιτίες:**
 
-* Forgot to mark target images
-* Target images don't contain visible targets
-* Target detection settings too strict
+* Ξεχάσατε να επισημάνετε τις εικόνες-στόχους
+* Οι εικόνες-στόχοι δεν περιέχουν ορατούς στόχους
+* Οι ρυθμίσεις ανίχνευσης στόχων είναι πολύ αυστηρές
 
-**Solutions:**
+**Λύσεις:**
 
-1. Review [Choosing Target Images](choosing-target-images.md)
-2. Mark appropriate images in Target column
-3. Verify targets are visible in marked images
-4. Adjust target detection settings if needed
-
-***
-
-## Tips for Successful Processing
-
-### Before Starting
-
-1. **Test with small subset first** - Process 10-20 images to verify settings
-2. **Check available disk space** - Ensure 2-3x dataset size free
-3. **Close unnecessary applications** - Free up system resources
-4. **Verify target images** - Preview marked targets to ensure quality
-5. **Save project** - Project auto-saves, but good practice to save manually
-
-### During Processing
-
-1. **Avoid system sleep** - Disable power saving modes
-2. **Keep Chloros in foreground** - Or at least visible in taskbar
-3. **Monitor progress occasionally** - Check for warnings or errors
-4. **Don't load other heavy applications** - Especially with Chloros+ parallel mode
-
-### Chloros+ GPU Acceleration
-
-If using NVIDIA GPU acceleration:
-
-1. Update NVIDIA drivers to latest version
-2. Ensure GPU has 4GB+ VRAM
-3. Close GPU-intensive applications (games, video editing)
-4. Monitor GPU temperature (ensure adequate cooling)
+1. Ανατρέξτε στο [Επιλογή εικόνων-στόχων](choosing-target-images.md)
+2. Επισημάνετε τις κατάλληλες εικόνες στη στήλη Στόχος
+3. Βεβαιωθείτε ότι οι στόχοι είναι ορατοί στις επισημασμένες εικόνες
+4. Προσαρμόστε τις ρυθμίσεις ανίχνευσης στόχων, εάν χρειάζεται
 
 ***
 
-## Next Steps
+## Συμβουλές για επιτυχή επεξεργασία
 
-Once processing has started:
+### Πριν ξεκινήσετε
 
-1. **Monitor the progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-2. **Wait for completion** - Processing runs automatically
-3. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
+1. **Δοκιμάστε πρώτα με ένα μικρό υποσύνολο** - Επεξεργαστείτε 10-20 εικόνες για να επαληθεύσετε τις ρυθμίσεις
+2. **Ελέγξτε τον διαθέσιμο χώρο στο δίσκο** - Βεβαιωθείτε ότι υπάρχει ελεύθερος χώρος 2-3 φορές μεγαλύτερος από το μέγεθος του συνόλου δεδομένων
+3. **Κλείστε τις περιττές εφαρμογές** - Ελευθερώστε πόρους του συστήματος
+4. **Επαληθεύστε τις εικόνες-στόχους** - Προβάλετε τα επισημασμένα στόχους για να βεβαιωθείτε για την ποιότητα
+5. **Αποθηκεύστε το έργο** - Το έργο αποθηκεύεται αυτόματα, αλλά είναι καλή πρακτική να το αποθηκεύετε χειροκίνητα.
 
-For information about what to do during processing, see [Monitoring the Processing](monitoring-the-processing.md).
+### Κατά τη διάρκεια της επεξεργασίας
+
+1. **Αποφύγετε την κατάσταση αναστολής λειτουργίας του συστήματος** - Απενεργοποιήστε τις λειτουργίες εξοικονόμησης ενέργειας.
+2. **Διατηρήστε το Chloros στο προσκήνιο** - Ή τουλάχιστον ορατό στη γραμμή εργασιών.
+3. **Παρακολουθήστε περιστασιακά την πρόοδο** - Ελέγξτε για προειδοποιήσεις ή σφάλματα.
+4. **Μην φορτώνετε άλλες βαριές εφαρμογές** - Ειδικά με την παράλληλη λειτουργία Chloros+
+
+### Chloros+ Επιτάχυνση GPU
+
+Εάν χρησιμοποιείτε επιτάχυνση GPU NVIDIA:
+
+1. Ενημερώστε τα προγράμματα οδήγησης NVIDIA στην πιο πρόσφατη έκδοση
+2. Βεβαιωθείτε ότι η GPU διαθέτει 4GB+ VRAM
+3. Κλείστε τις εφαρμογές που απαιτούν μεγάλη χρήση της GPU (παιχνίδια, επεξεργασία βίντεο)
+4. Παρακολουθήστε τη θερμοκρασία της GPU (βεβαιωθείτε ότι υπάρχει επαρκής ψύξη)
+
+***
+
+## Επόμενα βήματα
+
+Μόλις ξεκινήσει η επεξεργασία:
+
+1. **Παρακολουθήστε την πρόοδο** - Δείτε [Παρακολούθηση της επεξεργασίας](monitoring-the-processing.md)
+2. **Περιμένετε μέχρι να ολοκληρωθεί** - Η επεξεργασία εκτελείται αυτόματα
+3. **Ελέγξτε τα αποτελέσματα** - Δείτε [Ολοκλήρωση της επεξεργασίας](finishing-the-processing.md)
+
+Για πληροφορίες σχετικά με το τι πρέπει να κάνετε κατά τη διάρκεια της επεξεργασίας, δείτε [Παρακολούθηση της επεξεργασίας](monitoring-the-processing.md).

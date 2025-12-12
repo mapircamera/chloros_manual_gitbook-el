@@ -1,221 +1,221 @@
-# Choosing Target Images
+# Επιλογή εικόνων-στόχων
 
-Marking which images contain calibration targets is a crucial step that significantly speeds up the Chloros processing pipeline. By pre-selecting target images, you eliminate the need for Chloros to scan every image in your dataset for calibration targets.
+Η επισήμανση των εικόνων που περιέχουν στόχους βαθμονόμησης είναι ένα κρίσιμο βήμα που επιταχύνει σημαντικά τη διαδικασία επεξεργασίας του Chloros. Με την προεπιλογή των εικόνων-στόχων, δεν χρειάζεται το Chloros να σαρώσει κάθε εικόνα στο σύνολο δεδομένων σας για στόχους βαθμονόμησης.
 
-## Why Mark Target Images?
+## Γιατί να επισημάνετε τις εικόνες-στόχους;
 
-### Processing Speed
+### Ταχύτητα επεξεργασίας
 
-Without marking target images, Chloros must:
+Χωρίς την επισήμανση των εικόνων-στόχων, το Chloros πρέπει:
 
-* Scan every single image in your project
-* Run target detection algorithms on each image
-* Check hundreds or thousands of images unnecessarily
+* Να σαρώσει κάθε εικόνα του έργου σας
+* Να εκτελέσει αλγόριθμους ανίχνευσης στόχων σε κάθε εικόνα
+* Να ελέγξει εκατοντάδες ή χιλιάδες εικόνες χωρίς λόγο
 
-**Result**: Processing can take significantly longer, especially for large datasets.
+**Αποτέλεσμα**: Η επεξεργασία μπορεί να διαρκέσει πολύ περισσότερο, ειδικά για μεγάλα σύνολα δεδομένων.
 
-### With Marked Target Images
+### Με επισημασμένες εικόνες στόχους
 
-When you check the Target column for specific images:
+Όταν επιλέγετε τη στήλη Στόχος για συγκεκριμένες εικόνες:
 
-* Chloros only scans the checked images for targets
-* Target detection completes much faster
-* Overall processing time is greatly reduced
+* Το Chloros σαρώνει μόνο τις επιλεγμένες εικόνες για στόχους
+* Η ανίχνευση στόχων ολοκληρώνεται πολύ πιο γρήγορα
+* Ο συνολικός χρόνος επεξεργασίας μειώνεται σημαντικά
 
-{% hint style="success" %}
-**Speed Improvement**: Marking 2-3 target images in a 500-image dataset can reduce target detection time from 30+ minutes to under 1 minute.
+{% hint style=&quot;success&quot; %}
+**Βελτίωση ταχύτητας**: Η επισήμανση 2-3 εικόνων-στόχων σε ένα σύνολο δεδομένων 500 εικόνων μπορεί να μειώσει τον χρόνο ανίχνευσης στόχων από 30+ λεπτά σε λιγότερο από 1 λεπτό.
 {% endhint %}
 
 ***
 
-## How to Mark Target Images
+## Πώς να επισημάνετε εικόνες στόχους
 
-### Step 1: Identify Your Target Images
+### Βήμα 1: Προσδιορίστε τις εικόνες στόχους σας
 
-Look through your imported images in the File Browser and identify which images contain calibration targets.
+Εξετάστε τις εισαγόμενες εικόνες σας στο File Browser και προσδιορίστε ποιες εικόνες περιέχουν στόχους βαθμονόμησης.
 
-**Common scenarios:**
+**Συνηθισμένα σενάρια:**
 
-* **Pre-capture target**: Captured before starting the session
-* **Post-capture target**: Captured after completing the session
-* **In-field targets**: Targets placed within the capture area
-* **Multiple targets**: 2-3 target images per session (recommended)
+* **Στόχος πριν τη λήψη**: Λήψη πριν την έναρξη της συνεδρίας
+* **Στόχος μετά τη λήψη**: Λήψη μετά την ολοκλήρωση της συνεδρίας
+* **Στόχοι εντός πεδίου**: Στόχοι που τοποθετούνται εντός της περιοχής λήψης
+* **Πολλαπλοί στόχοι**: 2-3 εικόνες στόχων ανά συνεδρία (συνιστάται)
 
-### Step 2: Check the Target Column
+### Βήμα 2: Ελέγξτε τη στήλη στόχου
 
-For each image containing a calibration target:
+Για κάθε εικόνα που περιέχει στόχο βαθμονόμησης:
 
-1. Locate the image in the File Browser table
-2. Find the **Target** column (rightmost column)
-3. Click the checkbox in the Target column for that image
-4. Repeat for all images containing targets
+1. Εντοπίστε την εικόνα στον πίνακα του προγράμματος περιήγησης αρχείων.
+2. Βρείτε τη στήλη **Στόχος** (η στήλη στα δεξιά).
+3. Κάντε κλικ στο πλαίσιο ελέγχου στη στήλη Στόχος για την εικόνα αυτή.
+4. Επαναλάβετε για όλες τις εικόνες που περιέχουν στόχους.
 
-### Step 3: Verify Your Selection
+### Βήμα 3: Επαληθεύστε την επιλογή σας
 
-Before processing, double-check:
+Πριν από την επεξεργασία, ελέγξτε ξανά:
 
-* [ ] All images with calibration targets are checked
-* [ ] No non-target images are accidentally checked
-* [ ] Targets are clearly visible in checked images
-
-***
-
-## Best Practices for Target Images
-
-### Target Capture Guidelines
-
-**Timing:**
-
-* Capture target images immediately before and throughout your capture session
-* Within the same lighting conditions as your DAQ light sensor
-* Ideally capture target images as often as possible for the best results. Otherwise, the light sensor data will be used to adjust the calibration over time.
-
-**Camera Position:**
-
-* Hold camera above target such that is is centered and fills around 40-60% of the image center.
-* Keep camera parallel/nadir to target surface
-
-**Lighting:**
-
-* Same ambient lighting as your DAQ light sensor
-* Avoid shadows on the target surfaces
-* Don't block your light source with your body, vehicle or vegetation
-* Overcast conditions provide most consistent results
-
-**Target Condition:**
-
-* Keep target panels clean and dry
-* All 4 panels should be clearly visible and unobstructed
-* Targets perpendicular/nadir to the light source if possible
-
-### How Many Target Images?
-
-**Minimum:** 1 target image per session. **Recommended:** 3-5 target images per session.
-
-**Best practice schedule:**
-
-* 3-5 images captured shortly after the light sensor is recording
-* Rotate the camera between captures for the best results
-* Optional: periodically mid-session if lighting conditions change constantly
+* [ ] Όλες οι εικόνες με στόχους βαθμονόμησης είναι επιλεγμένες
+* [ ] Καμία εικόνα που δεν είναι στόχος δεν έχει επιλεγεί κατά λάθος
+* [ ] Οι στόχοι είναι σαφώς ορατοί στις επιλεγμένες εικόνες
 
 ***
 
-## Working with Multiple Cameras
+## Βέλτιστες πρακτικές για εικόνες στόχων
 
-### Dual-Camera Setups
+### Οδηγίες λήψης στόχων
 
-If using two MAPIR cameras simultaneously (e.g., Survey3W RGN + Survey3N OCN):
+**Χρονοδιάγραμμα:**
 
-1. Capture target images with **both cameras** at the same time
-2. Use the **same physical target** for both cameras
-3. Mark target images for **both camera types** in the File Browser
-4. Chloros will use appropriate targets for each camera's calibration
+* Λάβετε εικόνες στόχων αμέσως πριν και κατά τη διάρκεια της συνεδρίας λήψης
+* Υπό τις ίδιες συνθήκες φωτισμού με τον αισθητήρα φωτός DAQ
+* Ιδανικά, καταγράψτε εικόνες στόχων όσο το δυνατόν πιο συχνά για καλύτερα αποτελέσματα. Διαφορετικά, τα δεδομένα του αισθητήρα φωτός θα χρησιμοποιηθούν για την προσαρμογή της βαθμονόμησης με την πάροδο του χρόνου.
 
-### Camera Model Column
+**Θέση κάμερας:**
 
-The **Camera Model** column helps identify which images came from which camera:
+* Κρατήστε την κάμερα πάνω από τον στόχο έτσι ώστε να είναι στο κέντρο και να καλύπτει περίπου το 40-60% του κέντρου της εικόνας.
+* Κρατήστε την κάμερα παράλληλη/ναδίρ προς την επιφάνεια του στόχου
+
+**Φωτισμός:**
+
+* Ίδιος φωτισμός περιβάλλοντος με τον αισθητήρα φωτός DAQ
+* Αποφύγετε τις σκιές στις επιφάνειες στόχων
+* Μην εμποδίζετε την πηγή φωτός με το σώμα, το όχημα ή τη βλάστηση
+* Οι συννεφιασμένες συνθήκες παρέχουν τα πιο συνεπή αποτελέσματα
+
+**Κατάσταση στόχου:**
+
+* Διατηρήστε τα πάνελ στόχων καθαρά και στεγνά
+* Και τα 4 πάνελ πρέπει να είναι καθαρά ορατά και χωρίς εμπόδια
+* Στόχοι κάθετοι/ναδίρ προς την πηγή φωτός, αν είναι δυνατόν
+
+### Πόσες εικόνες στόχων;
+
+**Ελάχιστο:** 1 εικόνα στόχου ανά συνεδρία. **Συνιστώμενο:** 3-5 εικόνες στόχου ανά συνεδρία.
+
+**Βέλτιστο πρόγραμμα:**
+
+* 3-5 εικόνες που τραβήχτηκαν αμέσως μετά την έναρξη της εγγραφής από τον αισθητήρα φωτός
+* Περιστρέψτε την κάμερα μεταξύ των λήψεων για καλύτερα αποτελέσματα
+* Προαιρετικό: περιοδικά στη μέση της συνεδρίας, εάν οι συνθήκες φωτισμού αλλάζουν συνεχώς
+
+***
+
+## Εργασία με πολλαπλές κάμερες
+
+### Ρυθμίσεις διπλής κάμερας
+
+Εάν χρησιμοποιείτε δύο κάμερες MAPIR ταυτόχρονα (π.χ. Survey3W RGN + Survey3N OCN):
+
+1. Λάβετε εικόνες στόχου με **και τις δύο κάμερες** ταυτόχρονα.
+2. Χρησιμοποιήστε τον **ίδιο φυσικό στόχο** και για τις δύο κάμερες.
+3. Σημειώστε τις εικόνες στόχου και για τους **δύο τύπους καμερών** στο File Browser (Πρόγραμμα περιήγησης αρχείων).
+4. Το Chloros θα χρησιμοποιήσει τους κατάλληλους στόχους για τη βαθμονόμηση κάθε κάμερας.
+
+### Στήλη μοντέλου κάμερας
+
+Η στήλη **Μοντέλο κάμερας** βοηθά στον προσδιορισμό των εικόνων που προέρχονται από κάθε κάμερα:
 
 * Survey3W\_RGN
 * Survey3N\_OCN
 * Survey3W\_RGB
-* etc.
+* κ.λπ.
 
-Use this column to verify you've marked targets for each camera type in your project.
-
-***
-
-## Target Detection Settings
-
-### Adjusting Detection Sensitivity
-
-If Chloros isn't detecting your targets correctly, adjust these settings in [Project Settings](adjusting-project-settings.md):
-
-**Minimum calibration sample area:**
-
-* **Default**: 25 pixels
-* **Increase** if getting false detections on small artifacts
-* **Decrease** if targets aren't being detected
-
-**Minimum target clustering:**
-
-* **Default**: 60
-* **Increase** if targets are being split into multiple detections
-* **Decrease** if targets with color variation aren't fully detected
+Χρησιμοποιήστε αυτή τη στήλη για να επαληθεύσετε ότι έχετε επισημάνει στόχους για κάθε τύπο κάμερας στο έργο σας.
 
 ***
 
-## Common Target Image Issues
+## Ρυθμίσεις ανίχνευσης στόχων
 
-### Problem: No Targets Detected
+### Ρύθμιση ευαισθησίας ανίχνευσης
 
-**Possible causes:**
+Εάν το Chloros δεν ανιχνεύει σωστά τους στόχους σας, προσαρμόστε αυτές τις ρυθμίσεις στις [Ρυθμίσεις έργου](adjusting-project-settings.md):
 
-* Target images not marked in File Browser
-* Target too small in frame (< 30% of image)
-* Poor lighting (shadows, glare)
-* Target detection settings too strict
+**Ελάχιστη περιοχή δειγματοληψίας βαθμονόμησης:**
 
-**Solutions:**
+* **Προεπιλογή**: 25 pixel
+* **Αύξηση** εάν λαμβάνετε ψευδείς ανιχνεύσεις σε μικρά αντικείμενα
+* **Μείωση** εάν οι στόχοι δεν ανιχνεύονται
 
-1. Verify Target column is checked for correct images
-2. Review target image quality in preview
-3. Recapture targets if quality is poor
-4. Adjust target detection settings if needed
+**Ελάχιστη ομαδοποίηση στόχων:**
 
-### Problem: False Target Detections
-
-**Possible causes:**
-
-* White buildings, vehicles, or ground cover mistaken for targets
-* Bright patches in vegetation
-* Detection sensitivity too low
-
-**Solutions:**
-
-1. Mark only actual target images to limit detection scope
-2. Increase minimum calibration sample area
-3. Increase minimum target clustering value
-4. Ensure target images show only the target (minimal background clutter)
+* **Προεπιλογή**: 60
+* **Αυξήστε** εάν οι στόχοι χωρίζονται σε πολλαπλές ανιχνεύσεις
+* **Μειώστε** εάν οι στόχοι με χρωματική διακύμανση δεν ανιχνεύονται πλήρως
 
 ***
 
-## Verification Checklist
+## Συνηθισμένα προβλήματα εικόνων στόχων
 
-Before starting processing, verify your target image selection:
+### Πρόβλημα: Δεν ανιχνεύονται στόχοι
 
-* [ ] At least 1 target image marked per session
-* [ ] Target column checkboxes are checked for all target images
-* [ ] Target images captured within same timeframe as survey
-* [ ] Targets clearly visible in preview when clicked
-* [ ] All 4 calibration panels visible in each target image
-* [ ] No shadows or obstructions on targets
-* [ ] For dual-camera: Targets marked for both camera types
+**Πιθανές αιτίες:**
+
+* Οι εικόνες στόχων δεν έχουν επισημανθεί στο πρόγραμμα περιήγησης αρχείων
+* Ο στόχος είναι πολύ μικρός στο πλαίσιο (&lt; 30% της εικόνας)
+* Κακός φωτισμός (σκιά, αντανάκλαση)
+* Οι ρυθμίσεις ανίχνευσης στόχων είναι πολύ αυστηρές
+
+**Λύσεις:**
+
+1. Βεβαιωθείτε ότι η στήλη Στόχος είναι επιλεγμένη για τις σωστές εικόνες
+2. Ελέγξτε την ποιότητα της εικόνας στόχου στην προεπισκόπηση
+3. Επαναλάβετε τη λήψη των στόχων εάν η ποιότητα είναι κακή
+4. Προσαρμόστε τις ρυθμίσεις ανίχνευσης στόχων, εάν χρειάζεται
+
+### Πρόβλημα: Λανθασμένες ανιχνεύσεις στόχων
+
+**Πιθανές αιτίες:**
+
+* Λευκά κτίρια, οχήματα ή κάλυψη εδάφους που εκλαμβάνονται ως στόχοι
+* Φωτεινά σημεία στη βλάστηση
+* Πολύ χαμηλή ευαισθησία ανίχνευσης
+
+**Λύσεις:**
+
+1. Επισημάνετε μόνο τις πραγματικές εικόνες στόχων για να περιορίσετε το εύρος ανίχνευσης
+2. Αυξήστε την ελάχιστη περιοχή δειγματοληψίας βαθμονόμησης
+3. Αυξήστε την ελάχιστη τιμή ομαδοποίησης στόχων
+4. Βεβαιωθείτε ότι οι εικόνες στόχων εμφανίζουν μόνο τον στόχο (ελάχιστη ακαταστασία στο φόντο)
 
 ***
 
-## Target-Free Processing
+## Λίστα ελέγχου επαλήθευσης
 
-### Processing Without Calibration Targets
+Πριν ξεκινήσετε την επεξεργασία, επαληθεύστε την επιλογή των εικόνων στόχων:
 
-While not recommended for scientific work, you can process without targets:
+* [ ] Τουλάχιστον 1 εικόνα στόχου επισημαίνεται ανά συνεδρία
+* [ ] Τα πλαίσια ελέγχου της στήλης στόχων είναι επιλεγμένα για όλες τις εικόνες στόχων
+* [ ] Οι εικόνες στόχων έχουν ληφθεί εντός του ίδιου χρονικού πλαισίου με την έρευνα
+* [ ] Οι στόχοι είναι σαφώς ορατοί στην προεπισκόπηση όταν κάνετε κλικ
+* [ ] Και τα 4 πάνελ βαθμονόμησης είναι ορατά σε κάθε εικόνα στόχου
+* [ ] Δεν υπάρχουν σκιές ή εμπόδια στους στόχους
+* [ ] Για διπλή κάμερα: Στόχοι επισημασμένοι και για τους δύο τύπους καμερών
 
-1. Leave all Target column checkboxes unchecked
-2. **Disable** "Reflectance calibration" in Project Settings
-3. Vignette correction will still be applied
-4. Output will not be calibrated for absolute reflectance
+***
 
-{% hint style="warning" %}
-**Not Recommended**: Without reflectance calibration, pixel values represent relative brightness only, not scientific reflectance measurements. Use calibration targets for accurate, repeatable results.
+## Επεξεργασία χωρίς στόχους
+
+### Επεξεργασία χωρίς στόχους βαθμονόμησης
+
+Αν και δεν συνιστάται για επιστημονική εργασία, μπορείτε να επεξεργαστείτε χωρίς στόχους:
+
+1. Αφήστε όλα τα πλαίσια ελέγχου της στήλης Στόχος μη επιλεγμένα
+2. **Απενεργοποιήστε** τη «Βαθμονόμηση ανακλαστικότητας» στις Ρυθμίσεις έργου
+3. Η διόρθωση βινιέτας θα εξακολουθήσει να εφαρμόζεται
+4. Η έξοδος δεν θα βαθμονομηθεί για απόλυτη ανακλαστικότητα
+
+{% hint style=&quot;warning&quot; %}
+**Δεν συνιστάται**: Χωρίς βαθμονόμηση ανακλαστικότητας, οι τιμές των εικονοστοιχείων αντιπροσωπεύουν μόνο τη σχετική φωτεινότητα και όχι επιστημονικές μετρήσεις ανακλαστικότητας. Χρησιμοποιήστε στόχους βαθμονόμησης για ακριβή και επαναλαμβανόμενα αποτελέσματα.
 {% endhint %}
 
 ***
 
-## Next Steps
+## Επόμενα βήματα
 
-Once you've marked your target images:
+Αφού επισημάνετε τις εικόνες-στόχους:
 
-1. **Review your settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-2. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-3. **Monitor progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+1. **Ελέγξτε τις ρυθμίσεις σας** - Δείτε [Προσαρμογή ρυθμίσεων έργου](adjusting-project-settings.md)
+2. **Ξεκινήστε την επεξεργασία** - Δείτε [Έναρξη της επεξεργασίας](starting-the-processing.md)
+3. **Παρακολουθήστε την πρόοδο** - Δείτε [Παρακολούθηση της επεξεργασίας](monitoring-the-processing.md)
 
-For more information about calibration targets themselves, see [Calibration Targets](../calibration-targets.md).
+Για περισσότερες πληροφορίες σχετικά με τους στόχους βαθμονόμησης, δείτε [Στόχοι βαθμονόμησης](../calibration-targets.md).

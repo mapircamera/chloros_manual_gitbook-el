@@ -1,247 +1,247 @@
-# Opening an Image Full Screen
+# Άνοιγμα εικόνας σε πλήρη οθόνη
 
-The Chloros Image Viewer provides a dedicated full-screen interface for viewing, analyzing, and manipulating your multispectral images. Whether viewing original images or processed outputs, the Image Viewer offers powerful tools for inspection and analysis.
+Το πρόγραμμα προβολής εικόνων Chloros παρέχει μια ειδική διεπαφή πλήρους οθόνης για την προβολή, ανάλυση και επεξεργασία των πολυφασματικών εικόνων σας. Είτε προβάλλετε πρωτότυπες εικόνες είτε επεξεργασμένα αποτελέσματα, το πρόγραμμα προβολής εικόνων προσφέρει ισχυρά εργαλεία για έλεγχο και ανάλυση.
 
-## Accessing the Image Viewer
+## Πρόσβαση στο πρόγραμμα προβολής εικόνων
 
-### From the File Browser
+### Από το πρόγραμμα περιήγησης αρχείων
 
-The most common way to open an image in the Image Viewer:
+Ο πιο συνηθισμένος τρόπος για να ανοίξετε μια εικόνα στο πρόγραμμα προβολής εικόνων:
 
-1. Ensure you're in the **File Browser** tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Click any **image thumbnail** in the image grid
-3. The image opens in the **main preview area** (center of screen)
-4. The image is now loaded and ready for full-screen viewing
+1. Βεβαιωθείτε ότι βρίσκεστε στην καρτέλα **Πρόγραμμα περιήγησης αρχείων** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Κάντε κλικ σε οποιαδήποτε **μικρογραφία εικόνας** στο πλέγμα εικόνων
+3. Η εικόνα ανοίγει στην **κύρια περιοχή προεπισκόπησης** (κέντρο της οθόνης)
+4. Η εικόνα έχει πλέον φορτωθεί και είναι έτοιμη για προβολή σε πλήρη οθόνη
 
-### Opening the Image Viewer Tab
+### Άνοιγμα της καρτέλας του Image Viewer
 
-Once an image is loaded in the preview area:
+Μόλις φορτωθεί μια εικόνα στην περιοχή προεπισκόπησης:
 
-1. Click the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> icon in the left sidebar
-2. The Image Viewer tab opens, displaying the selected image full-screen
-3. Advanced viewing and analysis tools become available in the left sidebar
-
-***
-
-## Image Viewer Interface Overview
-
-### Main Display Area
-
-The largest portion of the screen shows your image:
-
-* **Full resolution**: Images displayed at native resolution
-* **Zoomable**: Use controls or mouse wheel to zoom
-* **Pannable**: Click and drag to move around when zoomed
-* **Aspect ratio maintained**: Images scale proportionally
+1. Κάντε κλικ στο εικονίδιο **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> στην αριστερή πλευρική γραμμή
+2. Ανοίγει η καρτέλα Προβολέας εικόνων, εμφανίζοντας την επιλεγμένη εικόνα σε πλήρη οθόνη
+3. Τα προηγμένα εργαλεία προβολής και ανάλυσης γίνονται διαθέσιμα στην αριστερή πλευρική γραμμή
 
 ***
 
-## Viewing Options
+## Επισκόπηση διεπαφής Προβολέα εικόνων
 
-### Basic Image Navigation
+### Κύρια περιοχή προβολής
 
-#### Browse Through Images
+Το μεγαλύτερο μέρος της οθόνης εμφανίζει την εικόνα σας:
 
-Navigate through your image set using keyboard shortcuts or buttons:
-
-* **Next image**: Click → button or press **→** (Right Arrow) key
-* **Previous image**: Click ← button or press **←** (Left Arrow) key
-* **Jump to specific image**: Return to File Browser and click desired thumbnail
-
-#### Zoom Controls
-
-Adjust magnification to inspect image details:
-
-**Zoom In:**
-
-* Click **+** (Plus) button
-* Press **+** or **=** key
-* Scroll mouse wheel **up**
-
-**Zoom Out:**
-
-* Click **−** (Minus) button
-* Press **−** (Minus) key
-* Scroll mouse wheel **down**
-
-**Fit to Screen:**
-
-* Click **↔** (Fit) button
-* Press **0** (Zero) key
-* Double-click on image
-
-#### Pan When Zoomed
-
-When zoomed in beyond screen size:
-
-1. Move mouse cursor over image
-2. Click and **hold left mouse button**
-3. **Drag** to move image around
-4. Release to stop panning
-
-**Alternative**: Use arrow keys to pan in small increments
+* **Πλήρης ανάλυση**: Οι εικόνες εμφανίζονται στην εγγενή ανάλυση
+* **Με δυνατότητα μεγέθυνσης**: Χρησιμοποιήστε τα χειριστήρια ή το τροχό του ποντικιού για μεγέθυνση
+* **Με δυνατότητα μετακίνησης**: Κάντε κλικ και σύρετε για να μετακινηθείτε όταν μεγεθύνετε
+* **Διατήρηση αναλογίας διαστάσεων**: Οι εικόνες κλιμακώνονται αναλογικά
 
 ***
 
-## Pixel Value Inspection
+## Επιλογές προβολής
 
-### Viewing Pixel Values at Cursor
+### Βασική πλοήγηση στην εικόνα
 
-As you move your mouse cursor over the image, pixel values display in real-time:
+#### Περιήγηση στις εικόνες
 
-**Value display location:**
+Πλοηγηθείτε στο σύνολο των εικόνων σας χρησιμοποιώντας συντομεύσεις πληκτρολογίου ή κουμπιά:
 
-* **Floating number and red line in right side index LUT gradient legend**
-* **When zoomed in further, floating value near cursor and highlighted pixel**
-* Shows values for pixel **under cursor or highlighted**
-* Updates as you move mouse
+* **Επόμενη εικόνα**: Κάντε κλικ στο κουμπί → ή πατήστε το πλήκτρο **→** (δεξί βέλος)
+* **Προηγούμενη εικόνα**: Κάντε κλικ στο κουμπί ← ή πατήστε το πλήκτρο **←** (αριστερό βέλος)
+* **Μετάβαση σε συγκεκριμένη εικόνα**: Επιστρέψτε στο πρόγραμμα περιήγησης αρχείων και κάντε κλικ στην επιθυμητή μικρογραφία
 
-***
+#### Χειριστήρια μεγέθυνσης
 
-## Image Types You Can View
+Προσαρμόστε τη μεγέθυνση για να ελέγξετε τις λεπτομέρειες της εικόνας:
 
-### Original Images (Pre-Processing)
+**Μεγέθυνση:**
 
-**RAW + JPG images from camera:**
+* Κάντε κλικ στο κουμπί **+** (συν)
+* Πατήστε το πλήκτρο **+** ή **=**
+* Μετακινήστε τον τροχό του ποντικιού **προς τα πάνω**
 
-* Display RAW data as previewed
-* Show original, uncorrected values
-* Useful for checking image quality before processing
+**Σμίκρυνση:**
 
-### Calibrated Reflectance Images
+* Κάντε κλικ στο κουμπί **−** (μείον)
+* Πατήστε το πλήκτρο **−** (μείον)
+* Μετακινήστε τον τροχό του ποντικιού **προς τα κάτω**
 
-**After processing:**
+**Προσαρμογή στην οθόνη:**
 
-* Vignette corrected
-* Reflectance calibrated
-* Multi-band TIFF (Red, Green, NIR, etc.)
-* Scientific data ready for analysis
+* Κάντε κλικ στο κουμπί **↔** (Προσαρμογή)
+* Πατήστε το πλήκτρο **0** (Μηδέν)
+* Κάντε διπλό κλικ στην εικόνα
 
-### Index Images
+#### Μετακίνηση κατά τη μεγέθυνση
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif files):**
+Όταν η μεγέθυνση υπερβαίνει το μέγεθος της οθόνης:
 
-* Single-band grayscale images
-* Pixel values represent index calculation results
-* Range typically -1 to +1 for normalized indices
-* Can apply color LUTs for visualization
+1. Μετακινήστε τον κέρσορα του ποντικιού πάνω από την εικόνα
+2. Κάντε κλικ και **κρατήστε πατημένο το αριστερό κουμπί του ποντικιού**
+3. **Σύρετε** για να μετακινήσετε την εικόνα
+4. Αφήστε το κουμπί για να σταματήσετε την μετακίνηση
 
-***
-
-## Index and LUT Application
-
-Apply multispectral indices and color Look-Up Tables:
-
-1. Locate **Index/LUT Sandbox** in **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
-2. Select vegetation index (NDVI, NDRE, etc.)
-3. Select multispectral formula, or create your own custom one (Chloros+ only)
-4. Apply color LUT gradient for visualization
-5. Adjust value ranges and thresholds
-
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+**Εναλλακτική λύση**: Χρησιμοποιήστε τα πλήκτρα βέλους για να μετακινήσετε την εικόνα σε μικρά βήματα
 
 ***
 
-## Keyboard Shortcuts
+## Έλεγχος τιμών pixel
 
-### Navigation
+### Προβολή τιμών pixel στο δρομέα
 
-* **→** (Right Arrow): Next image
-* **←** (Left Arrow): Previous image
-* **Home**: First image in list
-* **End**: Last image in list
+Καθώς μετακινείτε τον δρομέα του ποντικιού πάνω από την εικόνα, οι τιμές pixel εμφανίζονται σε πραγματικό χρόνο:
 
-### Zoom
+**Θέση εμφάνισης τιμών:**
 
-* **+** or **=**: Zoom in
-* **−**: Zoom out
-* **0** (Zero): Fit to screen
-* **Mouse Wheel**: Zoom in/out
-
-### View Controls
-
-* **P**: Toggle pixel percent mode
-* **L**: Toggle layers panel
-* **Esc**: Close full-screen or return to File Browser
-
-### Other
-
-* **Ctrl+S**: Save current image
-* **F**: Full-screen mode (if available)
+* **Κινητός αριθμός και κόκκινη γραμμή στο δεξί δείκτη LUT gradient legend**
+* **Όταν μεγεθύνετε περαιτέρω, η κινητή τιμή κοντά στο δρομέα και το επισημασμένο pixel**
+* Εμφανίζει τις τιμές για το pixel **κάτω από το δρομέα ή το επισημασμένο**
+* Ενημερώνεται καθώς μετακινείτε το ποντίκι
 
 ***
 
-### Verifying Index Calculations
+## Τύποι εικόνων που μπορείτε να προβάλετε
 
-Check that indices calculated correctly:
+### Αρχικές εικόνες (προ-επεξεργασία)
 
-1. Open NDVI or other index image
-2. Check vegetation areas:
-   * **NDVI**: Should show 0.4-0.9 for healthy plants
-   * **NDRE**: Higher values for vigorous growth
-   * **GNDVI**: Similar to NDVI but chlorophyll-sensitive
-3. Check non-vegetation:
-   * **Soil**: Near 0 or slightly negative
-   * **Water**: Negative values (-0.5 to 0)
+**Εικόνες RAW + JPG από την κάμερα:**
 
-***
+* Εμφάνιση δεδομένων RAW όπως προβάλλεται
+* Εμφάνιση αρχικών, μη διορθωμένων τιμών
+* Χρήσιμο για τον έλεγχο της ποιότητας της εικόνας πριν από την επεξεργασία
 
-## Troubleshooting Viewing Issues
+### Εικόνες βαθμονομημένης ανακλαστικότητας
 
-### Image Won't Open
+**Μετά την επεξεργασία:**
 
-**Possible causes:**
+* Διόρθωση βινιέτας
+* Βαθμονομημένη ανακλαστικότητα
+* Πολυζωνικό TIFF (Red, Green, NIR, κ.λπ.)
+* Επιστημονικά δεδομένα έτοιμα για ανάλυση
 
-* File corrupted during processing
-* Unsupported file format
-* Insufficient memory for large image
+### Εικόνες δείκτη
 
-**Solutions:**
+**NDVI, NDRE, GNDVI, κ.λπ. (αρχεία \_NDVI.tif):**
 
-1. Try opening in external viewer to verify file integrity
-2. Check file format matches expected type
-3. Close other applications to free memory
-4. Try smaller/different image
-
-### Black or White Image Display
-
-**Possible causes:**
-
-* Value range outside display capability
-* 32-bit float image with unusual values
-* Index calculation error
-
-**Solutions:**
-
-1. Check pixel values - if all very low or very high, adjust display range
-2. Try opening in QGIS or similar with auto-range adjustment
-3. Check Debug Log from processing for errors
-
-### Pixel Values Seem Wrong
-
-**Possible causes:**
-
-* Viewing wrong image (original vs processed)
-* Calibration didn't apply correctly
-* Light sensor data wasn't included in input
-* Percent mode toggled incorrectly
-
-**Solutions:**
-
-1. Verify you're viewing processed output (check filename suffix)
-2. Check percent mode button state
-3. Compare with known-good images from same dataset
+* Εικόνες μονής ζώνης σε κλίμακα του γκρι
+* Οι τιμές των εικονοστοιχείων αντιπροσωπεύουν τα αποτελέσματα του υπολογισμού του δείκτη
+* Εύρος συνήθως από -1 έως +1 για κανονικοποιημένους δείκτες
+* Μπορεί να εφαρμοστεί LUT χρωμάτων για οπτικοποίηση
 
 ***
 
-## Next Steps
+## Εφαρμογή δείκτη και LUT
 
-Now that you can view images full-screen:
+Εφαρμογή πολυφασματικών δεικτών και πινάκων αναζήτησης χρωμάτων:
 
-* [**Image Layers**](image-layers.md) - Learn about multi-band visualization
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Apply custom indices and color mapping
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Understand available indices
+1. Εντοπίστε το **Index/LUT Sandbox** στο **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> πλευρική γραμμή
+2. Επιλέξτε δείκτη βλάστησης (NDVI, NDRE, κ.λπ.)
+3. Επιλέξτε πολυφασματικό τύπο ή δημιουργήστε τον δικό σας προσαρμοσμένο τύπο (μόνο Chloros+)
+4. Εφαρμόστε χρωματική κλίση LUT για οπτικοποίηση
+5. Προσαρμόστε τα εύρη τιμών και τα όρια
 
-For processing workflow, see:
+Δείτε [Δείκτης/LUT Sandbox](index-lut-sandbox.md) για λεπτομερείς οδηγίες.
 
-* [**Processing Images (GUI)**](../processing-images-gui/page-1.md) - Complete processing guide
+***
+
+## Συντομεύσεις πληκτρολογίου
+
+### Πλοήγηση
+
+* **→** (Δεξί βέλος): Επόμενη εικόνα
+* **←** (Αριστερό βέλος): Προηγούμενη εικόνα
+* **Home**: Πρώτη εικόνα στη λίστα
+* **End**: Τελευταία εικόνα στη λίστα
+
+### Μεγέθυνση
+
+* **+** ή **=**: Μεγέθυνση
+* **−**: Σμίκρυνση
+* **0** (Μηδέν): Προσαρμογή στην οθόνη
+* **Τροχός ποντικιού**: Μεγέθυνση/σμίκρυνση
+
+### Έλεγχοι προβολής
+
+* **P**: Εναλλαγή λειτουργίας ποσοστού pixel
+* **L**: Εναλλαγή πίνακα επιπέδων
+* **Esc**: Κλείσιμο πλήρους οθόνης ή επιστροφή στο File Browser
+
+### Άλλα
+
+* **Ctrl+S**: Αποθήκευση τρέχουσας εικόνας
+* **F**: Λειτουργία πλήρους οθόνης (εάν είναι διαθέσιμη)
+
+***
+
+### Επαλήθευση υπολογισμών δείκτη
+
+Ελέγξτε ότι οι δείκτες έχουν υπολογιστεί σωστά:
+
+1. Ανοίξτε το NDVI ή άλλη εικόνα δείκτη
+2. Ελέγξτε τις περιοχές βλάστησης:
+   * **NDVI**: Θα πρέπει να εμφανίζει 0,4-0,9 για υγιή φυτά
+   * **NDRE**: Υψηλότερες τιμές για έντονη ανάπτυξη
+   * **GNDVI**: Παρόμοιο με το NDVI αλλά ευαίσθητο στη χλωροφύλλη
+3. Ελέγξτε τις περιοχές χωρίς βλάστηση:
+   * **Έδαφος**: Κοντά στο 0 ή ελαφρώς αρνητικό
+   * **Νερό**: Αρνητικές τιμές (-0,5 έως 0)
+
+***
+
+## Αντιμετώπιση προβλημάτων προβολής
+
+### Η εικόνα δεν ανοίγει
+
+**Πιθανές αιτίες:**
+
+* Το αρχείο καταστράφηκε κατά την επεξεργασία
+* Μη υποστηριζόμενη μορφή αρχείου
+* Ανεπαρκής μνήμη για μεγάλη εικόνα
+
+**Λύσεις:**
+
+1. Προσπαθήστε να ανοίξετε την εικόνα σε εξωτερικό πρόγραμμα προβολής για να επαληθεύσετε την ακεραιότητα του αρχείου
+2. Ελέγξτε ότι η μορφή του αρχείου ταιριάζει με τον αναμενόμενο τύπο
+3. Κλείστε άλλες εφαρμογές για να ελευθερώσετε μνήμη
+4. Δοκιμάστε μια μικρότερη/διαφορετική εικόνα
+
+### Εμφάνιση μαύρης ή λευκής εικόνας
+
+**Πιθανές αιτίες:**
+
+* Εύρος τιμών εκτός των δυνατοτήτων της οθόνης
+* Εικόνα 32-bit float με ασυνήθιστες τιμές
+* Σφάλμα υπολογισμού δείκτη
+
+**Λύσεις:**
+
+1. Ελέγξτε τις τιμές των εικονοστοιχείων - εάν είναι όλες πολύ χαμηλές ή πολύ υψηλές, προσαρμόστε το εύρος εμφάνισης
+2. Δοκιμάστε να ανοίξετε το αρχείο στο QGIS ή σε παρόμοιο πρόγραμμα με αυτόματη προσαρμογή εύρους
+3. Ελέγξτε το αρχείο καταγραφής σφαλμάτων από την επεξεργασία για σφάλματα
+
+### Οι τιμές των εικονοστοιχείων φαίνονται λανθασμένες
+
+**Πιθανές αιτίες:**
+
+* Προβολή λανθασμένης εικόνας (πρωτότυπη έναντι επεξεργασμένης)
+* Η βαθμονόμηση δεν εφαρμόστηκε σωστά
+* Τα δεδομένα του αισθητήρα φωτός δεν συμπεριλήφθηκαν στην είσοδο
+* Η λειτουργία ποσοστού ενεργοποιήθηκε λανθασμένα
+
+**Λύσεις:**
+
+1. Βεβαιωθείτε ότι προβάλλετε το επεξεργασμένο αποτέλεσμα (ελέγξτε την κατάληξη του ονόματος αρχείου)
+2. Ελέγξτε την κατάσταση του κουμπιού λειτουργίας ποσοστού
+3. Συγκρίνετε με εικόνες γνωστής καλής ποιότητας από το ίδιο σύνολο δεδομένων
+
+***
+
+## Επόμενα βήματα
+
+Τώρα που μπορείτε να προβάλετε εικόνες σε πλήρη οθόνη:
+
+* [**Επίπεδα εικόνας**](image-layers.md) - Μάθετε για την οπτικοποίηση πολλαπλών ζωνών
+* [**Δείκτης/LUT Sandbox**](index-lut-sandbox.md) - Εφαρμόστε προσαρμοσμένους δείκτες και χρωματική αντιστοίχιση
+* [**Τύποι πολυφασματικών δεικτών**](../project-settings/multispectral-index-formulas.md) - Κατανοήστε τους διαθέσιμους δείκτες
+
+Για τη ροή εργασίας επεξεργασίας, δείτε:
+
+* [**Επεξεργασία εικόνων (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Πλήρης οδηγός επεξεργασίας
