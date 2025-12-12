@@ -38,7 +38,7 @@
 
 #### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Αρχείο καταγραφής σφαλμάτων
 
-Ελέγξτε το αρχείο καταγραφής για εκτυπώσεις σφαλμάτων όταν προκύπτουν προβλήματα. Αντιγράψτε/κατεβάστε το αρχείο καταγραφής και στείλτε το στο [MAPIR Support](https://www.mapir.camera/community/contact) για βοήθεια.
+Ελέγξτε το αρχείο καταγραφής για εκτυπώσεις σφαλμάτων όταν προκύπτουν προβλήματα. Αντιγράψτε/κατεβάστε το αρχείο καταγραφής και στείλτε το στο [MAPIR Υποστήριξη](https://www.mapir.camera/community/contact) για βοήθεια.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Σύνδεση χρήστη](chloros+-login.md)
 

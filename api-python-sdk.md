@@ -127,17 +127,17 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 Το SDK χρησιμοποιεί την ίδια άδεια χρήσης με τα Chloros, Chloros (Browser) και Chloros CLI. Ενεργοποιήστε μία φορά μέσω του GUI ή του CLI:
 
-1. Ανοίξτε το **Chloros ή το Chloros (Browser)** και συνδεθείτε στην καρτέλα Χρήστη <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Εναλλακτικά, ανοίξτε το **CLI**.
+1. Ανοίξτε το **Chloros ή το Chloros (Browser)** και συνδεθείτε στην καρτέλα Χρήστης <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Εναλλακτικά, ανοίξτε το **CLI**.
 2. Εισαγάγετε τα διαπιστευτήριά σας Chloros+ και συνδεθείτε
-3. Η άδεια αποθηκεύεται τοπικά (διατηρείται μετά την επανεκκίνηση)
+3. Η άδεια αποθηκεύεται τοπικά (διατηρείται μετά από επανεκκινήσεις)
 
 {% hint style=&quot;success&quot; %}
-**Μία φορά ρύθμιση**: Αφού συνδεθείτε μέσω του GUI ή του CLI, το SDK χρησιμοποιεί αυτόματα την αποθηκευμένη άδεια χρήσης. Δεν απαιτείται πρόσθετη πιστοποίηση!
+**Μία φορά μόνο ρύθμιση**: Μετά τη σύνδεση μέσω του GUI ή του CLI, το SDK χρησιμοποιεί αυτόματα την αποθηκευμένη άδεια χρήσης. Δεν απαιτείται επιπλέον πιστοποίηση!
 {% endhint %}
 
 ### Δοκιμή σύνδεσης
 
-Επαληθεύστε ότι το SDK μπορεί να συνδεθεί στο Chloros:
+Βεβαιωθείτε ότι το SDK μπορεί να συνδεθεί στο Chloros:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -152,7 +152,7 @@ print(f"Backend running: {status['running']}")
 
 ***
 
-## Αναφορά API
+## API Αναφορά
 
 ### ChlorosLocal Class
 
@@ -178,7 +178,7 @@ ChlorosLocal(
 | `auto_start_backend`      | bool | `True`                    | Αυτόματη εκκίνηση του backend αν χρειαστεί |
 | `backend_exe`             | str  | `None` (αυτόματη ανίχνευση)      | Διαδρομή προς το εκτελέσιμο backend            |
 | `timeout`                 | int  | `30`                      | Χρονικό όριο αιτήματος σε δευτερόλεπτα            |
-| `backend_startup_timeout` | int  | `60`                      | Χρονικό όριο για την εκκίνηση του backend (δευτερόλεπτα) |
+| `backend_startup_timeout` | int  | `60`                      | Χρονικό όριο εκκίνησης backend (δευτερόλεπτα) |
 
 **Παραδείγματα:**
 
@@ -209,7 +209,7 @@ chloros = ChlorosLocal(timeout=60)
 | Παράμετρος      | Τύπος | Απαιτείται | Περιγραφή                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
 | `project_name` | str  | Ναι      | Όνομα για το έργο                                     |
-| `camera`       | str  | Όχι       | Πρότυπο κάμερας (π.χ. &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
+| `camera`       | str  | Όχι       | Πρότυπο κάμερας (π.χ., &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
 **Επιστρέφει:** `dict` - Απόκριση δημιουργίας έργου
 
@@ -236,7 +236,7 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 | `folder_path` | str/Path | Ναι      | Διαδρομή προς φάκελο με εικόνες         |
 | `recursive`   | bool     | Όχι       | Αναζήτηση υποφακέλων (προεπιλογή: False) |
 
-**Επιστρέφει:** `dict` - Εισαγωγή αποτελεσμάτων με αριθμό αρχείων
+**Επιστρέφει:** `dict` - Αποτελέσματα εισαγωγής με αριθμό αρχείων
 
 **Παράδειγμα:**
 
@@ -308,7 +308,7 @@ chloros.configure(
 
 | Παράμετρος           | Τύπος     | Προεπιλογή      | Περιγραφή                               |
 | ------------------- | -------- | ------------ | ----------------------------------------- |
-| `mode`              | str      | `"parallel"` | Λειτουργία επεξεργασίας: &quot;parallel&quot; ή &quot;serial&quot;   |
+| `mode`              | str      | `"parallel"` | Λειτουργία επεξεργασίας: «parallel» ή «serial»   |
 | `wait`              | bool     | `True`       | Αναμονή για ολοκλήρωση                       |
 | `progress_callback` | callable | `None`       | Λειτουργία επιστροφής κλήσης προόδου (progress, msg) |
 | `poll_interval`     | float    | `2.0`        | Διάστημα δειγματοληψίας για την πρόοδο (δευτερόλεπτα)   |
@@ -316,7 +316,7 @@ chloros.configure(
 **Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
 
 {% hint style=&quot;warning&quot; %}
-**Παράλληλη λειτουργία**: Απαιτείται άδεια Chloros+. Προσαρμόζεται αυτόματα στους πυρήνες της CPU (έως 16 εργαζόμενους).
+**Παράλληλη λειτουργία**: Απαιτείται άδεια Chloros+. Προσαρμόζεται αυτόματα στους πυρήνες της CPU σας (έως 16 workers).
 {% endhint %}
 
 **Παράδειγμα:**
@@ -374,7 +374,7 @@ print(f"URL: {status['url']}")
 
 #### `shutdown_backend()`
 
-Τερματίζει το backend (εάν έχει ξεκινήσει από το SDK).
+Τερματισμός του backend (εάν έχει ξεκινήσει από το SDK).
 
 **Παράδειγμα:**
 
@@ -404,7 +404,7 @@ chloros.shutdown_backend()
 | `mode`                    | str      | `"parallel"`    | Λειτουργία επεξεργασίας                |
 | `progress_callback`       | callable | `None`          | Επιστροφή κλήσης προόδου              |
 
-**Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
+**Επιστροφές:** `dict` - Αποτελέσματα επεξεργασίας
 
 **Παράδειγμα:**
 
@@ -457,7 +457,7 @@ with ChlorosLocal() as chloros:
 
 ### Παράδειγμα 1: Βασική επεξεργασία
 
-Επεξεργασία φακέλου με τις προεπιλεγμένες ρυθμίσεις:
+Επεξεργασία φακέλου με προεπιλεγμένες ρυθμίσεις:
 
 ```python
 from chloros_sdk import process_folder
@@ -783,7 +783,7 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ***
 
-## Χειρισμός εξαιρέσεων
+## Αντιμετώπιση εξαιρέσεων
 
 Το SDK παρέχει συγκεκριμένες κατηγορίες εξαιρέσεων για διαφορετικούς τύπους σφαλμάτων:
 
@@ -892,7 +892,7 @@ for i in range(0, len(images), batch_size):
 
 ### Το backend δεν ξεκινά
 
-**Πρόβλημα:** Το SDK δεν ξεκινά το backend.
+**Πρόβλημα:** Το SDK δεν ξεκινά το backend
 
 **Λύσεις:**
 
@@ -904,7 +904,7 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Ελέγξτε ότι το Windows Firewall δεν το μπλοκάρει
+2. Ελέγξτε ότι το Windows Firewall δεν το εμποδίζει
 3. Δοκιμάστε τη χειροκίνητη διαδρομή του backend:
 
 ```python
@@ -973,7 +973,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 
 ***
 
-### Θύρα ήδη σε χρήση
+### Η θύρα είναι ήδη σε χρήση
 
 **Πρόβλημα:** Η θύρα 5000 του backend είναι κατειλημμένη
 
@@ -993,9 +993,9 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## Συμβουλές απόδοσης
+## Συμβουλές για την απόδοση
 
-### Βελτιστοποίηση ταχύτητας επεξεργασίας
+### Βελτιστοποίηση της ταχύτητας επεξεργασίας
 
 1. **Χρησιμοποιήστε την παράλληλη λειτουργία** (απαιτείται Chloros+)
 
@@ -1016,7 +1016,7 @@ chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Επεξεργασία σε SSD** (όχι HDD)
+4. **Επεξεργαστείτε σε SSD** (όχι HDD)
 
 ***
 
@@ -1033,7 +1033,7 @@ chloros.configure(indices=["NDVI"])  # Not all indices
 
 ### Επεξεργασία στο παρασκήνιο
 
-Απελευθερώστε Python για άλλες εργασίες:
+Απελευθερώστε το Python για άλλες εργασίες:
 
 ```python
 chloros.process(wait=False)  # Non-blocking
@@ -1123,7 +1123,7 @@ chloros.process(progress_callback=notebook_progress)
 
 ### Ε: Το SDK απαιτεί σύνδεση στο διαδίκτυο;
 
-**Α:** Μόνο για την αρχική ενεργοποίηση της άδειας χρήσης. Μετά τη σύνδεση μέσω Chloros, Chloros (Browser) ή Chloros CLI, η άδεια αποθηκεύεται τοπικά και λειτουργεί εκτός σύνδεσης για 30 ημέρες.
+**Α:** Μόνο για την αρχική ενεργοποίηση της άδειας χρήσης. Αφού συνδεθείτε μέσω Chloros, Chloros (Browser) ή Chloros CLI, η άδεια χρήσης αποθηκεύεται τοπικά και λειτουργεί εκτός σύνδεσης για 30 ημέρες.
 
 ***
 
@@ -1133,7 +1133,7 @@ chloros.process(progress_callback=notebook_progress)
 
 * Windows Server 2016 ή νεότερη έκδοση
 * Chloros εγκατεστημένο (μία φορά)
-* Άδεια χρήσης ενεργοποιημένη σε οποιονδήποτε υπολογιστή (άδεια χρήσης αποθηκευμένη στο cache και αντιγραμμένη στον διακομιστή)
+* Άδεια χρήσης ενεργοποιημένη σε οποιονδήποτε υπολογιστή (άδεια χρήσης αποθηκευμένη προσωρινά αντιγραμμένη στον διακομιστή)
 
 ***
 
@@ -1145,7 +1145,7 @@ chloros.process(progress_callback=notebook_progress)
 | **Κατάλληλο για**    | Οπτική εργασία | Σενάρια        | Ενσωμάτωση |
 | **Αυτοματοποίηση**  | Περιορισμένη     | Καλή             | Εξαιρετική   |
 | **Ευελιξία** | Βασική       | Καλή             | Μέγιστη     |
-| **Άδεια χρήσης**     | Chloros+    | Chloros+         | Chloros+    |
+| **Άδεια**     | Chloros+    | Chloros+         | Chloros+    |
 
 ***
 
@@ -1153,9 +1153,9 @@ chloros.process(progress_callback=notebook_progress)
 
 **Α:** Ο κώδικας SDK μπορεί να ενσωματωθεί στις εφαρμογές σας, αλλά:
 
-* Οι τελικοί χρήστες πρέπει να έχουν εγκατεστημένο το Chloros.
-* Οι τελικοί χρήστες πρέπει να έχουν ενεργές άδειες χρήσης Chloros+.
-* Η εμπορική διανομή απαιτεί άδεια χρήσης OEM.
+* Οι τελικοί χρήστες πρέπει να έχουν εγκατεστημένο το Chloros
+* Οι τελικοί χρήστες πρέπει να έχουν ενεργές άδειες Chloros+
+* Η εμπορική διανομή απαιτεί άδεια OEM.
 
 Επικοινωνήστε με το info@mapir.camera για ερωτήσεις σχετικά με το OEM.
 
@@ -1224,7 +1224,7 @@ thread.start()
 ### Κανάλια υποστήριξης
 
 * **Email**: info@mapir.camera
-* **Ιστότοπος**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* **Ιστοσελίδα**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * **Τιμές**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ### Δείγμα κώδικα
