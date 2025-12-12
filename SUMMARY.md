@@ -16,7 +16,7 @@
 ## Επεξεργασία εικόνων (GUI)
 
 * [Προσαρμογή ρυθμίσεων έργου](processing-images-gui/adjusting-project-settings.md)
-* [Προσθήκη αρχείων σε ένα έργο](processing-images-gui/page-1.md)
+* [Προσθήκη αρχείων σε ένα έργο](processing-images-gui/adding-files-to-a-project.md)
 * [Επιλογή εικόνων στόχου](processing-images-gui/choosing-target-images.md)
 * [Έναρξη της Επεξεργασίας](processing-images-gui/starting-the-processing.md)
 * [Παρακολούθηση της Επεξεργασίας](processing-images-gui/monitoring-the-processing.md)
@@ -24,11 +24,11 @@
 
 ## ΡΥΘΜΙΣΕΙΣ ΕΡΓΟΥ
 
-* [Ρυθμίσεις έργου](project-settings/page-2.md)
+* [Ρυθμίσεις έργου](project-settings/project-settings.md)
 * [Τύποι Πολυφασματικού Δείκτη](project-settings/multispectral-index-formulas.md)
 
 ## ΠΡΟΒΟΛΗ ΕΙΚΟΝΩΝ (GUI)
 
-* [Άνοιγμα μιας εικόνας σε πλήρη οθόνη](image-viewer-gui/page-3.md)
+* [Άνοιγμα μιας εικόνας σε πλήρη οθόνη](image-viewer-gui/opening-an-image-full-screen.md)
 * [Επίπεδα εικόνας](image-viewer-gui/image-layers.md)
 * [Ευρετήριο/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
