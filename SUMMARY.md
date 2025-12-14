@@ -15,10 +15,10 @@
 
 ## Επεξεργασία εικόνων (GUI)
 
-* [Προσαρμογή ρυθμίσεων έργου](processing-images-gui/adjusting-project-settings.md)
+* [Ρύθμιση παραμέτρων έργου](processing-images-gui/adjusting-project-settings.md)
 * [Προσθήκη αρχείων σε ένα έργο](processing-images-gui/adding-files-to-a-project.md)
 * [Επιλογή εικόνων-στόχων](processing-images-gui/choosing-target-images.md)
-* [Έναρξη της επεξεργασίας](processing-images-gui/starting-the-processing.md)
+* [Έναρξη επεξεργασίας](processing-images-gui/starting-the-processing.md)
 * [Παρακολούθηση της επεξεργασίας](processing-images-gui/monitoring-the-processing.md)
 * [Ολοκλήρωση της επεξεργασίας](processing-images-gui/finishing-the-processing.md)
 

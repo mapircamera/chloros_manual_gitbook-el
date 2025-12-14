@@ -1,12 +1,12 @@
 ---
-description: Πάνελ μετρημένα σε εργαστήριο που χρησιμοποιούνται για τη βαθμονόμηση των δεδομένων που συλλέγονται κατά την επεξεργασία μετά τη λήψη
+description: Lab-measured panels used to calibrate captured data in post processing
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
 ---
 # Στόχοι βαθμονόμησης
 
-Το MAPIR προσφέρει διάφορους στόχους βαθμονόμησης για να καλύψει ένα ευρύ φάσμα εφαρμογών. Το συμπαγές T4-R50 που φαίνεται παρακάτω περιέχει 4 πάνελ που έχουν μετρηθεί για ανάκλαση φωτός από 250 έως 2.500 nm.
+Το MAPIR προσφέρει διάφορους στόχους βαθμονόμησης για να καλύψει ένα ευρύ φάσμα εφαρμογών. Το συμπαγές T4-R50 που φαίνεται παρακάτω περιέχει 4 πάνελ που έχουν μετρηθεί για ανακλαστικότητα φωτός από 250 έως 2.500 nm.
 
 <figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>Οι διάχυτοι στόχοι αναφοράς T4 έχουν τις ακόλουθες καμπύλες ανάκλασης, [λήψη δεδομένων εδώ](https://cdn.shopify.com/s/files/1/0972/5566/files/MAPIR_Diffuse_Reflectance_Standard_Calibration_Target_Data_T4.xlsx?v=1741759157):
 
