@@ -6,7 +6,7 @@
 
 Όταν συνδεθείτε, θα εμφανιστούν τα στοιχεία του λογαριασμού σας:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Σύνδεση
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## CLI Σύνδεση
 
 Συνδεθείτε με τα διαπιστευτήριά σας Chloros+ για να ενεργοποιήσετε την επεξεργασία CLI.
 
