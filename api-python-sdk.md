@@ -9,7 +9,7 @@
 * 🚀 **Αυτοματοποίηση** - Δημιουργία προσαρμοσμένων ροών εργασίας μαζικής επεξεργασίας
 * 🔗 **Ενσωμάτωση** - Ενσωματώστε το Chloros σε υπάρχουσες εφαρμογές Python
 * 📊 **Έτοιμο για έρευνα** - Ιδανικό για επιστημονικές αναλύσεις
-* ⚡ **Παράλληλη επεξεργασία** - Προσαρμόζεται στους πυρήνες της CPU σας (Chloros+)
+* ⚡ **Παράλληλη επεξεργασία** - Κλιμακώνεται ανάλογα με τους πυρήνες της CPU σας (Chloros+)
 
 ### Απαιτήσεις
 
@@ -127,12 +127,16 @@ print(f"Chloros SDK version: {chloros_sdk.__version__}")
 
 Το SDK χρησιμοποιεί την ίδια άδεια χρήσης με τα Chloros, Chloros (Browser) και Chloros CLI. Ενεργοποιήστε μία φορά μέσω του GUI ή του CLI:
 
-1. Ανοίξτε το **Chloros ή το Chloros (Browser)** και συνδεθείτε στην καρτέλα Χρήστης <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Εναλλακτικά, ανοίξτε το **CLI**.
+1. Ανοίξτε το **Chloros ή το Chloros (Browser)**και συνδεθείτε στην καρτέλα Χρήστη <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Εναλλακτικά, ανοίξτε το**CLI**.
 2. Εισαγάγετε τα διαπιστευτήριά σας Chloros+ και συνδεθείτε
-3. Η άδεια αποθηκεύεται τοπικά (διατηρείται μετά από επανεκκίνηση)
+3. Η άδεια αποθηκεύεται τοπικά (διατηρείται μετά από επανεκκινήσεις)
 
 {% hint style=&quot;success&quot; %}
-**Μία φορά μόνο**: Αφού συνδεθείτε μέσω του GUI ή του CLI, το SDK χρησιμοποιεί αυτόματα την αποθηκευμένη άδεια χρήσης. Δεν απαιτείται επιπλέον πιστοποίηση!
+**Μία φορά μόνο ρύθμιση**: Μετά τη σύνδεση μέσω του GUI ή του CLI, το SDK χρησιμοποιεί αυτόματα την αποθηκευμένη άδεια χρήσης. Δεν απαιτείται επιπλέον πιστοποίηση!
+{% endhint %}
+
+{% hint style=&quot;info&quot; %}
+**Αποσύνδεση**: Οι χρήστες του SDK μπορούν να διαγράψουν προγραμματικά τα αποθηκευμένα διαπιστευτήρια χρησιμοποιώντας τη μέθοδο `logout()`. Δείτε τη μέθοδο [logout()](#logout) στην αναφορά API.
 {% endhint %}
 
 ### Δοκιμή σύνδεσης
@@ -178,7 +182,7 @@ ChlorosLocal(
 | `auto_start_backend`      | bool | `True`                    | Αυτόματη εκκίνηση του backend, αν χρειαστεί |
 | `backend_exe`             | str  | `None` (αυτόματη ανίχνευση)      | Διαδρομή προς το εκτελέσιμο backend            |
 | `timeout`                 | int  | `30`                      | Χρονικό όριο αιτήματος σε δευτερόλεπτα            |
-| `backend_startup_timeout` | int  | `60`                      | Χρονικό όριο εκκίνησης backend (δευτερόλεπτα) |
+| `backend_startup_timeout` | int  | `60`                      | Χρονικό όριο για εκκίνηση του backend (δευτερόλεπτα) |
 
 **Παραδείγματα:**
 
@@ -209,11 +213,9 @@ chloros = ChlorosLocal(timeout=60)
 | Παράμετρος      | Τύπος | Απαιτείται | Περιγραφή                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
 | `project_name` | str  | Ναι      | Όνομα για το έργο                                     |
-| `camera`       | str  | Όχι       | Πρότυπο κάμερας (π.χ., &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
+| `camera`       | str  | Όχι       | Πρότυπο κάμερας (π.χ. &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
-**Επιστροφές:** `dict` - Απόκριση δημιουργίας έργου
-
-**Παράδειγμα:**
+**Επιστρέφει:** `dict` - Απόκριση δημιουργίας έργου**Παράδειγμα:**
 
 ```python
 # Basic project
@@ -236,9 +238,7 @@ chloros.create_project("DroneField_A", camera="Survey3N_RGN")
 | `folder_path` | str/Path | Ναι      | Διαδρομή προς φάκελο με εικόνες         |
 | `recursive`   | bool     | Όχι       | Αναζήτηση υποφακέλων (προεπιλογή: False) |
 
-**Επιστρέφει:** `dict` - Αποτελέσματα εισαγωγής με αριθμό αρχείων
-
-**Παράδειγμα:**
+**Επιστρέφει:** `dict` - Αποτελέσματα εισαγωγής με αριθμό αρχείων**Παράδειγμα:**
 
 ```python
 # Import from folder
@@ -273,11 +273,7 @@ chloros.import_images("C:\\DroneImages", recursive=True)
 * `"PNG (8-bit)"` - Οπτική επιθεώρηση
 * `"JPG (8-bit)"` - Συμπιεσμένη έξοδος
 
-**Διαθέσιμοι δείκτες:**
-
-NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2 και άλλα.
-
-**Παράδειγμα:**
+**Διαθέσιμοι δείκτες:**NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2 και άλλα.**Παράδειγμα:**
 
 ```python
 # Basic configuration
@@ -316,7 +312,7 @@ chloros.configure(
 **Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
 
 {% hint style=&quot;warning&quot; %}
-**Παράλληλη λειτουργία**: Απαιτείται άδεια Chloros+. Προσαρμόζεται αυτόματα στους πυρήνες της CPU (έως 16 εργαζόμενους).
+**Παράλληλη λειτουργία**: Απαιτείται άδεια Chloros+. Προσαρμόζεται αυτόματα στους πυρήνες της CPU σας (έως 16 workers).
 {% endhint %}
 
 **Παράδειγμα:**
@@ -343,11 +339,9 @@ chloros.process(wait=False)
 
 #### `get_config()`
 
-Λήψη τρέχουσας διαμόρφωσης έργου.
+Λήψη της τρέχουσας διαμόρφωσης του έργου.
 
-**Επιστρέφει:** `dict` - Τρέχουσα διαμόρφωση έργου
-
-**Παράδειγμα:**
+**Επιστρέφει:** `dict` - Τρέχουσα διαμόρφωση του έργου**Παράδειγμα:**
 
 ```python
 config = chloros.get_config()
@@ -360,9 +354,7 @@ print(config['Project Settings'])
 
 Λήψη πληροφοριών κατάστασης του backend.
 
-**Επιστρέφει:** `dict` - Κατάσταση του backend
-
-**Παράδειγμα:**
+**Επιστρέφει:** `dict` - Κατάσταση του backend**Παράδειγμα:**
 
 ```python
 status = chloros.get_status()
@@ -381,6 +373,38 @@ print(f"URL: {status['url']}")
 ```python
 chloros.shutdown_backend()
 ```
+
+***
+
+#### `logout()`
+
+Εκκαθάριση των αποθηκευμένων διαπιστευτηρίων από το τοπικό σύστημα.
+
+**Περιγραφή:**
+
+Αποσυνδέεται προγραμματικά αφαιρώντας τα αποθηκευμένα διαπιστευτήρια ελέγχου ταυτότητας. Αυτό είναι χρήσιμο για:
+* Εναλλαγή μεταξύ διαφορετικών λογαριασμών Chloros+
+* Εκκαθάριση διαπιστευτηρίων σε αυτοματοποιημένα περιβάλλοντα
+* Λόγους ασφαλείας (π.χ. αφαίρεση διαπιστευτηρίων πριν από την απεγκατάσταση)
+
+**Επιστρέφει:** `dict` - Αποτέλεσμα της λειτουργίας αποσύνδεσης**Παράδειγμα:**
+
+```python
+from chloros_sdk import ChlorosLocal
+
+# Initialize SDK
+chloros = ChlorosLocal()
+
+# Clear cached credentials
+result = chloros.logout()
+print(f"Logout successful: {result}")
+
+# After logout, login required via GUI/CLI/Browser before next SDK use
+```
+
+{% hint style=&quot;info&quot; %}
+**Απαιτείται εκ νέου πιστοποίηση**: Μετά την κλήση του `logout()`, πρέπει να συνδεθείτε ξανά μέσω του Chloros, του Chloros (Browser) ή Chloros CLI πριν χρησιμοποιήσετε το SDK.
+{% endhint %}
 
 ***
 
@@ -404,9 +428,7 @@ chloros.shutdown_backend()
 | `mode`                    | str      | `"parallel"`    | Λειτουργία επεξεργασίας                |
 | `progress_callback`       | callable | `None`          | Επιστροφή κλήσης προόδου              |
 
-**Επιστρέφει:** `dict` - Αποτελέσματα επεξεργασίας
-
-**Παράδειγμα:**
+**Επιστροφές:** `dict` - Αποτελέσματα επεξεργασίας**Παράδειγμα:**
 
 ```python
 from chloros_sdk import process_folder
@@ -710,7 +732,50 @@ else:
 
 ***
 
-### Παράδειγμα 7: Εργαλείο γραμμής εντολών
+### Παράδειγμα 7: Διαχείριση λογαριασμού και αποσύνδεση
+
+Διαχείριση διαπιστευτηρίων μέσω προγραμματισμού:
+
+```python
+from chloros_sdk import ChlorosLocal
+
+def switch_account():
+    """Clear credentials to switch to a different account"""
+    try:
+        chloros = ChlorosLocal()
+        
+        # Clear current credentials
+        result = chloros.logout()
+        print("✓ Credentials cleared successfully")
+        print("Please log in with new account via Chloros, Chloros (Browser), or CLI")
+        
+        return True
+    
+    except Exception as e:
+        print(f"✗ Logout failed: {e}")
+        return False
+
+def secure_cleanup():
+    """Remove credentials for security purposes"""
+    try:
+        chloros = ChlorosLocal()
+        chloros.logout()
+        print("✓ Credentials removed for security")
+        
+    except Exception as e:
+        print(f"Warning: Cleanup error: {e}")
+
+# Switch accounts
+if switch_account():
+    print("\nRe-authenticate via Chloros GUI/CLI/Browser before next SDK use")
+
+# Or perform secure cleanup
+# secure_cleanup()
+```
+
+***
+
+### Παράδειγμα 8: Εργαλείο γραμμής εντολών
 
 Δημιουργήστε ένα προσαρμοσμένο εργαλείο CLI με το SDK:
 
@@ -735,8 +800,18 @@ def main():
                        help='Camera template')
     parser.add_argument('--format', default='TIFF (16-bit)',
                        help='Export format')
+    parser.add_argument('--logout', action='store_true',
+                       help='Clear cached credentials before processing')
     
     args = parser.parse_args()
+    
+    # Handle logout if requested
+    if args.logout:
+        from chloros_sdk import ChlorosLocal
+        chloros = ChlorosLocal()
+        chloros.logout()
+        print("Credentials cleared. Please re-login via Chloros GUI/CLI/Browser.")
+        return 0
     
     successful = []
     failed = []
@@ -778,12 +853,16 @@ if __name__ == '__main__':
 **Χρήση:**
 
 ```bash
+# Process multiple folders
 python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
+
+# Clear cached credentials
+python my_processor.py --logout
 ```
 
 ***
 
-## Αντιμετώπιση εξαιρέσεων
+## Χειρισμός εξαιρέσεων
 
 Το SDK παρέχει συγκεκριμένες κατηγορίες εξαιρέσεων για διαφορετικούς τύπους σφαλμάτων:
 
@@ -892,9 +971,7 @@ for i in range(0, len(images), batch_size):
 
 ### Το backend δεν ξεκινά
 
-**Πρόβλημα:** Το SDK δεν ξεκινά το backend.
-
-**Λύσεις:**
+**Πρόβλημα:** Το SDK δεν ξεκινά το backend.**Λύσεις:**
 
 1. Βεβαιωθείτε ότι το Chloros Desktop είναι εγκατεστημένο:
 
@@ -904,8 +981,8 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Ελέγξτε ότι το Windows Firewall δεν το μπλοκάρει.
-3. Δοκιμάστε τη διαδρομή του backend με το χέρι:
+2. Ελέγξτε ότι το Windows Firewall δεν το εμποδίζει
+3. Δοκιμάστε τη χειροκίνητη διαδρομή του backend:
 
 ```python
 chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
@@ -913,11 +990,7 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 ***
 
-### Η άδεια χρήσης δεν ανιχνεύεται
-
-**Πρόβλημα:** Το SDK προειδοποιεί για την έλλειψη άδειας χρήσης
-
-**Λύσεις:**
+### Η άδεια χρήσης δεν ανιχνεύεται**Πρόβλημα:** Το SDK προειδοποιεί για την έλλειψη άδειας χρήσης**Λύσεις:**
 
 1. Ανοίξτε το Chloros, το Chloros (πρόγραμμα περιήγησης) ή το Chloros CLI και συνδεθείτε.
 2. Βεβαιωθείτε ότι η άδεια χρήσης είναι αποθηκευμένη στην προσωρινή μνήμη:
@@ -931,15 +1004,23 @@ cache_path = Path(os.getenv('APPDATA')) / 'Chloros' / 'cache'
 print(f"Cache exists: {cache_path.exists()}")
 ```
 
-3. Επικοινωνήστε με την υποστήριξη: info@mapir.camera
+3. Εάν αντιμετωπίζετε προβλήματα με τα διαπιστευτήρια, διαγράψτε τα αποθηκευμένα διαπιστευτήρια και συνδεθείτε ξανά:
+
+```python
+from chloros_sdk import ChlorosLocal
+
+# Clear cached credentials
+chloros = ChlorosLocal()
+chloros.logout()
+
+# Then login again via Chloros, Chloros (Browser), or Chloros CLI
+```
+
+4. Επικοινωνήστε με την υποστήριξη: info@mapir.camera
 
 ***
 
-### Σφάλματα εισαγωγής
-
-**Πρόβλημα:** `ModuleNotFoundError: No module named 'chloros_sdk'`
-
-**Λύσεις:**
+### Σφάλματα εισαγωγής**Πρόβλημα:** `ModuleNotFoundError: No module named 'chloros_sdk'`**Λύσεις:**
 
 ```bash
 # Verify installation
@@ -955,11 +1036,7 @@ python -c "import sys; print(sys.path)"
 
 ***
 
-### Χρονικό όριο επεξεργασίας
-
-**Πρόβλημα:** Χρονικό όριο επεξεργασίας
-
-**Λύσεις:**
+### Χρονικό όριο επεξεργασίας**Πρόβλημα:** Χρονικό όριο επεξεργασίας**Λύσεις:**
 
 1. Αύξηση του χρονικού ορίου:
 
@@ -973,11 +1050,7 @@ chloros = ChlorosLocal(timeout=120)  # 2 minutes
 
 ***
 
-### Θύρα ήδη σε χρήση
-
-**Πρόβλημα:** Η θύρα 5000 του backend είναι κατειλημμένη
-
-**Λύσεις:**
+### Θύρα ήδη σε χρήση**Πρόβλημα:** Η θύρα 5000 του backend είναι κατειλημμένη**Λύσεις:**
 
 ```python
 # Use different port
@@ -993,9 +1066,9 @@ Get-NetTCPConnection -LocalPort 5000
 
 ***
 
-## Συμβουλές απόδοσης
+## Συμβουλές για την απόδοση
 
-### Βελτιστοποίηση ταχύτητας επεξεργασίας
+### Βελτιστοποίηση της ταχύτητας επεξεργασίας
 
 1. **Χρησιμοποιήστε την παράλληλη λειτουργία** (απαιτείται Chloros+)
 
@@ -1016,9 +1089,7 @@ chloros.configure(export_format="PNG (8-bit)")  # Faster than TIFF
 chloros.configure(indices=["NDVI"])  # Not all indices
 ```
 
-4. **Επεξεργασία σε SSD** (όχι HDD)
-
-***
+4. **Επεξεργαστείτε σε SSD** (όχι HDD)***
 
 ### Βελτιστοποίηση μνήμης
 
@@ -1033,7 +1104,7 @@ chloros.configure(indices=["NDVI"])  # Not all indices
 
 ### Επεξεργασία στο παρασκήνιο
 
-Απελευθερώστε το Python για άλλες εργασίες:
+Απελευθερώστε Python για άλλες εργασίες:
 
 ```python
 chloros.process(wait=False)  # Non-blocking
@@ -1123,17 +1194,13 @@ chloros.process(progress_callback=notebook_progress)
 
 ### Ε: Το SDK απαιτεί σύνδεση στο διαδίκτυο;
 
-**Α:** Μόνο για την αρχική ενεργοποίηση της άδειας χρήσης. Μετά τη σύνδεση μέσω Chloros, Chloros (Browser) ή το Chloros CLI, η άδεια αποθηκεύεται τοπικά και λειτουργεί εκτός σύνδεσης για 30 ημέρες.
+**Α:** Μόνο για την αρχική ενεργοποίηση της άδειας χρήσης. Αφού συνδεθείτε μέσω του Chloros, του Chloros (Browser) ή του Chloros CLI, η άδεια χρήσης αποθηκεύεται τοπικά και λειτουργεί εκτός σύνδεσης για 30 ημέρες.***
 
-***
-
-### Ε: Μπορώ να χρησιμοποιήσω το SDK σε έναν διακομιστή χωρίς GUI;
-
-**Α:** Ναι! Απαιτήσεις:
+### Ε: Μπορώ να χρησιμοποιήσω το SDK σε έναν διακομιστή χωρίς GUI;**Α:** Ναι! Απαιτήσεις:
 
 * Windows Server 2016 ή νεότερη έκδοση
 * Chloros εγκατεστημένο (μία φορά)
-* Άδεια χρήσης ενεργοποιημένη σε οποιονδήποτε υπολογιστή (άδεια χρήσης αποθηκευμένη στην προσωρινή μνήμη και αντιγραμμένη στον διακομιστή)
+* Άδεια ενεργοποιημένη σε οποιονδήποτε υπολογιστή (άδεια χρήσης αποθηκευμένη στο cache και αντιγραμμένη στον διακομιστή)
 
 ***
 
@@ -1145,13 +1212,9 @@ chloros.process(progress_callback=notebook_progress)
 | **Κατάλληλο για**    | Οπτική εργασία | Σενάρια        | Ενσωμάτωση |
 | **Αυτοματοποίηση**  | Περιορισμένη     | Καλή             | Εξαιρετική   |
 | **Ευελιξία** | Βασική       | Καλή             | Μέγιστη     |
-| **Άδεια**     | Chloros+    | Chloros+         | Chloros+    |
+| **Άδεια**     | Chloros+    | Chloros+         | Chloros+    |***
 
-***
-
-### Ε: Μπορώ να διανέμω εφαρμογές που έχουν δημιουργηθεί με το SDK;
-
-**Α:** Ο κώδικας SDK μπορεί να ενσωματωθεί στις εφαρμογές σας, αλλά:
+### Ε: Μπορώ να διανέμω εφαρμογές που έχουν δημιουργηθεί με το SDK;**Α:** Ο κώδικας SDK μπορεί να ενσωματωθεί στις εφαρμογές σας, αλλά:
 
 * Οι τελικοί χρήστες πρέπει να έχουν εγκατεστημένο το Chloros
 * Οι τελικοί χρήστες πρέπει να έχουν ενεργές άδειες Chloros+
@@ -1174,6 +1237,7 @@ pip install --upgrade chloros-sdk
 Από προεπιλογή, στη διαδρομή του έργου:
 
 ```
+
 Project_Path/
 └── MyProject/
     └── Survey3N_RGN/          # Processed outputs
@@ -1181,9 +1245,7 @@ Project_Path/
 
 ***
 
-### Ε: Μπορώ να επεξεργαστώ εικόνες από σενάρια Python που εκτελούνται σύμφωνα με το πρόγραμμα;
-
-**Α:** Ναι! Χρησιμοποιήστε το Windows Task Scheduler με σενάρια Python:
+### Ε: Μπορώ να επεξεργαστώ εικόνες από σενάρια Python που εκτελούνται σύμφωνα με το πρόγραμμα;**Α:** Ναι! Χρησιμοποιήστε το Windows Task Scheduler με σενάρια Python:
 
 ```python
 # scheduled_processing.py
@@ -1197,9 +1259,7 @@ results = process_folder("C:\\Flights\\Today")
 
 ***
 
-### Ε: Το SDK υποστηρίζει async/await;
-
-**Α:** Η τρέχουσα έκδοση είναι συγχρονισμένη. Για ασύγχρονη συμπεριφορά, χρησιμοποιήστε το `wait=False` ή εκτελέστε σε ξεχωριστό νήμα:
+### Ε: Το SDK υποστηρίζει async/await;**Α:** Η τρέχουσα έκδοση είναι συγχρονισμένη. Για ασύγχρονη συμπεριφορά, χρησιμοποιήστε το `wait=False` ή εκτελέστε σε ξεχωριστό νήμα:
 
 ```python
 import threading
@@ -1212,6 +1272,22 @@ thread.start()
 
 # Continue with other work...
 ```
+
+***
+
+### Ε: Πώς μπορώ να εναλλάσσω διαφορετικούς λογαριασμούς Chloros+;**Α:** Χρησιμοποιήστε τη μέθοδο `logout()` για να διαγράψετε τα αποθηκευμένα διαπιστευτήρια και, στη συνέχεια, συνδεθείτε ξανά με τον νέο λογαριασμό:
+
+```python
+from chloros_sdk import ChlorosLocal
+
+# Clear current credentials
+chloros = ChlorosLocal()
+chloros.logout()
+
+# Re-login via Chloros, Chloros (Browser), or Chloros CLI with new account
+```
+
+Μετά την αποσύνδεση, πραγματοποιήστε έλεγχο ταυτότητας με τον νέο λογαριασμό μέσω του GUI, του προγράμματος περιήγησης ή του CLI πριν χρησιμοποιήσετε ξανά το SDK.
 
 ***
 
@@ -1233,8 +1309,6 @@ thread.start()
 
 ***
 
-## Άδεια
+## Άδεια χρήσης**Ιδιόκτητο λογισμικό** - Πνευματικά δικαιώματα (c) 2025 MAPIR Inc.
 
-**Ιδιόκτητο λογισμικό** - Πνευματικά δικαιώματα (c) 2025 MAPIR Inc.
-
-Το SDK απαιτεί ενεργή συνδρομή Chloros+. Απαγορεύεται η μη εξουσιοδοτημένη χρήση, διανομή ή τροποποίηση.
+Το SDK απαιτεί ενεργή συνδρομή στο Chloros+. Απαγορεύεται η μη εξουσιοδοτημένη χρήση, διανομή ή τροποποίηση.

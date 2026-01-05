@@ -29,6 +29,8 @@
 
 ## ΠΡΟΒΟΛΗ ΕΙΚΟΝΩΝ (GUI)
 
+* [Πλέγμα εικόνων](image-viewer-gui/image-grid.md)
 * [Άνοιγμα εικόνας σε πλήρη οθόνη](image-viewer-gui/opening-an-image-full-screen.md)
 * [Επίπεδα εικόνας](image-viewer-gui/image-layers.md)
 * [Δείκτης/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Δείκτες χάρτη](image-viewer-gui/map-markers.md)

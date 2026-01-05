@@ -2,13 +2,11 @@
 
 ## Chloros και Chloros (Browser) Σύνδεση
 
-Το μενού <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> πλευρικό μενού σας επιτρέπει να συνδεθείτε στον λογαριασμό σας Chloros+ και να ξεκλειδώσετε επιπλέον λειτουργίες.
+Το <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> πλευρικό μενού σας επιτρέπει να συνδεθείτε στον λογαριασμό σας Chloros+ και να ξεκλειδώσετε επιπλέον λειτουργίες.
 
 Όταν συνδεθείτε, θα εμφανιστούν τα στοιχεία του λογαριασμού σας:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
-
-## CLI Σύνδεση
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Σύνδεση
 
 Συνδεθείτε με τα διαπιστευτήριά σας Chloros+ για να ενεργοποιήσετε την επεξεργασία CLI.
 
@@ -17,6 +15,10 @@
 ```bash
 chloros-cli login <email> <password>
 ```
+
+{% hint style=&quot;info&quot; %}
+**Χρήστες SDK**: Το Python SDK παρέχει επίσης μια προγραμματισμένη μέθοδο `logout()` για την εκκαθάριση των αποθηκευμένων διαπιστευτηρίων. Για λεπτομέρειες, ανατρέξτε στην [τεκμηρίωση Python SDK](api-python-sdk.md#logout).
+{% endhint %}
 
 **Παράδειγμα:**
 
@@ -30,9 +32,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Έξοδος:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
-
-### Λήξη προγράμματος
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Λήξη προγράμματος
 
 Η λήξη του προγράμματος στο GUI δείχνει πότε η άδεια χρήσης σας θα καταστεί άκυρη. Για τις επαναλαμβανόμενες μηνιαίες συνδρομές, η λήξη είναι στο τέλος του μήνα. Για τις ετήσιες συνδρομές, είναι ένα έτος μετά την έναρξη της συνδρομής. Ο έλεγχος της άδειας χρήσης απαιτεί μηνιαία σύνδεση στο διαδίκτυο για επαλήθευση, με περίοδο χάριτος 30 ημερών.
 
@@ -40,4 +40,4 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 Κάθε πρόγραμμα Chloros+ προσφέρει διαφορετικό αριθμό εγγεγραμμένων συσκευών. Κάθε συσκευή στην οποία συνδέεστε με λογαριασμό Chloros+ θα υπολογίζεται στον αριθμό των εγγεγραμμένων συσκευών σας. Μπορείτε να μετονομάσετε και να καταργήσετε μια συσκευή στη σελίδα του λογαριασμού σας στο MAPIR Cloud.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Πρόγραμμα Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Υποστηριζόμενες συσκευές</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">Πρόγραμμα Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">ΧΡΥΣΟ</th></tr></thead><tbody><tr><td align="right">Υποστηριζόμενες συσκευές</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
