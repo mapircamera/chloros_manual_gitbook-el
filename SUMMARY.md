@@ -6,7 +6,7 @@
 * [CLI : Γραμμή εντολών](CLI.md)
 * [API : Python SDK](api-python-sdk.md)
 * [Υποστηριζόμενες κάμερες](supported-cameras.md)
-* [Μορφές εξόδου εικόνας](output-image-formats.md)
+* [Μορφές εικόνας εξόδου](output-image-formats.md)
 * [Chloros+ Σύνδεση](chloros+-login.md)
 * [Στόχοι βαθμονόμησης](calibration-targets.md)
 * [Υποστηριζόμενες γλώσσες](supported-languages.md)
@@ -15,10 +15,10 @@
 
 ## Επεξεργασία εικόνων (GUI)
 
-* [Ρύθμιση παραμέτρων έργου](processing-images-gui/adjusting-project-settings.md)
+* [Προσαρμογή ρυθμίσεων έργου](processing-images-gui/adjusting-project-settings.md)
 * [Προσθήκη αρχείων σε ένα έργο](processing-images-gui/adding-files-to-a-project.md)
 * [Επιλογή εικόνων-στόχων](processing-images-gui/choosing-target-images.md)
-* [Έναρξη επεξεργασίας](processing-images-gui/starting-the-processing.md)
+* [Έναρξη της επεξεργασίας](processing-images-gui/starting-the-processing.md)
 * [Παρακολούθηση της επεξεργασίας](processing-images-gui/monitoring-the-processing.md)
 * [Ολοκλήρωση της επεξεργασίας](processing-images-gui/finishing-the-processing.md)
 
@@ -27,10 +27,21 @@
 * [Ρυθμίσεις έργου](project-settings/project-settings.md)
 * [Τύποι πολυφασματικών δεικτών](project-settings/multispectral-index-formulas.md)
 
-## ΠΡΟΒΟΛΗ ΕΙΚΟΝΩΝ (GUI)
+## ΠΡΟΓΡΑΜΜΑ ΠΡΟΒΟΛΗΣ ΕΙΚΟΝΩΝ (GUI)
 
 * [Πλέγμα εικόνων](image-viewer-gui/image-grid.md)
 * [Άνοιγμα εικόνας σε πλήρη οθόνη](image-viewer-gui/opening-an-image-full-screen.md)
 * [Επίπεδα εικόνας](image-viewer-gui/image-layers.md)
-* [Δείκτης/LUT Sandbox](image-viewer-gui/index-lut-sandbox.md)
+* [Περιβάλλον δοκιμών δείκτη/LUT](image-viewer-gui/index-lut-sandbox.md)
 * [Δείκτες χάρτη](image-viewer-gui/map-markers.md)
+
+## Linux &amp; Edge Computing
+
+* [Linux Επισκόπηση](linux/linux-overview.md)
+* [Linux Εγκατάσταση](linux/linux-installation.md)
+* [Οδηγός NVIDIA Jetson](linux/nvidia-jetson-guide.md)
+
+## Αρχιτεκτονική επεξεργασίας
+
+* [Δυναμική προσαρμογή υπολογιστικής ισχύος](processing-architecture/dynamic-compute-adaptation.md)
+* [Αγωγός επεξεργασίας](processing-architecture/processing-pipeline.md)
