@@ -165,7 +165,7 @@ $$
 
 Στο GUI και στη λίστα προεπιλογών CLI/SDK, ο τύπος του συμβόλου είναι `(z/y)*(x/y)` με x=Red, y=Green, z=NIR (ζώνες μιας κάμερας τύπου RGN)· η προεπιλογή του μηχανισμού δείκτη LATTICE είναι `nir * red / green**2`. Κάθε επιφάνεια υπολογίζει τον ίδιο δείκτη.
 
-_Αναφορά: Vincini, M., E. Frazzi και P. D&#x27;Alessio. «Ένας ευρυζωνικός δείκτης βλάστησης με βάση τη χλωροφύλλη των φύλλων σε κλίμακα φυλλώματος». Precision Agriculture 9 (2008): 303-319._
+_Αναφορά: Vincini, M., E. Frazzi και P. D'Alessio. «Ένας ευρυζωνικός δείκτης βλάστησης με βάση τη χλωροφύλλη των φύλλων σε κλίμακα φυλλώματος». Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -207,7 +207,7 @@ $$
 
 Οι δασικές περιοχές θα έχουν χαμηλότερες τιμές FCI1 λόγω της χαμηλότερης ανακλαστικότητας των δέντρων και της παρουσίας σκιών εντός της δασικής κόμης.
 
-_Αναφορά: Becker, Sarah J., Craig S.T. Daughtry και Andrew L. Russ. «Robust forest cover indices for multispectral images.» Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Αναφορά: Becker, Sarah J., Craig S.T. Daughtry και Andrew L. Russ. «Robust forest cover indices for multispectral images.» Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -223,7 +223,7 @@ $$
 
 Οι δασικές περιοχές θα παρουσιάζουν χαμηλότερες τιμές FCI2 λόγω της χαμηλότερης ανακλαστικότητας των δέντρων και της παρουσίας σκιών εντός της δασικής κόμης.
 
-_Αναφορά: Becker, Sarah J., Craig S.T. Daughtry και Andrew L. Russ. «Robust forest cover indices for multispectral images.» Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Αναφορά: Becker, Sarah J., Craig S.T. Daughtry και Andrew L. Russ. «Robust forest cover indices for multispectral images.» Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -489,7 +489,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Αναφορά: Bannari, A., H. Asalhi και P. Teillet. «Δείκτης μετασχηματισμένης διαφοράς βλάστησης (TDVI) για χαρτογράφηση της κάλυψης βλάστησης». Στα Πρακτικά του Συμποσίου Γεωεπιστημών και Τηλεπισκόπησης, IGARSS &#x27;02, IEEE International, Τόμος 5 (2002)._
+_Αναφορά: Bannari, A., H. Asalhi και P. Teillet. «Δείκτης μετασχηματισμένης διαφοράς βλάστησης (TDVI) για χαρτογράφηση της κάλυψης βλάστησης». Στα Πρακτικά του Συμποσίου Γεωεπιστημών και Τηλεπισκόπησης, IGARSS '02, IEEE International, Τόμος 5 (2002)._
 
 ***
 

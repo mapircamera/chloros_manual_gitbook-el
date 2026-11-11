@@ -43,7 +43,7 @@ You:  Show me what the array sees, then capture reflectance every 10 seconds
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**προσθέστε αυτό στο `claude_desktop_config.json` (το ανοίγετε από**Ρυθμίσεις &gt; Προγραμματιστής &gt; Επεξεργασία διαμόρφωσης**), και στη συνέχεια επανεκκινήστε το Claude Desktop. Το**Cursor** χρησιμοποιεί την ίδια καταχώριση στο `~/.cursor/mcp.json`.
+**Claude Desktop:**προσθέστε αυτό στο `claude_desktop_config.json` (το ανοίγετε από**Ρυθμίσεις > Προγραμματιστής > Επεξεργασία διαμόρφωσης**), και στη συνέχεια επανεκκινήστε το Claude Desktop. Το**Cursor** χρησιμοποιεί την ίδια καταχώριση στο `~/.cursor/mcp.json`.
 
 ```json
 {
@@ -53,7 +53,7 @@ claude mcp add chloros -- chloros-mcp
 }
 ```
 
-Εάν ο πελάτης αναφέρει ότι ο διακομιστής δεν μπόρεσε να ξεκινήσει, το `chloros-mcp` πιθανώς δεν βρίσκεται στο `PATH` που βλέπει: δώστε την πλήρη διαδρομή αντ&#x27; αυτού (`where chloros-mcp` στα Windows, `which chloros-mcp` στο Linux).
+Εάν ο πελάτης αναφέρει ότι ο διακομιστής δεν μπόρεσε να ξεκινήσει, το `chloros-mcp` πιθανώς δεν βρίσκεται στο `PATH` που βλέπει: δώστε την πλήρη διαδρομή αντ' αυτού (`where chloros-mcp` στα Windows, `which chloros-mcp` στο Linux).
 
 Πρέπει να έχετε εγκαταστήσει το Chloros στον ίδιο υπολογιστή και να έχετε συνδεθεί εκεί, είτε μέσω της εφαρμογής είτε με το `chloros-cli login`, σε οποιοδήποτε επί πληρωμή πακέτο Chloros+ (Copper ή ανώτερο). Ο διακομιστής δεν μπορεί να συνδεθεί εκ μέρους σας.
 

@@ -50,12 +50,12 @@
 * [Αισθητήρες φωτός DAQ](daq/README.md)
 * [Η καρτέλα «DAQ» στο Chloros](daq/gui.md)
 * [Γρήγορη εκκίνηση του CLI (pool-\*)](daq/cli-quick-start.md)
-* [Προφίλ Cap &amp; βαθμονομημένο εύρος](daq/caps-and-range.md)
+* [Προφίλ Cap & βαθμονομημένο εύρος](daq/caps-and-range.md)
 * [Καταγραφή και η μορφή .daq](daq/recording.md)
 * [Δικτύωση DAQ-E και συγχρονισμός χρόνου](daq/ethernet-ptp.md)
 * [Ροές εργασίας ανακλαστικότητας](daq/reflectance.md)
 
-## «Linux» &amp; «Edge Computing»
+## «Linux» & «Edge Computing»
 
 * [Επισκόπηση του «Linux»](linux/linux-overview.md)
 * [Εγκατάσταση του «Linux»](linux/linux-installation.md)
@@ -66,7 +66,7 @@
 * [Δυναμική προσαρμογή υπολογιστικής ισχύος](processing-architecture/dynamic-compute-adaptation.md)
 * [Αγωγός επεξεργασίας](processing-architecture/processing-pipeline.md)
 
-## Αναφορές (CLI &amp; SDK)
+## Αναφορές (CLI & SDK)
 
 * [Αναφορά για το Chloros CLI](reference/cli-reference.md)
 * [Αναφορά για το Chloros Python SDK](reference/sdk-reference.md)
