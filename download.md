@@ -196,7 +196,9 @@ pip install chloros-sdk
 * **🐻 Προηγμένη μέθοδος αποσυμπίεσης με αναγνώριση υφής** - μια υψηλής ποιότητας μέθοδος αποσυμπίεσης με αναγνώριση ακμών, σε συνδυασμό με ένα μοντέλο αποθορυβοποίησης AI/ML που αφαιρεί σχεδόν όλο τον θόρυβο της αποσυμπίεσης.
 * 🧮 **Προσαρμοσμένοι τύποι** - Δημιουργήστε προσαρμοσμένους πολυφασματικούς δείκτες
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Δείτε τα πακέτα και τις τιμές του Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Δείτε τα πακέτα και τις τιμές του Chloros+</a></p>
+
+***
 
 ## Βοήθεια εγκατάστασης
 
@@ -237,7 +239,9 @@ pip install chloros-sdk
 * 📧 **Email**: info@mapir.camera
 * 🌐 **Ιστότοπος**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Τεκμηρίωση**: [Ξεκινώντας](./)
-* ❓ **Συχνές ερωτήσεις**: [Συχνές ερωτήσεις](faq.md)***
+* ❓ **Συχνές ερωτήσεις**: [Συχνές ερωτήσεις](faq.md)
+
+***
 
 ## Ενημερώσεις λογισμικού Το
 
